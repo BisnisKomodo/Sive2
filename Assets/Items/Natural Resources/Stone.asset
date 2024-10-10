@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
+  m_Name: Stone
+  m_EditorClassIdentifier: 
+  itemtype: 0
+  icon: {fileID: 21300000, guid: 0de2c9158686caa48840641b0444b5a8, type: 3}
+  ItemName: Stone
+  Description: Basic Natural Resources for crafting
+  IsStackable: 1
+  maxstack: 20
+  healthChange: 0
+  hungerChange: 0
+  thirstChange: 0

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
+  m_Name: Winchester Shotgun
+  m_EditorClassIdentifier: 
+  itemtype: 2
+  icon: {fileID: 21300000, guid: b57256ff6c8c2b34d9017df734af2d8a, type: 3}
+  ItemName: Winchester
+  Description: Lethal at close range and Weak at long range
+  IsStackable: 0
+  maxstack: 1
+  damage: 20
+  range: 30
+  fireRate: 0.1
+  magSize: 1
+  bulletData: {fileID: 11400000, guid: a6a84a83cc5c2094ea0d28db478019c6, type: 2}
+  zoomFOV: 45
+  horizontalRecoil: 4
+  minVerticalRecoil: 3
+  maxVerticalRecoil: 5
+  hipSpread: 0.2
+  aimSpread: 0.2
+  shotgunFire: 1
+  pelletPerShot: 8
+  shootSound: {fileID: 8300000, guid: 86a79c0f05aafa94d8ccb3ee5f39860f, type: 3}
+  reloadSound: {fileID: 8300000, guid: 4012d8a3701a03742af7742b7cb5285f, type: 3}
+  drawSound: {fileID: 0}
+  emptySound: {fileID: 0}
+  healthChange: 10
+  hungerChange: 10
+  thirstChange: 10

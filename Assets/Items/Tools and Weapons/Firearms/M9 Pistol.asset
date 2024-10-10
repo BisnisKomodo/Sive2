@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
+  m_Name: M9 Pistol
+  m_EditorClassIdentifier: 
+  itemtype: 2
+  icon: {fileID: 21300000, guid: 25bdc618e13fe22408416d93190fadf0, type: 3}
+  ItemName: Beretta
+  Description: Easy carry firearm with small magazine
+  IsStackable: 0
+  maxstack: 1
+  damage: 10
+  range: 200
+  fireRate: 0.1
+  magSize: 8
+  bulletData: {fileID: 11400000, guid: 97cbd87f99d6ff74aaf2b108b0f14640, type: 2}
+  zoomFOV: 55
+  horizontalRecoil: 3
+  minVerticalRecoil: 2
+  maxVerticalRecoil: 4
+  hipSpread: 0.04
+  aimSpread: 0
+  shotgunFire: 0
+  pelletPerShot: 8
+  shootSound: {fileID: 8300000, guid: 8863d1ea27fe5084eb2b5f166c69d7aa, type: 3}
+  reloadSound: {fileID: 8300000, guid: 7601715666ccdbe469d6f6a52a3f986f, type: 3}
+  drawSound: {fileID: 0}
+  emptySound: {fileID: 0}
+  healthChange: 0
+  hungerChange: 0
+  thirstChange: 0

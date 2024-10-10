@@ -5,13 +5,32 @@ using UnityEngine.Lumin;
 
 public class Storage : MonoBehaviour
 {
-    public StorageSlot[] slots;
+    [HideInInspector] public StorageSlot[] slots;
+    public StorageSlot slotPrefab;
+    public int storageSize = 12;
+
+
     [Space]
-    bool opened;
+    public bool opened;
+
+    public void Start()
+    {
+        List<StorageSlot> slotList = new List<StorageSlot>();
+        for (int i = 0; i < storageSize; i++)
+        {
+            StorageSlot slot = Instantiate(slotPrefab, transform).GetComponent<StorageSlot>();
+
+            slotList.Add(slot);
+        }
+
+        slots = slotList.ToArray();
+    }
 
     public void Open(StorageUI UI)
     {
-        
+        UI.Open(this);
+
+        opened = true;
     }
 
     public void Close(Slot[] uiSlots)

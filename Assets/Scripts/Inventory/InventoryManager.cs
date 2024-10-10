@@ -78,6 +78,15 @@ public class InventoryManager : MonoBehaviour
         {
             opened = !opened;
         }
+
+        if(GetComponentInParent<WindowHandler>().storage.opened)
+        {
+            GetComponentInParent<WindowHandler>().crafting.opened = false;
+        }
+        else
+        {
+            GetComponentInParent<WindowHandler>().crafting.opened = true;
+        }
         
         if(opened)
         {
@@ -87,6 +96,11 @@ public class InventoryManager : MonoBehaviour
         else
         {
             transform.localPosition = new Vector3(-10000, 0, 0);
+
+            if (GetComponentInParent<WindowHandler>().storage.opened)
+            {
+                GetComponentInParent<WindowHandler>().storage.Close();
+            }
         }
     }
 

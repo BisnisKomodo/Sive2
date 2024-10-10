@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Survival.sln"
+    "dotnet.defaultSolution": "Sive2.sln"
 }

@@ -38,3 +38,4 @@ MonoBehaviour:
   healthChange: 0
   hungerChange: 0
   thirstChange: 0
+  ghost: {fileID: 0}

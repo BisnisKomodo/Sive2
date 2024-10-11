@@ -6,6 +6,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public Weapon[] weapons;
+    public BuildingHandler building;
     public bool opened;
     public KeyCode InventoryKey = KeyCode.Tab;
 
@@ -31,6 +32,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
+        building = GetComponentInParent<WindowHandler>().building;
         GenerateHotBarSlots();
         GenerateSlots();
     }
@@ -157,6 +159,16 @@ public class InventoryManager : MonoBehaviour
         {
             to.weaponEquipped.Unequip();
         }
+
+        // //Stop Building
+        // if (from == building.slotInUse)
+        // {
+        //     building.slotInUse = null;
+        // }
+        // if (to == building.slotInUse)
+        // {
+        //     building.slotInUse = null;
+        // }
 
         //Ngeswap barang
         if(from.data != to.data)

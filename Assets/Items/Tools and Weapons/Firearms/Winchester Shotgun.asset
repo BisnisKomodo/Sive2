@@ -24,9 +24,9 @@ MonoBehaviour:
   magSize: 1
   bulletData: {fileID: 11400000, guid: a6a84a83cc5c2094ea0d28db478019c6, type: 2}
   zoomFOV: 45
-  horizontalRecoil: 4
-  minVerticalRecoil: 3
-  maxVerticalRecoil: 5
+  horizontalRecoil: 10
+  minVerticalRecoil: 9
+  maxVerticalRecoil: 11
   hipSpread: 0.2
   aimSpread: 0.2
   shotgunFire: 1
@@ -38,3 +38,4 @@ MonoBehaviour:
   healthChange: 10
   hungerChange: 10
   thirstChange: 10
+  ghost: {fileID: 0}

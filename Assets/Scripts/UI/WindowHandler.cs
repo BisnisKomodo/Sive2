@@ -7,6 +7,7 @@ public class WindowHandler : MonoBehaviour
     [HideInInspector]public InventoryManager inventory;
     [HideInInspector]public CraftingManager crafting;
     [HideInInspector]public StorageUI storage;
+    [HideInInspector]public BuildingHandler building;
     public bool WindowOpened;
     private CameraLook cam;
 
@@ -16,6 +17,7 @@ public class WindowHandler : MonoBehaviour
         inventory = GetComponentInChildren<InventoryManager>();
         crafting = GetComponentInChildren<CraftingManager>();
         storage = GetComponentInChildren<StorageUI>();
+        building = GetComponentInChildren<BuildingHandler>();
     }
 
     private void FixedUpdate()

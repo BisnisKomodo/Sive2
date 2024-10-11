@@ -281,6 +281,42 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         {
             Consume();
         }
+
+        if (data.itemtype == ItemScriptableObject.ItemType.Buildable)
+        {
+            Try_Build();
+        }
+    }
+
+    public void Try_Build()
+    {
+        //UNEQUIP EVERY ACTIVE WEAPON
+            for (int i = 0; i < inventory.weapons.Length; i++)
+            {
+                if (inventory.weapons[i].gameObject.activeSelf)
+                {
+                    inventory.weapons[i].Unequip();
+                }
+            }
+
+        if (inventory.building.slotInUse == null)
+        {
+            inventory.building.slotInUse = this;
+        }
+        else
+        {
+            if (inventory.building.slotInUse == this)
+            {
+                inventory.building.slotInUse = null;
+            }
+            else
+            {
+                inventory.building.slotInUse = this;
+
+
+                Destroy(inventory.building.ghost.gameObject);
+            }
+        }
     }
 
     public void Consume()

@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletHolePrefab;
     public ItemScriptableObject weaponData;
     public bool isAutomatic;
+    public ParticleSystem muzzleFlash;
     [Space]
     public Transform shootPoint;
     public LayerMask shootableLayers;
@@ -138,7 +139,17 @@ public class Weapon : MonoBehaviour
             Debug.Log($"Hitted = {hit.transform.name}");
         }
 
-
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.Stop();
+            muzzleFlash.startRotation = Random.Range(0, 360);
+            muzzleFlash.Play();
+            muzzleFlash.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Muzzle flash not assigned");
+        }
 
 
 
@@ -187,6 +198,17 @@ public class Weapon : MonoBehaviour
             }
         }
 
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.Stop();
+            muzzleFlash.startRotation = Random.Range(0, 360);
+            muzzleFlash.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Muzzle flash not assigned");
+        }
+
 
 
 
@@ -205,7 +227,8 @@ public class Weapon : MonoBehaviour
 
     public void Start_Reload()
     {
-        if (isReloading || isAiming || slotEquippedOn.StackSize >= weaponData.magSize || player.running || !hasTakenOut || !CheckForBullets(weaponData.bulletData, weaponData.magSize))
+        if (isReloading || slotEquippedOn.StackSize >= weaponData.magSize || player.running || !hasTakenOut || !CheckForBullets(weaponData.bulletData, weaponData.magSize))
+        //if (isReloading || isAiming || slotEquippedOn.StackSize >= weaponData.magSize || player.running || !hasTakenOut || !CheckForBullets(weaponData.bulletData, weaponData.magSize))
         {
             return;
         }
@@ -311,11 +334,16 @@ public class Weapon : MonoBehaviour
             transform.localPosition = Vector3.Slerp(transform.localPosition, aimPos, aimSpeed * Time.deltaTime);
             isAiming = true;
         }
-        else
+        else if (!isReloading)
         {
             transform.localPosition = Vector3.Slerp(transform.localPosition, hipPos, aimSpeed * Time.deltaTime);
             isAiming = false;
         }
+        //else if
+        // {
+        //     transform.localPosition = Vector3.Slerp(transform.localPosition, hipPos, aimSpeed * Time.deltaTime);
+        //     isAiming = false;
+        // }
     }
 
 
@@ -328,7 +356,7 @@ public class Weapon : MonoBehaviour
 
     public void Swing()
     {
-        if (currentFireRate < fireRate || isReloading || !hasTakenOut || player.running || slotEquippedOn.StackSize <= 0)
+        if (currentFireRate < fireRate || isReloading || !hasTakenOut || player.running || slotEquippedOn.StackSize <= 0 || player.windowhandler.inventory.opened)
         {
             return;
         }
@@ -400,9 +428,10 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-         GetComponentInParent<CameraFOV_Handler>().weapon = this;
+        GetComponentInParent<CameraFOV_Handler>().weapon = this;
 
         slotEquippedOn = slot;
+        slotEquippedOn.weaponEquipped = this;
 
         transform.localPosition = hipPos;
 
@@ -412,8 +441,12 @@ public class Weapon : MonoBehaviour
     {
         GetComponentInParent<CameraFOV_Handler>().weapon = null;
 
-        gameObject.SetActive(false);
-
+        slotEquippedOn.weaponEquipped = null;
         slotEquippedOn = null;
+
+        isReloading = false;
+        hasTakenOut = false;
+
+        gameObject.SetActive(false);
     }
 }

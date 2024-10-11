@@ -132,6 +132,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 {
     private DragDropHandler dragDropHandler;
     private InventoryManager inventory;
+    public Weapon weaponEquipped;
     public ItemScriptableObject data;
     public int StackSize;
     public Image icon;

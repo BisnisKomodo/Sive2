@@ -148,6 +148,16 @@ public class InventoryManager : MonoBehaviour
 
     public void DragDrop(Slot from, Slot to)
     {
+        //Unequip barang dari slots
+        if (from.weaponEquipped != null)
+        {
+            from.weaponEquipped.Unequip();
+        }
+        if (to.weaponEquipped != null)
+        {
+            to.weaponEquipped.Unequip();
+        }
+
         //Ngeswap barang
         if(from.data != to.data)
         {
@@ -171,6 +181,15 @@ public class InventoryManager : MonoBehaviour
 
                     from.StackSize = amountLeft;
                     to.StackSize = to.data.maxstack;
+                }
+                else
+                {
+                    to.StackSize += from.StackSize;
+
+                    from.Clean();
+
+                    from.UpdateSlot();
+                    to.UpdateSlot();
                 }
             }
             else

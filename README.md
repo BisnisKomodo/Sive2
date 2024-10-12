@@ -48,35 +48,22 @@ The following controls are bound in-game, for gameplay and testing.
 | W,A,S,D           | Standard movement |
 | Tab             | Inventory              |
 | Space             | Jump           |
+| R             | Reload             |
+| Left Ctrl             | Crouch              |
+| Mouse Click             | Craft, Shoot, etc              |
 
 <br>
 
 ##  📜Scripts and Features
 
-- In this game, we collect player performance data and store it in Google Sheets using Unity Networking WWW by submitting a form.
-- The leaderboard is sorted A-Z and handled by Looker Studio for display on the screen.
-- The Saturation Changer is used to control the environment’s tone and weather effects through color adjustments in the game.
+You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
 
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| `GameManager.cs` | Manages the game flow such as timers, difficulty levels, networking, etc. |
-| CheckPointManager.cs | Handles the location and management of checkpoints in the game. |
-| `SaturationChanger.cs`  | Controls the saturation levels of the 3D environment via post-processing. |
-| `UIHandler.cs`  | Manages various UI elements and organizes them into sequences. |
+| `InventoryManager.cs` | Responsible for all the inventory things in game like drag and drop, hotbar, etc |
+| `ItemScriptableObject.cs` | Responsible for all the items data in Sive2 for example wood, guns, stone, etc |
+| `Weapon.cs`  | Responsible for all in game weapon including melee weapon, controlling reload, swing, etc |
+| `BuildingHandler.cs`  | Responsible for the building system in game using socket system |
 | `etc`  | |
 
 <br>
-
-## 🔥How to open up the project on Unity Editor
-This game was developed using **Unity Editor 2021.3.11f1**, and we recommend that you download this specific version because using different ones, especially older versions, might result in problems
-
-![image](https://github.com/fajarnadril/Project-Stir/assets/36891062/1d44502b-1dfb-424c-97d1-6b1a93616ffc)
-
-
-You are **required to download several assets from the Unity Asset Store** to properly operate this game. All assets should be placed in the **3rdParty** folder. The assets that need to be downloaded are as follows:
-
-**Download Here:**
-- Japanese City Megapack (URP 2020) : https://assetstore.unity.com/packages/3d/environments/japanese-city-modular-pack-v1-4-239043
-- Logitech SDK : https://assetstore.unity.com/packages/tools/integration/logitech-gaming-sdk-6630
-- RainMaker :  https://assetstore.unity.com/packages/vfx/particles/environment/rain-maker-2d-and-3d-rain-particle-system-for-unity-34938
-- RealisticCarControllerV3 : https://assetstore.unity.com/packages/tools/physics/realistic-car-controller-16296

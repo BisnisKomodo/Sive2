@@ -36,7 +36,7 @@ Currently in development phase
 ├── README.md                         # The description of Please Survive file from About til the developers and the contribution for this game.
 ```
       
-```
+
 <br>
 
 ## 🕹️Game controls
@@ -46,11 +46,8 @@ The following controls are bound in-game, for gameplay and testing.
 | Key Binding       | Function          |
 | ----------------- | ----------------- |
 | W,A,S,D           | Standard movement |
-| Tab               | Open Inventory    |
-| Space             | Jump              |
-| Mouse Click       | Craft, shoot, etc |
-| R                 | Reload            |
-| Left Ctrl         | Crouch            |
+| F             | NOS              |
+| Space             | Hand Break            |
 
 <br>
 

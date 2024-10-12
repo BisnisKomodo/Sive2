@@ -9,7 +9,6 @@ Currently in development phase
 ## 👤Developer & Contributions
 - Nicholas Van Lukman (Game Programmer)
 <br>
-
 ## 📂Files description
 
 ```

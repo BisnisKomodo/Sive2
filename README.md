@@ -1,51 +1,40 @@
-<p align="center">
-  <img width="100%" alt="prostir" src="https://github.com/fajarnadril/Project-Stir/assets/36891062/612d0ce6-1bc7-4727-869b-f1d3762496c7">
-  </br>
-</p>
-
 ## 🔴About
-**ProjectStir [Pre-Alpha]** is a driving simulation application meticulously crafted to assess driving skills performance using a game-centric approach. Within this application, drivers or users are tasked with navigating a cityscape, all the while gathering vital checkpoints. The performance evaluation revolves around quantifying the number of **checkpoints** successfully acquired within specific time constraints. This performance assessment also encompasses a metric denoted as **damage**, which quantifies the extent of vehicular wear and tear sustained throughout the driving experience.
-
-The game is set against an urban backdrop in Asia, replete with one-way streets capable of accommodating only one vehicle at any given moment. Enhanced user performance, characterized by a greater accumulation of checkpoints and minimal vehicle damage, leads to superior overall outcomes. Project-Stir can be operated using various input devices, including a keyboard, joystick, or steering wheel controller.
-
-Within this gaming environment, an user data collection process is employed, employing a Leaderboard-based, game-oriented methodology. The feature for gathering performance data is initiated through data submission following a player's successful game completion. The variables collected encompass **Player Nickname**, **Checkpoint**, and **Damage** data. This performance data is seamlessly integrated with Looker Studio, a public-accessible data visualization tool. This data collection methodology is easily accessible for entertainment purposes or, if necessary, for research applications. Access to this data is available via https://lookerstudio.google.com/reporting/b00ab0ae-0caf-4b2b-855f-a3c7b88dc9f7
-
-
 
 <br>
 
-## 🕹️Download Game
-Itch.io : https://binusgat.itch.io/project-stir
-
-<br>
-
-## ▶️ Video Gameplay
-<img src="https://github.com/KXLVXN7/KXLVXN7/blob/main/gif/pstir.gif" alt="1" style="width:50%;height:auto;">
-View Full Gameplay : https://youtu.be/UWn3G_PZ_fA
-
-
+## 🕹️Play Game
+Currently in development phase
 <br>
 
 ## 👤Developer & Contributions
-- Kelvin - Unity Programmer Main Mechanic
-- David Ang - Unity Programmer Game Mechanic 
-- Muhamad Fajar - Unity Technical Artist
-- Thomas Galih Satria - Visual Designer
-- Galih Dea - Game Designer
-
+- Nicholas Van Lukman (Game Programmer)
 <br>
 
 ## 📂Files description
 
 ```
-├── Project-Stir                      # In this Folder, containing all the Unity project files, to be opened by a Unity Editor
-   ├── ...
-   ├── Assets                         #  In this Folder, it contains all our code, assets, scenes, etcwas not automatically created by Unity
-      ├── ...
-      ├── 3rdParty                   # In this folder, there are several packages that you must add via Unity Package Manager
-      ├── Scenes                     # In this folder, there are scenes. You can open these scenes to play the game via Unity
-      ├── ....
-   ├── ...
+├── Sive2                             # Contain everything needed for Please Survive to works.
+   ├── .vscode                        # Contains configuration files for Visual Studio Code (VSCode) when it's used as the code editor for the project.
+      ├── extensions.json             # Contains settings and configurations for debugging, code formatting, and IntelliSense. This folder is related to Visual Studio Code integration.
+      ├── launch.json                 # Contains the configuration necessary to start debugging Unity C# scripts within VSCode.                     
+      ├── setting.json                # Contains workspace-specific settings for VSCode that are applied when working within the Unity project.
+   ├── Assets                         # Contains every assets that have been worked with unity to create the game like the scripts and the art.
+      ├── Art                         # Contains all the game art like the sprites, background, even the character.
+      ├── Animation                   # Contains every animation clip and animator controller that played when the game start.
+      ├── Sounds and Music            # Contains every sound used for the game like music and sound effects.
+      ├── Scripts                     # Contains all scripts needed to make the gane get goings like PlayerMovement scripts.
+      ├── Prefabs                     # Contains every pre-configured, reusable game object that you can instantiate (create copies of) in your game scene.
+      ├── Scenes                      # Contains all scenes that exist in the game for it to interconnected with each other like MainMenu, Gameplay, etc
+      ├── ThirdParty Packages         # Contains the Package Manager from unity registry or unity asset store assets for game purposes.
+      ├── Items                       # Contains items in game survival, Saved data as scriptableobject for easier sorting out.
+      ├── Recipes                     # Contains recipe for the survival game and the scriptableobject data to match the craftable tools.
+      ├── Models                      # Contains models for every 3D object in the game like the drop bags, the fps arms, even storage box.
+   ├── Packages                       # Contains game packages that responsible for managing external libraries and packages used in your project.
+      ├── Manifest.json               # Contains the lists of all the packages that your project depends on and their versions.
+      ├── Packages-lock.json          # Contains packages that ensuring your project always uses the same versions of all dependencies and their sub-dependencies.
+   ├── Project Settings               # Contains the configuration of your game to control the quality settings, icon, or even the cursor settings
+├── README.md                         # The description of Please Survive file from About til the developers and the contribution for this game.
+```
       
 ```
 <br>
@@ -57,8 +46,11 @@ The following controls are bound in-game, for gameplay and testing.
 | Key Binding       | Function          |
 | ----------------- | ----------------- |
 | W,A,S,D           | Standard movement |
-| F             | NOS              |
-| Space             | Hand Break            |
+| Tab               | Open Inventory    |
+| Space             | Jump              |
+| Mouse Click       | Craft, shoot, etc |
+| R                 | Reload            |
+| Left Ctrl         | Crouch            |
 
 <br>
 

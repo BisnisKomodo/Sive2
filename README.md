@@ -1,5 +1,5 @@
 ## 🔴About
-
+Sive 2, depicting a vast survival game where you need to manage your hunger and thirst to continue your journey. You objective is Hunt for your survivability and to escape the dangerous island. I forged the HUD, inventory system, hotbar shortcut, Drag and drop handler, Slot generator, Item scriptable object, and also created the terrain. Here's a small portion details about Sive2 development presented
 <br>
 
 ## 🕹️Play Game
@@ -46,8 +46,8 @@ The following controls are bound in-game, for gameplay and testing.
 | Key Binding       | Function          |
 | ----------------- | ----------------- |
 | W,A,S,D           | Standard movement |
-| F             | NOS              |
-| Space             | Hand Break            |
+| Tab             | Inventory              |
+| Space             | Jump           |
 
 <br>
 

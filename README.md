@@ -64,6 +64,7 @@ You are able to do so many stuff in the game like walking, running, building, cr
 | `ItemScriptableObject.cs` | Responsible for all the items data in Sive2 for example wood, guns, stone, etc |
 | `Weapon.cs`  | Responsible for all in game weapon including melee weapon, controlling reload, swing, etc |
 | `BuildingHandler.cs`  | Responsible for the building system in game using socket system |
+| `CraftingManager.cs`  | Responsible for all the items required and crafting system working in game|
 | `etc`  | |
 
 <br>

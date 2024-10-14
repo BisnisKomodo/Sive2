@@ -63,20 +63,28 @@ public class BuildingHandler : MonoBehaviour
 
     public void UpdateBuilding()
     {
+        // Debug log for slotInUse
         if (slotInUse == null)
         {
+            Debug.Log("No slot in use.");
             if (ghost != null)
             {
                 Destroy(ghost.gameObject);
+                ghost = null; // Resetting the ghost reference
             }
             return;
         }
 
+        // Debug log for slotInUse data
+        Debug.Log($"Slot in use: {slotInUse.data?.name}, Stack Size: {slotInUse.StackSize}");
+
         if (slotInUse.StackSize <= 0 || slotInUse.data == null)
         {
+            Debug.Log("Slot is empty or invalid.");
             if (ghost != null)
             {
                 Destroy(ghost.gameObject);
+                ghost = null; // Resetting the ghost reference
             }
             return;
         }
@@ -84,25 +92,28 @@ public class BuildingHandler : MonoBehaviour
         if (ghost == null)
         {
             ghost = Instantiate(slotInUse.data.ghost, offGroundPoint.transform.position, GetComponentInParent<PlayerMovement>().transform.rotation);
+            Debug.Log("Ghost instantiated.");
         }
 
         UpdateColors();
 
         RaycastHit hit;
-
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
+            Debug.Log($"Raycast hit: {hit.transform.name}");
             if (hit.transform.GetComponent<BuildBlocked>() == null)
             {
                 ghost.transform.position = hit.point;
                 ghost.transform.rotation = GetComponentInParent<PlayerMovement>().transform.rotation;
                 canBuild = true;
+                Debug.Log("Building is allowed.");
             }
             else
             {
                 ghost.transform.position = offGroundPoint.position;
                 ghost.transform.rotation = GetComponentInParent<PlayerMovement>().transform.rotation;
                 canBuild = false;
+                Debug.Log("Building is blocked.");
             }
         }
         else
@@ -110,15 +121,15 @@ public class BuildingHandler : MonoBehaviour
             ghost.transform.position = offGroundPoint.position;
             ghost.transform.rotation = GetComponentInParent<PlayerMovement>().transform.rotation;
             canBuild = false;
+            Debug.Log("No hit detected.");
         }
-
 
         if (Input.GetButtonDown("Fire1") && canBuild && ghost.canBuild)
         {
             slotInUse.StackSize--;
             slotInUse.UpdateSlot();
-
             Instantiate(ghost.buildPrefab, ghost.transform.position, ghost.transform.rotation);
+            Debug.Log($"Building placed. Remaining stack size: {slotInUse.StackSize}");
         }
     }
 }

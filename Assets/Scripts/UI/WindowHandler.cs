@@ -7,7 +7,7 @@ public class WindowHandler : MonoBehaviour
     [HideInInspector]public InventoryManager inventory;
     [HideInInspector]public CraftingManager crafting;
     [HideInInspector]public StorageUI storage;
-    [HideInInspector]public BuildingHandler building;
+    public BuildingHandler building;
     public bool WindowOpened;
     private CameraLook cam;
 

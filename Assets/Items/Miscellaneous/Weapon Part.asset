@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Metal Ore
+  m_Name: Weapon Part
   m_EditorClassIdentifier: 
   itemtype: 0
-  icon: {fileID: 21300000, guid: 4222aeddd6bce4948bb6ded0f9a4c026, type: 3}
-  ItemName: Metal Ore
-  Description: Raw Metal can be furnace to create metal bar
+  icon: {fileID: 21300000, guid: dab2ea4b9b9ae4e4f8752fc03f4f14a6, type: 3}
+  ItemName: Weapon Part
+  Description: One of material to build yourself a gun
   IsStackable: 1
   maxstack: 20
   damage: 20

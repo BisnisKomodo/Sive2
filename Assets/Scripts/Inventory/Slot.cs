@@ -131,7 +131,7 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private DragDropHandler dragDropHandler;
-    private InventoryManager inventory;
+    public InventoryManager inventory;
     public Weapon weaponEquipped;
     public ItemScriptableObject data;
     public int StackSize;
@@ -208,6 +208,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         {
             dragDropHandler.slotDraggedFrom = this;
             dragDropHandler.isDragging = true;
+            Debug.Log($"Started dragging from slot: {this.gameObject.name}, IsEmpty: {IsEmpty}");
         }
     }
 
@@ -215,22 +216,23 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     {
         if (dragDropHandler.isDragging)
         {
-
-
+            Debug.Log($"Pointer Up: Dragging from {dragDropHandler.slotDraggedFrom.gameObject.name}");
+        
             if (dragDropHandler.slotDraggedTo == null)
             {
                 Drop();
+                Debug.Log("Dropped item.");
                 dragDropHandler.isDragging = false;
-            }
-
+            }   
             else
             {
                 inventory.DragDrop(dragDropHandler.slotDraggedFrom, dragDropHandler.slotDraggedTo);
+                Debug.Log($"Dragged to {dragDropHandler.slotDraggedTo.gameObject.name}");
                 dragDropHandler.isDragging = false;
             }
 
-            dragDropHandler.slotDraggedFrom = null;
-            dragDropHandler.slotDraggedTo = null;
+        dragDropHandler.slotDraggedFrom = null;
+        dragDropHandler.slotDraggedTo = null;
         }
     }
 
@@ -299,6 +301,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
                 }
             }
 
+        if (inventory.building == null)
+        {
+            inventory.building = GetComponentInParent<PlayerMovement>().GetComponentInChildren<BuildingHandler>();
+        }
         if (inventory.building.slotInUse == null)
         {
             inventory.building.slotInUse = this;
@@ -335,6 +341,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (dragDropHandler.isDragging)
         {
             dragDropHandler.slotDraggedTo = this;
+            Debug.Log($"Dragging over slot: {this.gameObject.name}");
         }
     }
 
@@ -343,6 +350,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (dragDropHandler.isDragging)
         {
             dragDropHandler.slotDraggedTo = null;
+            Debug.Log("Item follow cursor");
         }
     }
 }

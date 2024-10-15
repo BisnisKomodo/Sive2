@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf5a50ae7ba901b43a414112cd869e7a, type: 3}
+  m_Script: {fileID: 11500000, guid: cbfbb23dcb8675f4989021a51ce33fcf, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 5104776f8fba52f488befdb68b1aaa75, type: 2}
-  amountNeeded: 20
+  item: {fileID: 11400000, guid: 5104776f8fba52f488befdb68b1aaa75, type: 2}
+  amount: 1

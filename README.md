@@ -1,9 +1,9 @@
 <table>
   <tr>
-    <td align="left" width="60%">
+    <td align="left" width="50%">
       <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/8d3cb0d1-1825-46b5-9cee-12b8aa473add">
     </td>
-    <td align="right" width="60%">
+    <td align="right" width="50%">
       <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/644cdd47-ec33-4391-9214-ec30687a03f9">
     </td>
   </tr>

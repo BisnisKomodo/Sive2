@@ -1,17 +1,30 @@
-<p align="center">
-  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/8d3cb0d1-1825-46b5-9cee-12b8aa473add">
+<p align="left">
+  <img width="50%" alt="prostir" src="https://github.com/user-attachments/assets/8d3cb0d1-1825-46b5-9cee-12b8aa473add">
   </br>
 </p>
 <p align="center">
-  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/644cdd47-ec33-4391-9214-ec30687a03f9">
+  <img width="50%" alt="prostir" src="https://github.com/user-attachments/assets/644cdd47-ec33-4391-9214-ec30687a03f9">
   </br>
 </p>
-<p align="center">
-  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/f3da1e29-8b62-4046-915a-d5dd8f488e18">
+<p align="cright">
+  <img width="50%" alt="prostir" src="https://github.com/user-attachments/assets/f3da1e29-8b62-4046-915a-d5dd8f488e18">
   </br>
 </p>
 
+##  📜Scripts and Features
 
+You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
+
+|  Script       | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `InventoryManager.cs` | Responsible for all the inventory things in game like drag and drop, hotbar, etc |
+| `ItemScriptableObject.cs` | Responsible for all the items data in Sive2 for example wood, guns, stone, etc |
+| `Weapon.cs`  | Responsible for all in game weapon including melee weapon, controlling reload, swing, etc |
+| `BuildingHandler.cs`  | Responsible for the building system in game using socket system |
+| `CraftingManager.cs`  | Responsible for all the items required and crafting system working in game|
+| `etc`  | |
+
+<br>
 
 
 ## 🔴About
@@ -67,20 +80,5 @@ The following controls are bound in-game, for gameplay and testing.
 | R             | Reload             |
 | Left Ctrl             | Crouch              |
 | Mouse Click             | Craft, Shoot, etc              |
-
-<br>
-
-##  📜Scripts and Features
-
-You are able to do so many stuff in the game like walking, running, building, crafting, shooting, hunting, and so much more thanks to tons of scripting has been implemented to the game
-
-|  Script       | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| `InventoryManager.cs` | Responsible for all the inventory things in game like drag and drop, hotbar, etc |
-| `ItemScriptableObject.cs` | Responsible for all the items data in Sive2 for example wood, guns, stone, etc |
-| `Weapon.cs`  | Responsible for all in game weapon including melee weapon, controlling reload, swing, etc |
-| `BuildingHandler.cs`  | Responsible for the building system in game using socket system |
-| `CraftingManager.cs`  | Responsible for all the items required and crafting system working in game|
-| `etc`  | |
 
 <br>

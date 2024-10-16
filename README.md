@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100%" src="![Sive2 Complete Pics](https://github.com/user-attachments/assets/80e24fc3-c14c-4580-9105-3da06076c492)">
+  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/43ee9a35-2e1c-4c84-a264-a39b1ebcd7fb">
   </br>
 </p>
 

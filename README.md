@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/735f704f-0539-455a-8a75-d8300dac3b22"/>
+  <img width="100%" src="![Sive2 About gif 3](https://github.com/user-attachments/assets/3ead7550-9b96-46fc-b421-8422e10cc950)">
   </br>
 </p>
 

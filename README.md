@@ -1,10 +1,15 @@
 <p align="center">
-  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/43ee9a35-2e1c-4c84-a264-a39b1ebcd7fb">
+  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/8d3cb0d1-1825-46b5-9cee-12b8aa473add">
   </br>
 </p>
-
-<h1>🍖Sive 2</h1>
-</br>
+<p align="center">
+  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/644cdd47-ec33-4391-9214-ec30687a03f9">
+  </br>
+</p>
+<p align="center">
+  <img width="100%" alt="prostir" src="https://github.com/user-attachments/assets/f3da1e29-8b62-4046-915a-d5dd8f488e18">
+  </br>
+</p>
 
 
 

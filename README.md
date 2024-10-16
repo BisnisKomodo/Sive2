@@ -1,3 +1,14 @@
+<p align="center">
+  <img width="100%" src="https://github.com/fajarnadril/Project-Stir/assets/36891062/612d0ce6-1bc7-4727-869b-f1d3762496c7">
+  </br>
+</p>
+
+<p align="center">
+  <img width="100%" src="https://github.com/user-attachments/assets/a294427a-8591-4506-98a9-17296b97c547">
+  </br>
+</p>
+
+
 ## 🔴About
 Sive 2, depicting a vast survival game where you need to manage your hunger and thirst to continue your journey. You objective is Hunt for your survivability and to escape the dangerous island. I forged the HUD, inventory system, hotbar shortcut, Drag and drop handler, Slot generator, Item scriptable object, and also created the terrain. Here's a small portion details about Sive2 development presented
 <br>

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3378948851954296649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4015665908640493844}
+  - component: {fileID: 4053243468682797659}
+  m_Layer: 0
+  m_Name: Tree and Rock Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4015665908640493844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378948851954296649}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3, y: 10.334933, z: -44.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4053243468682797659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378948851954296649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 200
+  maxEntities: 15
+  spawnablesEntities:
+  - {fileID: 6361882541124704242, guid: c9a8210fceded2f408082934aff0aae3, type: 3}
+  - {fileID: 8616618656984062821, guid: eb302f67bbbcfc147b0ac2c5fdc4db6d, type: 3}
+  - {fileID: 6361882541124704242, guid: c9a8210fceded2f408082934aff0aae3, type: 3}
+  spawnedEntities: []
+  width: 20
+  length: 20
+  height: 20
+  color: {r: 0, g: 1, b: 0, a: 0.24313726}

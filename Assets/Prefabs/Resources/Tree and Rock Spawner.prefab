@@ -45,11 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 200
-  maxEntities: 15
+  maxEntities: 20
   spawnablesEntities:
-  - {fileID: 6361882541124704242, guid: c9a8210fceded2f408082934aff0aae3, type: 3}
+  - {fileID: 5340696283325180576, guid: dc984549cfbb16d4ca3dfcc17632bbc6, type: 3}
   - {fileID: 8616618656984062821, guid: eb302f67bbbcfc147b0ac2c5fdc4db6d, type: 3}
-  - {fileID: 6361882541124704242, guid: c9a8210fceded2f408082934aff0aae3, type: 3}
+  - {fileID: 4681716560765432424, guid: 6c9874268229135438e4b388637a26cc, type: 3}
+  - {fileID: 1129976636869312806, guid: 3f3e6d2cf0317ff4c9bb48cf9f6b3052, type: 3}
+  - {fileID: 327399953673435980, guid: 20e9e7faa14d98e4cb7589bd518afc10, type: 3}
+  - {fileID: 899342625530382165, guid: d1f3bf972b4968346bf0344f7a971e67, type: 3}
+  - {fileID: 5100205404660660488, guid: 7488bdd7b5d1acd4caa6da152da7f81c, type: 3}
   spawnedEntities: []
   width: 20
   length: 20

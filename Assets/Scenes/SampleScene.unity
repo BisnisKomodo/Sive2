@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: b1026180dc7c2da46ae84254ddc371da, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1612dc54605b67947bed7b6e6b4f48c4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.5615282, g: 0.8660373, b: 0.9456037, a: 1}
+  m_IndirectSpecularColor: {r: 0.19526416, g: 0.2323823, b: 0.26728284, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10657,7 +10657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11236,7 +11236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11294,8 +11294,8 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 2
-  m_WindTurbulence: 2
+  m_WindMain: 1
+  m_WindTurbulence: 1
   m_WindPulseMagnitude: 0.5
   m_WindPulseFrequency: 0.01
 --- !u!4 &715760495
@@ -11608,7 +11608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21786,7 +21786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21869,7 +21869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22093,7 +22093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22660,7 +22660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22866,7 +22866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23250,7 +23250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23323,7 +23323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053243468682797659, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
       propertyPath: maxEntities
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23845,8 +23845,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954489965}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22909747, y: 0.75107884, z: 0.32732585, w: 0.5255976}
-  m_LocalPosition: {x: -977.4111, y: -138.31267, z: -698.4671}
+  m_LocalRotation: {x: -0.26010272, y: 0.04421416, z: 0.011883975, w: 0.96449494}
+  m_LocalPosition: {x: -686.10077, y: 46.683083, z: -910.94745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28906,6 +28906,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1148519650982621262, guid: df63840476f6b044486116e2f2070449, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148519650982621262, guid: df63840476f6b044486116e2f2070449, type: 3}
       propertyPath: sepBlurSpread
       value: 1
       objectReference: {fileID: 0}
@@ -28916,6 +28920,10 @@ PrefabInstance:
     - target: {fileID: 1148519650982621262, guid: df63840476f6b044486116e2f2070449, type: 3}
       propertyPath: bloomBlurIterations
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215579774035108167, guid: df63840476f6b044486116e2f2070449, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4851140972906950065, guid: df63840476f6b044486116e2f2070449, type: 3}
       propertyPath: m_ShowToolkit
@@ -28968,6 +28976,10 @@ PrefabInstance:
     - target: {fileID: 6012539746709592064, guid: df63840476f6b044486116e2f2070449, type: 3}
       propertyPath: intensity
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012539746709592064, guid: df63840476f6b044486116e2f2070449, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6137497068817675235, guid: df63840476f6b044486116e2f2070449, type: 3}
       propertyPath: m_Color.b

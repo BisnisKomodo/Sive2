@@ -66,7 +66,6 @@ public class BuildingHandler : MonoBehaviour
         // Debug log for slotInUse
         if (slotInUse == null)
         {
-            Debug.Log("No slot in use.");
             if (ghost != null)
             {
                 Destroy(ghost.gameObject);

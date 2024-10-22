@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6769340954966055729}
   - component: {fileID: 731276986660247334}
   - component: {fileID: 7830651007314593604}
+  - component: {fileID: -5516069168509284023}
   m_Layer: 0
   m_Name: PF Conifer Small BOTD
   m_TagString: Untagged
@@ -114,6 +115,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5516069168509284023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253136539851993654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7480a60be31887d45b8b3fbcd8730456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathType: 1
+  gatherData:
+  - {fileID: 11400000, guid: 0b34b57fcf1ca314e9536ffbbe08cdf6, type: 2}
+  hits: 7
+  prefferedtools:
+  - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
+  toolMultiplier: 1
 --- !u!1 &3445476965424465171
 GameObject:
   m_ObjectHideFlags: 0

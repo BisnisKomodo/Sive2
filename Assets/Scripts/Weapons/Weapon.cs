@@ -406,8 +406,32 @@ public class Weapon : MonoBehaviour
     public void Hit()
     {
         anim.SetTrigger("Hit");
+        
     }
 
+    // public void ExecuteHit()
+    // {
+    //     RaycastHit hit;
+
+    //     GetComponentInParent<Animator>().SetTrigger("Shake");
+
+    //     if (Physics.SphereCast(shootPoint.position, 0.2f, shootPoint.forward, out hit, weaponData.range, shootableLayers))
+    //     {
+    //         GatherableObject gatherobj = hit.transform.GetComponent<GatherableObject>();
+    //         GatherExtension gatherexten = hit.transform.GetComponent<GatherExtension>();
+
+
+
+    //         if (gatherobj != null)
+    //         {
+    //             gatherobj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+    //         }
+    //         if (gatherexten != null)
+    //         {
+    //             gatherexten.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+    //         }
+    //     }
+    // }
     public void ExecuteHit()
     {
         RaycastHit hit;
@@ -416,18 +440,24 @@ public class Weapon : MonoBehaviour
 
         if (Physics.SphereCast(shootPoint.position, 0.2f, shootPoint.forward, out hit, weaponData.range, shootableLayers))
         {
-            GatherableObject gatherobj = hit.transform.GetComponent<GatherableObject>();
-            GatherExtension gatherexten = hit.transform.GetComponent<GatherExtension>();
+            BasicAI bear = hit.transform.GetComponent<BasicAI>();
 
-
-
-            if (gatherobj != null)
+            if (bear != null)
             {
-                gatherobj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
-            }
-            if (gatherexten != null)
-            {
-                gatherexten.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+                // If the bear is alive, apply damage
+                if (!bear.isDead)
+                {
+                    bear.health -= weaponData.damage;
+                }
+                else
+                {
+                    // If the bear is dead, gather resources
+                    GatherableObject gatherObj = hit.transform.GetComponent<GatherableObject>();
+                    if (gatherObj != null)
+                    {
+                        gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+                    }
+                }
             }
         }
     }

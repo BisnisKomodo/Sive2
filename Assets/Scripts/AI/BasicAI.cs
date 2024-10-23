@@ -42,37 +42,75 @@ public class BasicAI : MonoBehaviour
         currentWanderTime = wanderWaitTime;
     }
 
-    bool hasDied;
+    // private void Update()
+    // {
+    //     if (health <= 0)
+    //     {
+    //         agent.SetDestination(transform.position);
+
+    //         Destroy(agent);
+    //         anim.SetTrigger("Die");
+
+
+
+    //         GetComponent<GatherableObject>().enabled = true;
+    //         Destroy(this);
+    //         return;
+    //     }
+
+
+    //     UpdateAnimations();
+
+    //     if (target != null)
+    //     {
+    //         if (Vector3.Distance(target.transform.position, transform.position) > maxChaseDistance)
+    //             target = null;
+
+    //         if (!isAttacking)
+    //             Chase();
+    //     }
+    //     else
+    //         Wander();
+    // }
+
+    public bool isDead = false;
 
     private void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
-            agent.SetDestination(transform.position);
-
-            Destroy(agent);
-            anim.SetTrigger("Die");
-
-
-
-            GetComponent<GatherableObject>().enabled = true;
-            Destroy(this);
+            HandleDeath();
             return;
         }
 
-
-        UpdateAnimations();
-
-        if (target != null)
+        if (!isDead)
         {
-            if (Vector3.Distance(target.transform.position, transform.position) > maxChaseDistance)
-                target = null;
+            UpdateAnimations();
+            // Chasing and wandering logic for when the bear is alive
+            if (target != null)
+            {
+                if (Vector3.Distance(target.transform.position, transform.position) > maxChaseDistance)
+                    target = null;
 
-            if (!isAttacking)
-                Chase();
+                if (!isAttacking)
+                    Chase();
+            }
+            else
+                Wander();
         }
-        else
-            Wander();
+    }
+
+    private void HandleDeath()
+    {
+        isDead = true;
+        agent.SetDestination(transform.position);
+        Destroy(agent); // Destroy the NavMeshAgent so the bear stops moving
+        anim.SetTrigger("Die");
+
+        // Enable gathering once the bear is dead
+        GetComponent<GatherableObject>().enabled = true;
+        // Disable AI script to stop it from running further
+        this.enabled = false;
     }
 
     public void UpdateAnimations()
@@ -157,19 +195,44 @@ public class BasicAI : MonoBehaviour
         }
     }
 
+    // public void Chase()
+    // {
+    //     Debug.Log("Bear is Chasing You!");
+    //     agent.SetDestination(target.transform.position);
+
+    //     walk = false;
+
+    //     run = true;
+
+    //     agent.speed = runSpeed;
+
+    //     if (Vector3.Distance(target.transform.position, transform.position) <= minAttackDistance && !isAttacking)
+    //         StartAttack();
+    // }
+
     public void Chase()
     {
+        if (target == null)
+        {
+            Debug.Log("No target to chase.");
+            return;
+        }
+
         Debug.Log("Bear is Chasing You!");
+        agent.isStopped = false; // Ensure NavMeshAgent is not stopped
         agent.SetDestination(target.transform.position);
 
         walk = false;
-
         run = true;
 
         agent.speed = runSpeed;
 
-        if (Vector3.Distance(target.transform.position, transform.position) <= minAttackDistance && !isAttacking)
+        // Check if it's within attack range and ready to attack
+        float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
+        if (distanceToTarget <= minAttackDistance && !isAttacking)
+        {
             StartAttack();
+        }
     }
 
     public void StartAttack()
@@ -182,20 +245,47 @@ public class BasicAI : MonoBehaviour
         anim.SetTrigger("Attack");
     }
 
+    // public void FinishAttack()
+    // {
+    //     if (Vector3.Distance(target.transform.position, transform.position) > maxAttackDistance)
+    //         return;
+
+    //     target.GetComponent<PlayerStats>().health -= damage;
+
+    //     isAttacking = false;
+
+    // }
+
     public void FinishAttack()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) > maxAttackDistance)
-            return;
-
-        target.GetComponent<PlayerStats>().health -= damage;
-
+        // Ensure that the attack has finished before checking distance
         isAttacking = false;
 
+        if (target == null)
+            return;
+
+        float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
+
+        // Check if the player is still within attack range
+        if (distanceToTarget > maxAttackDistance)
+        {
+            Debug.Log("Player out of attack range, resuming chase.");
+            Chase(); // Resume chasing if the player moved out of range
+        }
+        else
+        {
+            // Deal damage if still within range
+            target.GetComponent<PlayerStats>().health -= damage;
+            Debug.Log("Attacked player, dealt " + damage + " damage.");
+            Chase(); // Immediately resume chasing after attacking
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerMovement>() != null)
+        {
             target = other.transform;
+        }
     }
 }

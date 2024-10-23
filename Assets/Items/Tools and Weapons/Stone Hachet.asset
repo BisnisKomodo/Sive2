@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: A Stone Hatchet made for cutting tree
   IsStackable: 0
   maxstack: 1
-  damage: 20
+  damage: 5
   range: 2
   fireRate: 0.5
   magSize: 30
@@ -38,3 +38,4 @@ MonoBehaviour:
   healthChange: 0
   hungerChange: 0
   thirstChange: 0
+  ghost: {fileID: 0}

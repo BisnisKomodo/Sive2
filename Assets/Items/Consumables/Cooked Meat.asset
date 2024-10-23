@@ -18,6 +18,24 @@ MonoBehaviour:
   Description: Eat this to reach full bursting
   IsStackable: 1
   maxstack: 10
+  damage: 20
+  range: 200
+  fireRate: 0.1
+  magSize: 30
+  bulletData: {fileID: 0}
+  zoomFOV: 50
+  horizontalRecoil: 0
+  minVerticalRecoil: 0
+  maxVerticalRecoil: 0
+  hipSpread: 0.04
+  aimSpread: 0
+  shotgunFire: 0
+  pelletPerShot: 8
+  shootSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  drawSound: {fileID: 0}
+  emptySound: {fileID: 0}
   healthChange: 0
-  hungerChange: 20
+  hungerChange: 15
   thirstChange: 0
+  ghost: {fileID: 0}

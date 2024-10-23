@@ -30,7 +30,7 @@ public class GatherableObject : MonoBehaviour
                     GetComponent<Rigidbody>().isKinematic = false;
                     GetComponent<Rigidbody>().useGravity = true;
 
-                    GetComponent<Rigidbody>().AddTorque(Vector3.right * 20);
+                    GetComponent<Rigidbody>().AddTorque(Vector3.right * 25);
 
                     Destroy(gameObject, 15f);
                 }

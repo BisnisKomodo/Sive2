@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 200
-  maxEntities: 5
+  respawnTime: 300
+  maxEntities: 3
   spawnablesEntities:
-  - {fileID: 6516819008141338667, guid: b651b99da7a86b547a36a5902ab12551, type: 3}
-  - {fileID: 315597382385242485, guid: c7f0478236182b6478962f939019105e, type: 3}
+  - {fileID: 7495640482840304990, guid: 400610b23037bb741840331638f73fa7, type: 3}
+  - {fileID: 1283908595010877256, guid: e85fd88081745d548bb17619ae4638b9, type: 3}
   spawnedEntities: []
   width: 10
   length: 10

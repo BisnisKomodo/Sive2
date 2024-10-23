@@ -432,6 +432,37 @@ public class Weapon : MonoBehaviour
     //         }
     //     }
     // }
+    // public void ExecuteHit()
+    // {
+    //     RaycastHit hit;
+
+    //     GetComponentInParent<Animator>().SetTrigger("Shake");
+
+    //     if (Physics.SphereCast(shootPoint.position, 0.2f, shootPoint.forward, out hit, weaponData.range, shootableLayers))
+    //     {
+    //         BasicAI bear = hit.transform.GetComponent<BasicAI>();
+
+    //         if (bear != null)
+    //         {
+    //             // If the bear is alive, apply damage
+    //             if (!bear.isDead)
+    //             {
+    //                 bear.health -= weaponData.damage;
+    //             }
+    //             else
+    //             {
+    //                 // If the bear is dead, gather resources
+    //                 GatherableObject gatherObj = hit.transform.GetComponent<GatherableObject>();
+    //                 if (gatherObj != null)
+    //                 {
+    //                     gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+
     public void ExecuteHit()
     {
         RaycastHit hit;
@@ -441,6 +472,7 @@ public class Weapon : MonoBehaviour
         if (Physics.SphereCast(shootPoint.position, 0.2f, shootPoint.forward, out hit, weaponData.range, shootableLayers))
         {
             BasicAI bear = hit.transform.GetComponent<BasicAI>();
+            GatherableObject gatherObj = hit.transform.GetComponent<GatherableObject>();
 
             if (bear != null)
             {
@@ -451,16 +483,20 @@ public class Weapon : MonoBehaviour
                 }
                 else
                 {
-                    // If the bear is dead, gather resources
-                    GatherableObject gatherObj = hit.transform.GetComponent<GatherableObject>();
+                    // If the bear is dead, gather resources (meat)
                     if (gatherObj != null)
                     {
                         gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
                     }
                 }
             }
+        else if (gatherObj != null)
+        {
+            // Handle tree cutting separately
+            gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
         }
     }
+}
 
 
 

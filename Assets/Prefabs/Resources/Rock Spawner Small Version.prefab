@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 200
+  respawnTime: 300
   maxEntities: 5
   spawnablesEntities:
   - {fileID: 8616618656984062821, guid: eb302f67bbbcfc147b0ac2c5fdc4db6d, type: 3}

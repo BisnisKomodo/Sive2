@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class BasicAI : MonoBehaviour
 {
+    public Image redOverlay;
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;
@@ -269,15 +271,35 @@ public class BasicAI : MonoBehaviour
         // Check if the player is still within attack range
         if (distanceToTarget > maxAttackDistance)
         {
-            Debug.Log("Player out of attack range, resuming chase.");
             Chase(); // Resume chasing if the player moved out of range
         }
         else
         {
             // Deal damage if still within range
             target.GetComponent<PlayerStats>().health -= damage;
-            Debug.Log("Attacked player, dealt " + damage + " damage.");
+
+            redOverlay.gameObject.SetActive(true);
+            StartCoroutine(FadeOutOverlay());
             Chase(); // Immediately resume chasing after attacking
+        }
+    }
+
+    private IEnumerator FadeOutOverlay()
+    {
+        Color color = redOverlay.color;
+        color.a = 0.3f;
+        redOverlay.color = color;
+
+        //Fade out overtime
+        float fadeDuration = 0.5f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Lerp(1, 0, elapsedTime/fadeDuration);
+            redOverlay.color = color;
+            yield return null;
         }
     }
 

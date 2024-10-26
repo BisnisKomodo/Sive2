@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 300
-  maxEntities: 15
+  maxEntities: 13
   spawnablesEntities:
   - {fileID: 8616618656984062821, guid: eb302f67bbbcfc147b0ac2c5fdc4db6d, type: 3}
   - {fileID: 899342625530382165, guid: d1f3bf972b4968346bf0344f7a971e67, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemName: Metal Ore
   Description: Raw Metal can be furnace to create metal bar
   IsStackable: 1
-  maxstack: 20
+  maxstack: 30
   damage: 20
   range: 200
   fireRate: 0.1

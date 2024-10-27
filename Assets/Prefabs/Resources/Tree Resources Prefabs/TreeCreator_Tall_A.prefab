@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6394519808831992855}
   - component: {fileID: 9148018821096580170}
   - component: {fileID: 8190301270546008114}
+  - component: {fileID: 8543039908429463183}
   m_Layer: 0
   m_Name: TreeCreator_Tall_A
   m_TagString: Untagged
@@ -166,3 +167,19 @@ MonoBehaviour:
   prefferedtools:
   - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
   toolMultiplier: 1
+--- !u!208 &8543039908429463183
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687116067011169358}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 2.5, y: 23.477001, z: 2.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.42400002, y: 22.477001, z: -0.632}
+  m_TimeToStationary: 0.5

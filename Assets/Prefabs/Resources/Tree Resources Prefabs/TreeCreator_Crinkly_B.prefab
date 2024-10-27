@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8677533832815615441}
   - component: {fileID: 6363241319310559993}
   - component: {fileID: 518668575862369648}
+  - component: {fileID: -8198521288815948706}
   m_Layer: 0
   m_Name: TreeCreator_Crinkly_B
   m_TagString: Untagged
@@ -159,10 +160,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7480a60be31887d45b8b3fbcd8730456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathType: 0
+  deathType: 1
   gatherData:
   - {fileID: 11400000, guid: 0b34b57fcf1ca314e9536ffbbe08cdf6, type: 2}
   hits: 20
   prefferedtools:
   - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
   toolMultiplier: 1
+--- !u!208 &-8198521288815948706
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283908595010877256}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 2.5, y: 21.973001, z: 2.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.513, y: 21.973001, z: -1.0610001}
+  m_TimeToStationary: 0.5

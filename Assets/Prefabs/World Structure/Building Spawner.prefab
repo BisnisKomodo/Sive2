@@ -48,6 +48,12 @@ MonoBehaviour:
   maxEntities: 1
   spawnablesEntities:
   - {fileID: 6803809901518426986, guid: 34217a8d936f5024e8dc91c0a280667e, type: 3}
+  - {fileID: 3716866291841165290, guid: 98d78d1a100b46e418e1d7b1e1738857, type: 3}
+  - {fileID: 4383110613221394745, guid: 21f2ec97a79b5034482a7cc6605ca7cf, type: 3}
+  - {fileID: 1761488977477582150, guid: 7752ef3b12ac0074da432e6eeecd17a8, type: 3}
+  - {fileID: 173138428706028341, guid: ba35be1600f30e94990144a2a3fbf24f, type: 3}
+  - {fileID: 4638900803102829847, guid: 188313091d07a02479a760c763ae5cc1, type: 3}
+  - {fileID: 5352414513129616750, guid: 245b5985c634a5646920abb9aa06e420, type: 3}
   spawnedEntities: []
   width: 10
   length: 10

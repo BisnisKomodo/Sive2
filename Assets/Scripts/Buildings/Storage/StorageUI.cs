@@ -11,6 +11,12 @@ public class StorageUI : MonoBehaviour
     public bool opened;
     public Vector3 openPosition;
 
+
+    [Header("Furnace UI")]
+    public GameObject furnaceUI;
+    public GameObject turnOnButton;
+    public GameObject turnOffButton;
+
     private void Update()
     {
         if (opened)
@@ -20,6 +26,47 @@ public class StorageUI : MonoBehaviour
         else
         {
             transform.position = new Vector3(-10000, 0, 0);
+        }
+
+        if(storageOpened.isFurnace)
+        {
+            if(storageOpened.GetComponent<Furnace>().isOn)
+            {
+                for (int i = 0; i < storageOpened.slots.Length; i++)
+                {
+                    Slot slot = Instantiate(slotPrefab, content).GetComponentInParent<Slot>();
+
+                    if (storageOpened.slots[i].data == null)
+                    {
+                        slot.data = null;
+                    }
+                    else
+                    {
+                        slot.data = storageOpened.slots[i].data;
+                    }
+
+                    slot.StackSize = storageOpened.slots[i].stackSize;
+
+                    slot.UpdateSlot();
+                }
+            }
+
+            furnaceUI.SetActive(true);
+
+            if(storageOpened.GetComponent<Furnace>().isOn)
+            {
+                turnOffButton.SetActive(true);
+                turnOnButton.SetActive(false);
+            }
+            else
+            {
+                turnOffButton.SetActive(false);
+                turnOnButton.SetActive(true);
+            }
+        }
+        else
+        {
+            furnaceUI.SetActive(false);
         }
     }
 
@@ -67,5 +114,27 @@ public class StorageUI : MonoBehaviour
         }
 
         opened = false;
+    }
+
+
+
+    public void TurnOnFurnace()
+    {
+        if (storageOpened != null)
+        {
+            return;
+        }
+
+        storageOpened.GetComponent<Furnace>().TurnOn();
+    }
+
+    public void TurnOffFurnace()
+    {
+        if (storageOpened != null)
+        {
+            return;
+        }
+
+        storageOpened.GetComponent<Furnace>().TurnOff();
     }
 }

@@ -55,6 +55,13 @@ public class ItemScriptableObject : ScriptableObject
 
     [Header("Buildable")]
     public BuildGhost ghost;
+
+    [Header("Fuel / Smelting")]
+    public bool isFuel;
+    public ItemScriptableObject outcome;
+    [Range(1,100)]
+    public int outcomeAmount = 1;
+    public float processTimer = 3f;
 }
 
 

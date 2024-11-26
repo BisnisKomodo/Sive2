@@ -39,3 +39,7 @@ MonoBehaviour:
   hungerChange: 10
   thirstChange: 10
   ghost: {fileID: 0}
+  isFuel: 0
+  outcome: {fileID: 11400000, guid: e7ca77c866d07c54c90c413f1729116b, type: 2}
+  outcomeAmount: 1
+  processTimer: 8

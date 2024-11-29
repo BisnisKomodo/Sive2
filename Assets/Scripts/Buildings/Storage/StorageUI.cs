@@ -28,26 +28,44 @@ public class StorageUI : MonoBehaviour
             transform.position = new Vector3(-10000, 0, 0);
         }
 
-        if(storageOpened.isFurnace)
+        if(storageOpened != null)
+        {
+            if(storageOpened.isFurnace)
         {
             if(storageOpened.GetComponent<Furnace>().isOn)
             {
                 for (int i = 0; i < storageOpened.slots.Length; i++)
                 {
-                    Slot slot = Instantiate(slotPrefab, content).GetComponentInParent<Slot>();
-
+                    Slot[] slot = GetComponentsInChildren<Slot>();
                     if (storageOpened.slots[i].data == null)
                     {
-                        slot.data = null;
+                        slot[i].data = null;
                     }
                     else
                     {
-                        slot.data = storageOpened.slots[i].data;
+                        slot[i].data = storageOpened.slots[i].data;
                     }
 
-                    slot.StackSize = storageOpened.slots[i].stackSize;
+                    slot[i].StackSize = storageOpened.slots[i].stackSize;
 
-                    slot.UpdateSlot();
+                    slot[i].UpdateSlot();
+                }
+            }
+            else
+            {
+                for (int i = 0; i < storageOpened.slots.Length; i++)
+                {
+                    Slot[] slot = GetComponentsInChildren<Slot>();
+                    if (slot[i].data == null)
+                    {
+                        storageOpened.slots[i].data = null;
+                    }
+                    else
+                    {
+                        storageOpened.slots[i].data = slot[i].data;
+                    }
+
+                storageOpened.slots[i].stackSize = slot[i].StackSize;
                 }
             }
 
@@ -67,6 +85,7 @@ public class StorageUI : MonoBehaviour
         else
         {
             furnaceUI.SetActive(false);
+        }
         }
     }
 
@@ -113,28 +132,45 @@ public class StorageUI : MonoBehaviour
             Destroy(slotsToDestroy[i].gameObject);
         }
 
+        storageOpened = null;
+
         opened = false;
-    }
-
-
-
-    public void TurnOnFurnace()
-    {
-        if (storageOpened != null)
-        {
-            return;
-        }
-
-        storageOpened.GetComponent<Furnace>().TurnOn();
     }
 
     public void TurnOffFurnace()
     {
-        if (storageOpened != null)
+        if (storageOpened == null)
         {
             return;
         }
+        Furnace furnace = storageOpened.GetComponent<Furnace>();
+        if (furnace != null)
+        {
+            furnace.TurnOff();
+        }
+    }
 
-        storageOpened.GetComponent<Furnace>().TurnOff();
+
+    // public void TurnOnFurnace()
+    // {
+    //     if (storageOpened != null)
+    //     {
+    //         return;
+    //     }
+
+    //     storageOpened.GetComponent<Furnace>().TurnOn();
+    // }
+
+    public void TurnOnFurnace()
+    {
+        if (storageOpened == null)
+        {
+            return;
+        }
+        Furnace furnace = storageOpened.GetComponent<Furnace>();
+        if (furnace != null)
+        {
+            furnace.TurnOn();
+        }
     }
 }

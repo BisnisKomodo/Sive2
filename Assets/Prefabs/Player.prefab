@@ -541,7 +541,6 @@ RectTransform:
   m_Children:
   - {fileID: 8678678359301605535}
   - {fileID: 8326059423426380017}
-  - {fileID: 1430989850198050209}
   m_Father: {fileID: 3059817061887809237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2983,8 +2982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 703, y: 175}
-  m_SizeDelta: {x: 243.31, y: 255.017}
+  m_AnchoredPosition: {x: 702.43005, y: 189.367}
+  m_SizeDelta: {x: 246.908, y: 275.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4337005587302849146
 CanvasRenderer:
@@ -3007,14 +3006,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14716971, g: 0.14716971, b: 0.14716971, a: 0.78431374}
+  m_Color: {r: 0.14716971, g: 0.14716971, b: 0.14716971, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8c82b4b419b8a374a8f3f99947227dbc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6107,7 +6106,7 @@ GameObject:
   - component: {fileID: 8810541357639471883}
   - component: {fileID: 8126604407426187154}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: SignTurnOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6120,12 +6119,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4383294258464454346}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.86, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3619203043539100778}
+  m_Father: {fileID: 8326059423426380017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6173,9 +6172,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Turn off furnace
+  m_Text: 'Turn furnace off to
 
-    to move items'
+    get the items back'
 --- !u!1 &4444118377107484069
 GameObject:
   m_ObjectHideFlags: 0
@@ -9930,6 +9929,7 @@ RectTransform:
   m_Children:
   - {fileID: 379527675930682914}
   - {fileID: 1668916579742147866}
+  - {fileID: 1430989850198050209}
   m_Father: {fileID: 3619203043539100778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

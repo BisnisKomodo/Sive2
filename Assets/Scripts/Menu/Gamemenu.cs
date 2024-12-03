@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Gamemenu : MonoBehaviour
 {
+    public bool opened;
     public enum MenuMode{Main, Pause}
     public MenuMode menuMode;
 
@@ -25,6 +26,29 @@ public class Gamemenu : MonoBehaviour
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void Update() 
+    {
+        if (menuMode == MenuMode.Main)
+        {
+            UI.transform.localPosition = new Vector3(0, 0, 0);
+        }
+        else if (menuMode == MenuMode.Pause)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                opened = !opened;
+            }
+            if (opened)
+            {
+                UI.transform.localPosition = new Vector3(0 ,0 ,0);
+            }
+            else
+            {
+                UI.transform.localPosition = new Vector3(-10000, 0, 0);
+            }
+        }
     }
 
     public void Intro()

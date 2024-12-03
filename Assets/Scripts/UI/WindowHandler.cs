@@ -7,6 +7,7 @@ public class WindowHandler : MonoBehaviour
     [HideInInspector]public InventoryManager inventory;
     [HideInInspector]public CraftingManager crafting;
     [HideInInspector]public StorageUI storage;
+    [HideInInspector]public Gamemenu gameMenu;
     public BuildingHandler building;
     public bool WindowOpened;
     private CameraLook cam;
@@ -18,6 +19,7 @@ public class WindowHandler : MonoBehaviour
         crafting = GetComponentInChildren<CraftingManager>();
         storage = GetComponentInChildren<StorageUI>();
         building = GetComponentInChildren<BuildingHandler>();
+        gameMenu = FindObjectOfType<Gamemenu>();
     }
 
     private void FixedUpdate()
@@ -34,7 +36,7 @@ public class WindowHandler : MonoBehaviour
             cam.canMove = true;
         }
 
-        if(inventory.opened)
+        if(inventory.opened || gameMenu.opened)
         {
             WindowOpened = true;
         }

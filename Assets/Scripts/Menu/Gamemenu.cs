@@ -16,37 +16,112 @@ public class Gamemenu : MonoBehaviour
     [Space]
     [Space] 
     public GameObject backToMainMenuButton;
+    public GameObject continueButton;
     public GameObject settingMenu;
+    public GameObject exitButton;
+    public GameObject settingButton;
     [Header("Main Menu")]
     public GameObject mainBackground;
+    public GameObject mainBackground2;
 
     [Header("Pause Menu")]
     public GameObject pauseBackground;
+    public Canvas pauseMenuCanvas;
 
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Update() 
+    // public void Update() 
+    // {
+    //     if (menuMode == MenuMode.Main)
+    //     {
+    //         UI.transform.localPosition = new Vector3(0, 0, 0);
+    //     }
+    //     else if (menuMode == MenuMode.Pause)
+    //     {
+    //         if (Input.GetKeyDown(KeyCode.Escape))
+    //         {
+    //             opened = !opened;
+    //         }
+    //         if (opened)
+    //         {
+    //             UI.transform.localPosition = new Vector3(0 ,0 ,0);
+    //         }
+    //         else
+    //         {
+    //             UI.transform.localPosition = new Vector3(-10000, 0, 0);
+    //         }
+    //     }
+    // }
+
+    public void TogglePauseMenu()
     {
-        if (menuMode == MenuMode.Main)
+        if (opened)
         {
+            pauseMenuCanvas.sortingOrder = 10; 
             UI.transform.localPosition = new Vector3(0, 0, 0);
         }
-        else if (menuMode == MenuMode.Pause)
+        else
+        {
+            pauseMenuCanvas.sortingOrder = 0;
+            UI.transform.localPosition = new Vector3(-10000, 0, 0);
+        }
+    }
+
+    private void Update()
+    {
+        // For Pause Menu
+        if (menuMode == MenuMode.Pause)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 opened = !opened;
+                UpdateMenuVisibility();
+                TogglePauseMenu();
             }
+        }
+    }
+
+    private void UpdateMenuVisibility()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // Main Menu Mode
+        if (menuMode == MenuMode.Main && currentScene == "MainMenu")
+        {
+            UI.transform.localPosition = Vector3.zero; // Show UI
+            mainBackground.SetActive(true);
+            pauseBackground.SetActive(false);
+            mainBackground2.SetActive(true);
+
+            introButton.SetActive(true);
+            playButton.SetActive(true);
+            backToMainMenuButton.SetActive(false);
+            continueButton.SetActive(false);
+            settingMenu.SetActive(false);
+        }
+        // Pause Menu Mode
+        else if (menuMode == MenuMode.Pause && currentScene != "MainMenu")
+        {
             if (opened)
             {
-                UI.transform.localPosition = new Vector3(0 ,0 ,0);
+                UI.transform.localPosition = Vector3.zero; // Show UI
+                mainBackground.SetActive(false);
+                pauseBackground.SetActive(true);
+                mainBackground2.SetActive(false);
+
+                introButton.SetActive(false);
+                playButton.SetActive(false);
+                backToMainMenuButton.SetActive(true);
+                continueButton.SetActive(true);
+                settingMenu.SetActive(false);
+                exitButton.SetActive(false);
             }
             else
             {
-                UI.transform.localPosition = new Vector3(-10000, 0, 0);
+                UI.transform.localPosition = new Vector3(-10000, 0, 0); // Hide UI
             }
         }
     }
@@ -59,7 +134,7 @@ public class Gamemenu : MonoBehaviour
     public void StartGame()
     {
         menuMode = MenuMode.Pause;
-
+        UI.transform.localPosition = new Vector3(-10000, 0, 0);
         SceneManager.LoadScene(1);
     }
 
@@ -74,11 +149,23 @@ public class Gamemenu : MonoBehaviour
     public void Settings()
     {
         settingMenu.SetActive(true);
+
+        continueButton.SetActive(false);
+        backToMainMenuButton.SetActive(false);
+        settingButton.SetActive(false);
     }
     
     public void Exit()
     {
         Application.Quit();
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
+    public void CloseEscape()
+    {
+        UI.transform.localPosition = new Vector3(-10000, 0, 0);
+    }
 }

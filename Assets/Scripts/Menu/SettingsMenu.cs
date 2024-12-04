@@ -8,6 +8,7 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown graphicsQuality;
     public Slider fieldOfView;
     public Toggle postProcessing;
+    public Gamemenu gameMenu;
     private void Start() 
     {
         graphicsQuality.value = (int)Settings.graphicsQuality;
@@ -26,6 +27,9 @@ public class SettingsMenu : MonoBehaviour
     public void Close()
     {
         gameObject.SetActive(false);
+        gameMenu.continueButton.SetActive(true);
+        gameMenu.backToMainMenuButton.SetActive(true);
+        gameMenu.settingButton.SetActive(true);
     }
 
     public void ApplyChanges()

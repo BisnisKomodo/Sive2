@@ -23,7 +23,7 @@ MonoBehaviour:
   fireRate: 0.1
   magSize: 8
   bulletData: {fileID: 11400000, guid: 97cbd87f99d6ff74aaf2b108b0f14640, type: 2}
-  zoomFOV: 55
+  zoomFOV: 50
   horizontalRecoil: 10
   minVerticalRecoil: 9
   maxVerticalRecoil: 12
@@ -39,3 +39,7 @@ MonoBehaviour:
   hungerChange: 0
   thirstChange: 0
   ghost: {fileID: 0}
+  isFuel: 0
+  outcome: {fileID: 0}
+  outcomeAmount: 1
+  processTimer: 3

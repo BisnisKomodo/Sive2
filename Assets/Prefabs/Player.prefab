@@ -4518,6 +4518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2228792109131511286}
   - component: {fileID: 2130223549936984768}
+  - component: {fileID: 1246123525081190201}
   m_Layer: 0
   m_Name: M9 Pistol Animator
   m_TagString: Untagged
@@ -4562,6 +4563,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1246123525081190201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228216356581076861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5650863d90e8b214181b2047ad2ab2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowHandler: {fileID: 0}
+  invertHorizontal: 0
+  invertVertical: 0
+  lockSway: 0
+  amount: 0.02
+  maxAmount: 0.06
+  smoothAmount: 6
+  rotationAmount: 4
+  maxRotationAmount: 5
+  smoothRotation: 12
+  rotationX: 1
+  rotationY: 1
+  rotationZ: 1
 --- !u!1 &3229896715969170142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7488,6 +7514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5160351184032702495}
   - component: {fileID: 5978043096268487600}
+  - component: {fileID: 6808776243457880646}
   m_Layer: 0
   m_Name: Shotgun Animator
   m_TagString: Untagged
@@ -7532,6 +7559,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6808776243457880646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365509530728048978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5650863d90e8b214181b2047ad2ab2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowHandler: {fileID: 0}
+  invertHorizontal: 0
+  invertVertical: 0
+  lockSway: 0
+  amount: 0.02
+  maxAmount: 0.06
+  smoothAmount: 6
+  rotationAmount: 4
+  maxRotationAmount: 5
+  smoothRotation: 12
+  rotationX: 1
+  rotationY: 1
+  rotationZ: 1
 --- !u!1 &5534342491844518019
 GameObject:
   m_ObjectHideFlags: 0
@@ -8333,6 +8385,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   crafting: {fileID: 0}
   storage: {fileID: 0}
+  gameMenu: {fileID: 0}
   building: {fileID: 0}
   WindowOpened: 0
 --- !u!82 &7281647429395285050
@@ -12163,6 +12216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4217969047465040039}
   - component: {fileID: 8950609973340430020}
+  - component: {fileID: 4440876986833104183}
   m_Layer: 0
   m_Name: M4 Animator
   m_TagString: Untagged
@@ -12207,6 +12261,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4440876986833104183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748177596010125650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5650863d90e8b214181b2047ad2ab2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowHandler: {fileID: 0}
+  invertHorizontal: 0
+  invertVertical: 0
+  lockSway: 0
+  amount: 0.02
+  maxAmount: 0.06
+  smoothAmount: 6
+  rotationAmount: 4
+  maxRotationAmount: 5
+  smoothRotation: 12
+  rotationX: 1
+  rotationY: 1
+  rotationZ: 1
 --- !u!1 &8760401609506782670
 GameObject:
   m_ObjectHideFlags: 0
@@ -12603,6 +12682,7 @@ GameObject:
   - component: {fileID: 5687077565191707264}
   - component: {fileID: 7664296445939989605}
   - component: {fileID: 233039703915768541}
+  - component: {fileID: 800420667269217542}
   m_Layer: 0
   m_Name: Stone Hatchet Animator
   m_TagString: Untagged
@@ -12659,6 +12739,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2653d5874cd704eaa7b936a7bddec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &800420667269217542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949404329166538884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5650863d90e8b214181b2047ad2ab2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowHandler: {fileID: 0}
+  invertHorizontal: 0
+  invertVertical: 0
+  lockSway: 0
+  amount: 0.02
+  maxAmount: 0.06
+  smoothAmount: 6
+  rotationAmount: 4
+  maxRotationAmount: 5
+  smoothRotation: 12
+  rotationX: 1
+  rotationY: 1
+  rotationZ: 1
 --- !u!1 &8955164759034106320
 GameObject:
   m_ObjectHideFlags: 0

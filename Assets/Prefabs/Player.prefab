@@ -956,11 +956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6518909991936175260}
-  - {fileID: 4049477460882527389}
-  - {fileID: 4964760196606894277}
-  - {fileID: 4612247630040933327}
-  - {fileID: 9130379170385756241}
-  m_Father: {fileID: 9173375718008016445}
+  m_Father: {fileID: 8453303372123784369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7356923956096485832
 Camera:
@@ -1641,7 +1637,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5160351184032702495}
-  m_Father: {fileID: 6680404933914198849}
+  m_Father: {fileID: 2295538775248820783}
   m_LocalEulerAnglesHint: {x: 0.244, y: 6.851, z: -0.675}
 --- !u!114 &7505727352543493237
 MonoBehaviour:
@@ -4217,6 +4213,41 @@ Transform:
   - {fileID: 2571413192938625358}
   m_Father: {fileID: 236220489905750893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3100470550809506270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2295538775248820783}
+  m_Layer: 6
+  m_Name: Player Weapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2295538775248820783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100470550809506270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4049477460882527389}
+  - {fileID: 4964760196606894277}
+  - {fileID: 4612247630040933327}
+  - {fileID: 9130379170385756241}
+  m_Father: {fileID: 9173375718008016445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3111668350173250559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5032,6 +5063,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3028357039359017452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3556055427019127386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8453303372123784369}
+  - component: {fileID: 9080094225713011808}
+  - component: {fileID: 144764161047945812}
+  m_Layer: 6
+  m_Name: Head Bob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8453303372123784369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556055427019127386}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6680404933914198849}
+  m_Father: {fileID: 9173375718008016445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &9080094225713011808
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556055427019127386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2f3a97419816cb4a84ea300543f144c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &144764161047945812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556055427019127386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61b1d94509079f4e8bf2eda884accae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3572321216024841860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,7 +5199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2228792109131511286}
-  m_Father: {fileID: 6680404933914198849}
+  m_Father: {fileID: 2295538775248820783}
   m_LocalEulerAnglesHint: {x: 0, y: 4.441, z: 5.248}
 --- !u!114 &3857027981199149321
 MonoBehaviour:
@@ -8740,13 +8838,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6364451757926903021}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5687077565191707264}
-  m_Father: {fileID: 6680404933914198849}
+  m_Father: {fileID: 2295538775248820783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5436654206510452021
 MonoBehaviour:
@@ -9896,13 +9994,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7038533376209409246}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07974124, y: 0.13506868, z: -0.02435932, w: 0.9873218}
+  m_LocalRotation: {x: 0.07974125, y: 0.1350687, z: -0.024359321, w: 0.98732185}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4217969047465040039}
-  m_Father: {fileID: 6680404933914198849}
+  m_Father: {fileID: 2295538775248820783}
   m_LocalEulerAnglesHint: {x: 9.442, y: 15.452, z: -1.543}
 --- !u!114 &2548877489432611203
 MonoBehaviour:
@@ -11276,7 +11374,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6680404933914198849}
+  - {fileID: 8453303372123784369}
+  - {fileID: 2295538775248820783}
   m_Father: {fileID: 7082447947635273541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5598126449534937546

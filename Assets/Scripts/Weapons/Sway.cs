@@ -58,7 +58,7 @@ public class Sway : MonoBehaviour
 
 
 
-        if (cam.canMove && !lockSway && !GetComponentInParent<Weapon>().isAiming && !windowHandler.WindowOpened)
+        if (cam.canMove && !windowHandler.WindowOpened) //!lockSway && !GetComponentInParent<Weapon>().isAiming &&
             CalculateHorizontalSway();
         else
             InputX = 0;

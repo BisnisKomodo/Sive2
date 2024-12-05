@@ -36,13 +36,28 @@ public class WindowHandler : MonoBehaviour
             cam.canMove = true;
         }
 
-        if(inventory.opened || gameMenu.opened)
+        if (gameMenu != null)
         {
-            WindowOpened = true;
+            if(inventory.opened || gameMenu.opened)
+            {
+                WindowOpened = true;
+            }
+            else
+            {
+                WindowOpened = false;
+            }
         }
         else
         {
-            WindowOpened = false;
+            if(inventory.opened)
+            {
+                WindowOpened = true;
+            }
+            else
+            {
+                WindowOpened = false;
+            }
         }
+        
     }
 }

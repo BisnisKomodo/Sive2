@@ -181,7 +181,7 @@ public class BasicAI : MonoBehaviour
             }
             else
             {
-                Debug.Log("Couldn't find a valid position to wander");
+                //Debug.Log("Couldn't find a valid position to wander");
             }
         }
         else
@@ -216,11 +216,11 @@ public class BasicAI : MonoBehaviour
     {
         if (target == null)
         {
-            Debug.Log("No target to chase.");
+            //Debug.Log("No target to chase.");
             return;
         }
 
-        Debug.Log("Bear is Chasing You!");
+        //Debug.Log("Bear is Chasing You!");
         agent.isStopped = false; // Ensure NavMeshAgent is not stopped
         agent.SetDestination(target.transform.position);
 

@@ -28,6 +28,7 @@ public class Weapon : MonoBehaviour
 
     private float currentFireRate;
     private float fireRate;
+    private Gamemenu gameMenu;
 
 
     private void Start()
@@ -35,6 +36,7 @@ public class Weapon : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         player = GetComponentInParent<PlayerMovement>();
         audioS = GetComponent<AudioSource>();
+        gameMenu = FindObjectOfType<Gamemenu>();
 
         transform.localPosition = hipPos;
 
@@ -44,6 +46,12 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
+        if (gameMenu != null && gameMenu.settingMenu.activeSelf)
+        {
+            return;
+        }
+
+        
         UpdateAnimation();
         if (weaponData.itemtype == ItemScriptableObject.ItemType.Weapon)
         {
@@ -143,7 +151,7 @@ public class Weapon : MonoBehaviour
             {
                 ai.health -= weaponData.damage;
             }
-            Debug.Log($"Hitted = {hit.transform.name}");
+            //Debug.Log($"Hitted = {hit.transform.name}");
         }
 
         if (muzzleFlash != null)
@@ -155,7 +163,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Muzzle flash not assigned");
+            //Debug.LogWarning("Muzzle flash not assigned");
         }
 
 
@@ -209,7 +217,7 @@ public class Weapon : MonoBehaviour
                     ai.health -= weaponData.damage;
                 }
                 
-                Debug.Log($"Hitted = {hit.transform.name}");
+                //Debug.Log($"Hitted = {hit.transform.name}");
             }
         }
 
@@ -221,7 +229,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Muzzle flash not assigned");
+            //Debug.LogWarning("Muzzle flash not assigned");
         }
 
 

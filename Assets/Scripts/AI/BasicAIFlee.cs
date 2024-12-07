@@ -90,7 +90,7 @@ public class BasicAIFlee : MonoBehaviour
         if (target == null)
             return;
 
-        Debug.Log("AI is fleeing from the player!");
+        //Debug.Log("AI is fleeing from the player!");
 
         // Calculate direction away from target
         Vector3 fleeDirection = transform.position - target.position;
@@ -109,7 +109,7 @@ public class BasicAIFlee : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Flee destination is not on the NavMesh!");
+            //Debug.LogWarning("Flee destination is not on the NavMesh!");
         }
     }
 
@@ -150,7 +150,7 @@ public class BasicAIFlee : MonoBehaviour
         if (other.GetComponent<PlayerMovement>() != null)
         {
             target = other.transform;
-            Debug.Log("Player detected!");
+            //Debug.Log("Player detected!");
         }
     }
 }

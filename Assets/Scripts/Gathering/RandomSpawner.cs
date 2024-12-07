@@ -43,7 +43,7 @@ public class RandomSpawner : MonoBehaviour
         {
             if (spawnablesEntities.Length <= 0)
             {   
-                Debug.LogError("Spawnable Entities are not set");
+                //Debug.LogError("Spawnable Entities are not set");
                 return;
             }
             int amountToRespawn = 0;

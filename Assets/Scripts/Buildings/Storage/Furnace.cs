@@ -30,7 +30,7 @@ public class Furnace : MonoBehaviour
         }
         else
         {
-            Debug.Log("Furnace don't have access to storage scripts");
+            //Debug.Log("Furnace don't have access to storage scripts");
         }
     }
 
@@ -255,7 +255,7 @@ public class Furnace : MonoBehaviour
 
     public void TurnOn()
     {
-        Debug.Log("Furnace Turned On!");
+        //Debug.Log("Furnace Turned On!");
         isOn = true;
 
         if (VFX != null)
@@ -264,13 +264,13 @@ public class Furnace : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("VFX not assigned");
+            //Debug.LogWarning("VFX not assigned");
         }
     }
 
     public void TurnOff()
     {
-        Debug.Log("Furnace Turned Off!");
+        //Debug.Log("Furnace Turned Off!");
         isOn = false;
 
         if (VFX != null)

@@ -208,7 +208,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         {
             dragDropHandler.slotDraggedFrom = this;
             dragDropHandler.isDragging = true;
-            Debug.Log($"Started dragging from slot: {this.gameObject.name}, IsEmpty: {IsEmpty}");
+            //Debug.Log($"Started dragging from slot: {this.gameObject.name}, IsEmpty: {IsEmpty}");
         }
     }
 
@@ -216,18 +216,18 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     {
         if (dragDropHandler.isDragging)
         {
-            Debug.Log($"Pointer Up: Dragging from {dragDropHandler.slotDraggedFrom.gameObject.name}");
+            //Debug.Log($"Pointer Up: Dragging from {dragDropHandler.slotDraggedFrom.gameObject.name}");
         
             if (dragDropHandler.slotDraggedTo == null)
             {
                 Drop();
-                Debug.Log("Dropped item.");
+                //Debug.Log("Dropped item.");
                 dragDropHandler.isDragging = false;
             }   
             else
             {
                 inventory.DragDrop(dragDropHandler.slotDraggedFrom, dragDropHandler.slotDraggedTo);
-                Debug.Log($"Dragged to {dragDropHandler.slotDraggedTo.gameObject.name}");
+                //Debug.Log($"Dragged to {dragDropHandler.slotDraggedTo.gameObject.name}");
                 dragDropHandler.isDragging = false;
             }
 
@@ -341,7 +341,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (dragDropHandler.isDragging)
         {
             dragDropHandler.slotDraggedTo = this;
-            Debug.Log($"Dragging over slot: {this.gameObject.name}");
+            //Debug.Log($"Dragging over slot: {this.gameObject.name}");
         }
     }
 
@@ -350,7 +350,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (dragDropHandler.isDragging)
         {
             dragDropHandler.slotDraggedTo = null;
-            Debug.Log("Item follow cursor");
+            //Debug.Log("Item follow cursor");
         }
     }
 }

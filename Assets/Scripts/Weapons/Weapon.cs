@@ -146,10 +146,15 @@ public class Weapon : MonoBehaviour
         {
             GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             BasicAI ai = hit.transform.GetComponent<BasicAI>();
+            BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
 
             if (ai != null)
             {
                 ai.health -= weaponData.damage;
+            }
+            if (aiflee != null)
+            {
+                aiflee.health -= weaponData.damage;
             }
             //Debug.Log($"Hitted = {hit.transform.name}");
         }
@@ -211,10 +216,15 @@ public class Weapon : MonoBehaviour
             {
                 GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 BasicAI ai = hit.transform.GetComponent<BasicAI>();
+                BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
 
                 if (ai != null)
                 {
                     ai.health -= weaponData.damage;
+                }
+                if (aiflee != null)
+                {
+                    aiflee.health -= weaponData.damage;
                 }
                 
                 //Debug.Log($"Hitted = {hit.transform.name}");

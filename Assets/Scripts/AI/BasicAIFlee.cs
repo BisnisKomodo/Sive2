@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 public class BasicAIFlee : MonoBehaviour
 {
-    public Image redOverlay;
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;

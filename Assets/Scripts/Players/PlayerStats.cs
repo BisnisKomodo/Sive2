@@ -22,13 +22,14 @@ public class PlayerStats : MonoBehaviour
     [Space]
 
     public float HungerDamage = 1.5f;
-    public float ThirstDamage = 1.75f;
+    public float ThirstDamage = 1.5f;
 
     [Space]
 
     public StatsBar Healthbar;
     public StatsBar Hungerbar;
     public StatsBar Thirstbar;
+    public Image redOverlay;
 
     private void Start()
     {
@@ -87,11 +88,15 @@ public class PlayerStats : MonoBehaviour
         //Player Stats Get Damages
         if (hunger <= 0)
         {
+            redOverlay.gameObject.SetActive(true);
+            StartCoroutine(FadeOverlayOut());
             health -= HungerDamage * Time.deltaTime;
         }
 
         if (thirst <= 0)
         {
+            redOverlay.gameObject.SetActive(true);
+            StartCoroutine(FadeOverlayOut());
             health -= ThirstDamage * Time.deltaTime;
         }
 
@@ -107,4 +112,25 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public IEnumerator FadeOverlayOut()
+    {
+        Debug.Log("Player got hurt!");
+        Color color = redOverlay.color;
+        color.a = 1f;
+        redOverlay.color = color;
+
+        float fadeDuration = 1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Lerp(1, 0, fadeDuration/elapsedTime);
+            redOverlay.color = color;
+            yield return null;
+        }
+
+        redOverlay.gameObject.SetActive(false);
+        Debug.Log("Overlay Hidden");
+    }
 }

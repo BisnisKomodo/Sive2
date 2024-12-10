@@ -6,7 +6,8 @@ public class Weapon : MonoBehaviour
 {
     private PlayerMovement player;
     private AudioSource audioS;
-
+    public GameObject bloodEffect;
+    public GameObject smokeEffect;
 
     [HideInInspector] public Animator anim;
     [HideInInspector] public Slot slotEquippedOn;
@@ -148,6 +149,17 @@ public class Weapon : MonoBehaviour
             BasicAI ai = hit.transform.GetComponent<BasicAI>();
             BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
 
+            if (hit.collider.CompareTag("Animal"))
+            {
+                GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(blood, 2f);
+            }
+            else
+            {
+                GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(smoke, 2f);
+            }
+
             if (ai != null)
             {
                 ai.health -= weaponData.damage;
@@ -217,6 +229,17 @@ public class Weapon : MonoBehaviour
                 GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 BasicAI ai = hit.transform.GetComponent<BasicAI>();
                 BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
+
+                if (hit.collider.CompareTag("Animal"))
+                {
+                    GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(blood, 1f);
+                }
+                else
+                {
+                    GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(smoke, 1f);
+                }
 
                 if (ai != null)
                 {

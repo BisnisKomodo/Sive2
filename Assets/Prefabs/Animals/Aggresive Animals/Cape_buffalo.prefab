@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 672407017675218126}
   m_Layer: 0
   m_Name: Cape_buffalo
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,8 +1795,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.44810858, y: 1.1638807, z: 1.8729005}
-  m_Center: {x: 0.0042075184, y: 0.746723, z: 0.24166052}
+  m_Size: {x: 0.44810858, y: 1.1638807, z: 2.2145529}
+  m_Center: {x: 0.0042075184, y: 0.746723, z: 0.26206917}
 --- !u!114 &3573944673134446270
 MonoBehaviour:
   m_ObjectHideFlags: 0

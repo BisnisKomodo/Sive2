@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class BasicAI : MonoBehaviour
 {
-    public Image redOverlay;
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;
@@ -276,30 +275,19 @@ public class BasicAI : MonoBehaviour
         else
         {
             // Deal damage if still within range
-            target.GetComponent<PlayerStats>().health -= damage;
+            //target.GetComponent<PlayerStats>().health -= damage;
 
-            redOverlay.gameObject.SetActive(true);
-            StartCoroutine(FadeOutOverlay());
+            PlayerStats playerStats = target.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                playerStats.health -= damage; // Directly decrease health
+                playerStats.redOverlay.gameObject.SetActive(true);
+                StartCoroutine(playerStats.FadeOverlayOut()); // Call the red overlay fade function
+            }
+
+
+
             Chase(); // Immediately resume chasing after attacking
-        }
-    }
-
-    private IEnumerator FadeOutOverlay()
-    {
-        Color color = redOverlay.color;
-        color.a = 0.3f;
-        redOverlay.color = color;
-
-        //Fade out overtime
-        float fadeDuration = 0.5f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(1, 0, elapsedTime/fadeDuration);
-            redOverlay.color = color;
-            yield return null;
         }
     }
 

@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
 
     [Space]
 
-    public float HungerDepletion = 0.5f;
+    public float HungerDepletion = 0.6f;
     public float ThirstDepletion = 0.75f;
 
     [Space]
@@ -114,23 +114,23 @@ public class PlayerStats : MonoBehaviour
 
     public IEnumerator FadeOverlayOut()
     {
-        Debug.Log("Player got hurt!");
+        //Debug.Log("Player got hurt!");
         Color color = redOverlay.color;
         color.a = 1f;
         redOverlay.color = color;
 
-        float fadeDuration = 1f;
+        float fadeDuration = 0.5f;
         float elapsedTime = 0f;
 
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(1, 0, fadeDuration/elapsedTime);
+            color.a = Mathf.Lerp(1, 0, elapsedTime/fadeDuration);
             redOverlay.color = color;
             yield return null;
         }
 
         redOverlay.gameObject.SetActive(false);
-        Debug.Log("Overlay Hidden");
+        //Debug.Log("Overlay Hidden");
     }
 }

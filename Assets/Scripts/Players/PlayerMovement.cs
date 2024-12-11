@@ -204,6 +204,21 @@ public class PlayerMovement : MonoBehaviour
         cc.Move(moveDir);
     }
 
+
+    public void ApplyKnockback(Vector3 direction, float force)
+    {
+        // Normalize the direction to ensure consistent force
+        direction = direction.normalized;
+
+        // Apply knockback by moving the CharacterController
+        Vector3 knockback = direction * force;
+
+        // Include vertical push for a more realistic effect
+        knockback.y = 20f; // Adjust based on desired vertical impact
+        cc.Move(knockback * Time.deltaTime);
+    }
+
+
     public AudioClip GetFootStep()
     {
         RaycastHit hit;

@@ -10,8 +10,9 @@ public class BasicAI : MonoBehaviour
     public NavMeshAgent agent;
     private Animator anim;
     private bool isAttacking;
-
+    public float maxhealth = 100f;
     public float health = 100f;
+    public bool isDead = false;
 
     [Header("Attack Settings")]
     public float damage;
@@ -27,8 +28,6 @@ public class BasicAI : MonoBehaviour
     public float walkSpeed = 2f;
     public float runSpeed = 3.5f;
     public float wanderRange = 5f;
-
-
 
 
     public bool walk;
@@ -74,8 +73,6 @@ public class BasicAI : MonoBehaviour
     //         Wander();
     // }
 
-    public bool isDead = false;
-
     private void Update()
     {
         if (health <= 0 && !isDead)
@@ -87,6 +84,12 @@ public class BasicAI : MonoBehaviour
         if (!isDead)
         {
             UpdateAnimations();
+
+            if (health < maxhealth && target == null)
+            {
+                target = FindObjectOfType<PlayerStats>().transform;
+                Chase();
+            }
             // Chasing and wandering logic for when the bear is alive
             if (target != null)
             {
@@ -113,6 +116,8 @@ public class BasicAI : MonoBehaviour
         // Disable AI script to stop it from running further
         this.enabled = false;
     }
+
+    
 
     public void UpdateAnimations()
     {
@@ -234,6 +239,11 @@ public class BasicAI : MonoBehaviour
         {
             StartAttack();
         }
+
+        if (agent == null)
+        {
+            agent.isStopped = true;
+        }
     }
 
     public void StartAttack()
@@ -283,8 +293,12 @@ public class BasicAI : MonoBehaviour
                 playerStats.health -= damage; // Directly decrease health
                 playerStats.redOverlay.gameObject.SetActive(true);
                 StartCoroutine(playerStats.FadeOverlayOut()); // Call the red overlay fade function
-            }
 
+
+                //Apply Knockback to player
+                Vector3 knockbackDirection = target.transform.position - transform.position;
+                target.GetComponent<PlayerMovement>().ApplyKnockback(knockbackDirection, 20f);
+            }
 
 
             Chase(); // Immediately resume chasing after attacking

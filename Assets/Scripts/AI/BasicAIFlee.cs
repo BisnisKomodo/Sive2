@@ -7,10 +7,9 @@ public class BasicAIFlee : MonoBehaviour
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;
-    private bool isAttacking;
-
+    public float maxhealth = 100f;
     public float health = 100f;
-    private bool isDead = false;
+    public bool isDead = false;
 
     [Header("Attack Settings")]
     public float damage;
@@ -48,6 +47,13 @@ public class BasicAIFlee : MonoBehaviour
         if (!isDead)
         {
             UpdateAnimations();
+
+            if (health < maxhealth && target == null)
+            {
+                target = FindObjectOfType<PlayerStats>().transform;
+                Flee();
+            }
+
             if (target != null)
             {
                 float distanceToTarget = Vector3.Distance(target.position, transform.position);

@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 705481496467985001}
   m_Layer: 0
   m_Name: Wild_boar_prefab
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1451,19 +1451,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
-  health: 20
-  damage: 40
+  maxhealth: 40
+  health: 40
+  damage: 20
   maxChaseDistance: 30
   minAttackDistance: 3
   maxAttackDistance: 5
   wanderWaitTime: 8
   canMoveWhileAttacking: 1
-  walkSpeed: 2.5
-  runSpeed: 7
-  wanderRange: 50
+  walkSpeed: 1.5
+  runSpeed: 6
+  wanderRange: 40
   walk: 0
   run: 0
   isDead: 0
@@ -1508,8 +1508,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 13
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!65 &7916406209498126655
 BoxCollider:
   m_ObjectHideFlags: 0

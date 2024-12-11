@@ -233,12 +233,12 @@ public class Weapon : MonoBehaviour
                 if (hit.collider.CompareTag("Animal"))
                 {
                     GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    Destroy(blood, 1f);
+                    Destroy(blood, 2f);
                 }
                 else
                 {
                     GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    Destroy(smoke, 1f);
+                    Destroy(smoke, 2f);
                 }
 
                 if (ai != null)
@@ -512,15 +512,46 @@ public class Weapon : MonoBehaviour
 
         if (Physics.SphereCast(shootPoint.position, 0.2f, shootPoint.forward, out hit, weaponData.range, shootableLayers))
         {
-            BasicAI bear = hit.transform.GetComponent<BasicAI>();
+            BasicAI ai = hit.transform.GetComponent<BasicAI>();
+            BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
             GatherableObject gatherObj = hit.transform.GetComponent<GatherableObject>();
 
-            if (bear != null)
+            if (hit.collider.CompareTag("Animal"))
+            {
+                GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(blood, 2f);
+            }
+            else
+            {
+                GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(smoke, 2f);
+            }
+
+            if (ai != null)
             {
                 // If the bear is alive, apply damage
-                if (!bear.isDead)
+                if (!ai.isDead)
                 {
-                    bear.health -= weaponData.damage;
+                    //Debug.Log(weaponData.damage);
+                    ai.health -= weaponData.damage;
+                }
+                else
+                {
+                    // If the bear is dead, gather resources (meat)
+                    if (gatherObj != null)
+                    {
+                        gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+                    }
+                }
+            }
+
+            if (aiflee != null)
+            {
+                // If the bear is alive, apply damage
+                if (!aiflee.isDead)
+                {
+                    //Debug.Log(weaponData.damage);
+                    aiflee.health -= weaponData.damage;
                 }
                 else
                 {

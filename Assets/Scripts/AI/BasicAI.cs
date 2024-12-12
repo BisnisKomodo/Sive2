@@ -34,6 +34,10 @@ public class BasicAI : MonoBehaviour
     public bool run;
 
 
+    [SerializeField] private float knockbackFlyForce = 5f;
+    [SerializeField] private float knockbackPushForce = 4f;
+
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -83,6 +87,7 @@ public class BasicAI : MonoBehaviour
 
         if (!isDead)
         {
+            GetComponent<GatherableObject>().enabled = false;
             UpdateAnimations();
 
             if (health < maxhealth && target == null)
@@ -216,6 +221,36 @@ public class BasicAI : MonoBehaviour
     //         StartAttack();
     // }
 
+    // public void Chase()
+    // {
+    //     if (target == null)
+    //     {
+    //         //Debug.Log("No target to chase.");
+    //         return;
+    //     }
+
+    //     //Debug.Log("Bear is Chasing You!");
+    //     agent.isStopped = false; // Ensure NavMeshAgent is not stopped
+    //     agent.SetDestination(target.transform.position);
+
+    //     walk = false;
+    //     run = true;
+
+    //     agent.speed = runSpeed;
+
+    //     // Check if it's within attack range and ready to attack
+    //     float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
+    //     if (distanceToTarget <= minAttackDistance && !isAttacking)
+    //     {
+    //         StartAttack();
+    //     }
+
+    //     if (agent == null)
+    //     {
+    //         agent.isStopped = true;
+    //     }
+    // }
+
     public void Chase()
     {
         if (target == null)
@@ -225,25 +260,27 @@ public class BasicAI : MonoBehaviour
         }
 
         //Debug.Log("Bear is Chasing You!");
-        agent.isStopped = false; // Ensure NavMeshAgent is not stopped
-        agent.SetDestination(target.transform.position);
-
-        walk = false;
-        run = true;
-
-        agent.speed = runSpeed;
-
-        // Check if it's within attack range and ready to attack
-        float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
-        if (distanceToTarget <= minAttackDistance && !isAttacking)
+        if (agent != null) // Check if agent exists before using it
         {
-            StartAttack();
-        }
+            agent.isStopped = false; // Ensure NavMeshAgent is not stopped
+            agent.SetDestination(target.transform.position);
 
-        if (agent == null)
-        {
-            agent.isStopped = true;
+            walk = false;
+            run = true;
+
+            agent.speed = runSpeed;
+
+            // Check if it's within attack range and ready to attack
+            float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
+            if (distanceToTarget <= minAttackDistance && !isAttacking)
+            {
+                StartAttack();
+            }
         }
+        // else
+        // {
+        //     //Debug.LogWarning("NavMeshAgent is missing or destroyed!");
+        // }
     }
 
     public void StartAttack()
@@ -295,9 +332,16 @@ public class BasicAI : MonoBehaviour
                 StartCoroutine(playerStats.FadeOverlayOut()); // Call the red overlay fade function
 
 
-                //Apply Knockback to player
-                Vector3 knockbackDirection = target.transform.position - transform.position;
-                target.GetComponent<PlayerMovement>().ApplyKnockback(knockbackDirection, 20f);
+                //Knockback function
+                PlayerMovement playerMovement = target.GetComponent<PlayerMovement>();
+                if (playerMovement != null)
+                {
+                    Vector3 knockbackDirection = (target.transform.position - transform.position).normalized;
+
+                    knockbackDirection.y = knockbackFlyForce;
+                    playerMovement.isKnockedback = true;
+                    playerMovement.knockbackDirection = knockbackDirection * knockbackPushForce; // Pass the knockback direction
+                }
             }
 
 

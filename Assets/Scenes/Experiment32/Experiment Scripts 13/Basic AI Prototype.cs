@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class BasicAIPrototype : MonoBehaviour
 {
-    public Image redOverlay;
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;
-    public GameObject projectile;
     private bool isAttacking;
 
     public float health = 100f;
@@ -29,6 +26,10 @@ public class BasicAIPrototype : MonoBehaviour
     public float walkSpeed = 2f;
     public float runSpeed = 3.5f;
     public float wanderRange = 5f;
+
+
+
+
     public bool walk;
     public bool run;
 
@@ -40,44 +41,38 @@ public class BasicAIPrototype : MonoBehaviour
 
         currentWanderTime = wanderWaitTime;
     }
-    public bool isDead = false;
+
+    bool hasDied;
 
     private void Update()
     {
-        if (health <= 0 && !isDead)
+        if (health <= 0)
         {
-            HandleDeath();
+            agent.SetDestination(transform.position);
+
+            Destroy(agent);
+            anim.SetTrigger("Die");
+
+
+
+            GetComponent<GatherableObject>().enabled = true;
+            Destroy(this);
             return;
         }
 
-        if (!isDead)
+
+        UpdateAnimations();
+
+        if (target != null)
         {
-            UpdateAnimations();
-            // Chasing and wandering logic for when the bear is alive
-            if (target != null)
-            {
-                if (Vector3.Distance(target.transform.position, transform.position) > maxChaseDistance)
-                    target = null;
+            if (Vector3.Distance(target.transform.position, transform.position) > maxChaseDistance)
+                target = null;
 
-                if (!isAttacking)
-                    Chase();
-            }
-            else
-                Wander();
+            if (!isAttacking)
+                Chase();
         }
-    }
-
-    private void HandleDeath()
-    {
-        isDead = true;
-        agent.SetDestination(transform.position);
-        Destroy(agent); // Destroy the NavMeshAgent so the bear stops moving
-        anim.SetTrigger("Die");
-
-        // Enable gathering once the bear is dead
-        GetComponent<GatherableObject>().enabled = true;
-        // Disable AI script to stop it from running further
-        this.enabled = false;
+        else
+            Wander();
     }
 
     public void UpdateAnimations()
@@ -85,6 +80,38 @@ public class BasicAIPrototype : MonoBehaviour
         anim.SetBool("Walk", walk);
         anim.SetBool("Run", run);
     }
+
+    // public void Wander()
+    // {
+    //     Debug.Log("Bear is Roaming");
+    //     if (currentWanderTime >= wanderWaitTime)
+    //     {
+    //         Vector3 wanderPos = transform.position;
+
+    //         wanderPos.x += Random.Range(-wanderRange, wanderRange);
+    //         wanderPos.z += Random.Range(-wanderRange, wanderRange);
+
+    //         currentWanderTime = 0;
+
+    //         agent.speed = walkSpeed;
+
+    //         agent.SetDestination(wanderPos);
+
+    //         walk = true;
+    //         run = false;
+    //     }
+    //     else
+    //     {
+    //         if (agent.isStopped)
+    //         {
+    //             Debug.Log("Bear is Idling");
+    //             currentWanderTime += Time.deltaTime;
+
+    //             walk = false;
+    //             run = false;
+    //         }
+    //     }
+    // }
 
     public void Wander()
     {
@@ -132,27 +159,17 @@ public class BasicAIPrototype : MonoBehaviour
 
     public void Chase()
     {
-        if (target == null)
-        {
-            Debug.Log("No target to chase.");
-            return;
-        }
-
         Debug.Log("Bear is Chasing You!");
-        agent.isStopped = false; // Ensure NavMeshAgent is not stopped
         agent.SetDestination(target.transform.position);
 
         walk = false;
+
         run = true;
 
         agent.speed = runSpeed;
 
-        // Check if it's within attack range and ready to attack
-        float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
-        if (distanceToTarget <= minAttackDistance && !isAttacking)
-        {
+        if (Vector3.Distance(target.transform.position, transform.position) <= minAttackDistance && !isAttacking)
             StartAttack();
-        }
     }
 
     public void StartAttack()
@@ -164,56 +181,21 @@ public class BasicAIPrototype : MonoBehaviour
 
         anim.SetTrigger("Attack");
     }
+
     public void FinishAttack()
     {
-        // Ensure that the attack has finished before checking distance
-        isAttacking = false;
-
-        if (target == null)
+        if (Vector3.Distance(target.transform.position, transform.position) > maxAttackDistance)
             return;
 
-        float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);
+        target.GetComponent<PlayerStats>().health -= damage;
 
-        // Check if the player is still within attack range
-        if (distanceToTarget > maxAttackDistance)
-        {
-            Chase(); // Resume chasing if the player moved out of range
-        }
-        else
-        {
-            // Deal damage if still within range
-            //target.GetComponent<PlayerStats>().health -= damage;
-            Instantiate(projectile);
-            redOverlay.gameObject.SetActive(true);
-            StartCoroutine(FadeOutOverlay());
-            Chase(); // Immediately resume chasing after attacking
-        }
-    }
+        isAttacking = false;
 
-    private IEnumerator FadeOutOverlay()
-    {
-        Color color = redOverlay.color;
-        color.a = 0.3f;
-        redOverlay.color = color;
-
-        //Fade out overtime
-        float fadeDuration = 0.5f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(1, 0, elapsedTime/fadeDuration);
-            redOverlay.color = color;
-            yield return null;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerMovement>() != null)
-        {
             target = other.transform;
-        }
     }
 }

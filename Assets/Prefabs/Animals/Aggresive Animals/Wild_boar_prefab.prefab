@@ -1455,18 +1455,20 @@ MonoBehaviour:
   agent: {fileID: 0}
   maxhealth: 40
   health: 40
+  isDead: 0
   damage: 20
   maxChaseDistance: 30
-  minAttackDistance: 3
-  maxAttackDistance: 5
+  minAttackDistance: 1.8
+  maxAttackDistance: 3
   wanderWaitTime: 8
-  canMoveWhileAttacking: 1
+  canMoveWhileAttacking: 0
   walkSpeed: 1.5
   runSpeed: 6
   wanderRange: 40
   walk: 0
   run: 0
-  isDead: 0
+  knockbackFlyForce: 10
+  knockbackPushForce: 3
 --- !u!195 &7157818420169668578
 NavMeshAgent:
   m_ObjectHideFlags: 0

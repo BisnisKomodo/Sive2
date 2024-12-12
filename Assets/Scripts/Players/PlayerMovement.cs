@@ -34,6 +34,20 @@ public class PlayerMovement : MonoBehaviour
     public float crouchStepLength;
     public float walkStepLength;
     public float runStepLength;
+
+    [Header("Knockback Settings")]
+    [SerializeField] private float knockbackForce = 1f;
+    public Vector3 knockbackDirection = Vector3.zero;
+    public bool isKnockedback = false;
+    private float knockbackTime = 0.5f;
+
+
+
+
+
+
+
+
     void Start()
     {
         windowhandler = GetComponent<WindowHandler>();
@@ -51,6 +65,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
+        if (isKnockedback)
+        {
+            // Apply knockback direction (horizontal and vertical)
+            cc.Move(knockbackDirection * knockbackForce * Time.deltaTime);
+
+            // Manually apply gravity
+            y_velocity += Gravity * Time.deltaTime;  // Gravity effect
+
+            // Apply gravity to knockback vertical movement
+            knockbackDirection.y = y_velocity;
+
+            // Reset after knockback time
+            StartCoroutine(ResetKnockback());
+            return;  // Exit movement to prevent normal movement
+        }
+
         if (crouching)
         {
             if (currentCrouchLength < crouchStepLength)
@@ -99,6 +130,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
+        if (isKnockedback)
+        {
+            //Knockback in opposite direction
+            cc.Move(knockbackDirection * Time.deltaTime);
+            return;
+        }
+
+
         Vector3 moveDir = Vector3.zero; //Mulai direction pertama atau originalnya
         if(Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
         {
@@ -204,21 +243,6 @@ public class PlayerMovement : MonoBehaviour
         cc.Move(moveDir);
     }
 
-
-    public void ApplyKnockback(Vector3 direction, float force)
-    {
-        // Normalize the direction to ensure consistent force
-        direction = direction.normalized;
-
-        // Apply knockback by moving the CharacterController
-        Vector3 knockback = direction * force;
-
-        // Include vertical push for a more realistic effect
-        knockback.y = 20f; // Adjust based on desired vertical impact
-        cc.Move(knockback * Time.deltaTime);
-    }
-
-
     public AudioClip GetFootStep()
     {
         RaycastHit hit;
@@ -241,5 +265,13 @@ public class PlayerMovement : MonoBehaviour
         {
             return null;
         }
+    }
+
+    private IEnumerator ResetKnockback()
+    {
+        yield return new WaitForSeconds(knockbackTime);
+        isKnockedback = false; // Reset knockback
+        knockbackDirection = Vector3.zero; // Reset knockback direction
+        y_velocity = 0f; // Reset vertical velocity
     }
 }

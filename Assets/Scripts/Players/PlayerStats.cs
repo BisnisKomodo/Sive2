@@ -116,7 +116,7 @@ public class PlayerStats : MonoBehaviour
     {
         //Debug.Log("Player got hurt!");
         Color color = redOverlay.color;
-        color.a = 1f;
+        color.a = 0.5f;
         redOverlay.color = color;
 
         float fadeDuration = 0.5f;

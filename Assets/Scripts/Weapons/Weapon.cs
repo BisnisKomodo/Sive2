@@ -527,24 +527,6 @@ public class Weapon : MonoBehaviour
                 Destroy(smoke, 2f);
             }
 
-            if (ai != null)
-            {
-                // If the bear is alive, apply damage
-                if (!ai.isDead)
-                {
-                    //Debug.Log(weaponData.damage);
-                    ai.health -= weaponData.damage;
-                }
-                else
-                {
-                    // If the bear is dead, gather resources (meat)
-                    if (gatherObj != null)
-                    {
-                        gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
-                    }
-                }
-            }
-
             if (aiflee != null)
             {
                 // If the bear is alive, apply damage
@@ -562,6 +544,25 @@ public class Weapon : MonoBehaviour
                     }
                 }
             }
+
+            else if (ai != null)
+            {
+                // If the bear is alive, apply damage
+                if (!ai.isDead)
+                {
+                    //Debug.Log(weaponData.damage);
+                    ai.health -= weaponData.damage;
+                }
+                else
+                {
+                    // If the bear is dead, gather resources (meat)
+                    if (gatherObj != null)
+                    {
+                        gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
+                    }
+                }
+            }
+            
         else if (gatherObj != null)
         {
             // Handle tree cutting separately

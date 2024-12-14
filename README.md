@@ -4,7 +4,7 @@
       <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/f3da1e29-8b62-4046-915a-d5dd8f488e18">
     </td>
     <td align="right" width="50%">
-      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/644cdd47-ec33-4391-9214-ec30687a03f9">
+      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/f1e758bb-6d88-4801-9818-ec999609664e">
     </td>
   </tr>
 </table>

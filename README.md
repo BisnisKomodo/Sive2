@@ -10,7 +10,7 @@
 </table>
 
 <p align="center">
-  <img width="100%" alt="gif3" src="![Sive2 Animal Encounter Gif](https://github.com/user-attachments/assets/fff4ba8c-4aad-45ab-9848-749a7d48a316)">
+  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/fff4ba8c-4aad-45ab-9848-749a7d48a316">
 </p>
 
 ##  📜Scripts and Features

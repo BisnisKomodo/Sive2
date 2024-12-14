@@ -1058,8 +1058,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 13
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 2}
 --- !u!114 &985336348256357217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,22 +1090,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
-  health: 20
-  damage: 40
+  maxhealth: 100
+  health: 100
+  isDead: 0
+  damage: 30
   maxChaseDistance: 30
-  minAttackDistance: 3.5
-  maxAttackDistance: 5.5
+  minAttackDistance: 2
+  maxAttackDistance: 3
   wanderWaitTime: 8
   canMoveWhileAttacking: 1
-  walkSpeed: 2.5
-  runSpeed: 7
+  walkSpeed: 1
+  runSpeed: 8
   wanderRange: 50
   walk: 0
   run: 0
-  isDead: 0
+  knockbackFlyForce: 5
+  knockbackPushForce: 4
 --- !u!65 &5885429171551708465
 BoxCollider:
   m_ObjectHideFlags: 0

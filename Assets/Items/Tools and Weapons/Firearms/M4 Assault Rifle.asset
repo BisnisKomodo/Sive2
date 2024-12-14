@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Your favorite assault rifle and possess full auto mode
   IsStackable: 0
   maxstack: 1
-  damage: 20
+  damage: 15
   range: 200
   fireRate: 0.1
   magSize: 30

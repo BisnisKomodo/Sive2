@@ -1453,8 +1453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 40
-  health: 40
+  maxhealth: 60
+  health: 60
   isDead: 0
   damage: 20
   maxChaseDistance: 30
@@ -1510,8 +1510,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 6
-  m_Center: {x: 0, y: 0, z: -2}
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 4.6}
 --- !u!65 &7916406209498126655
 BoxCollider:
   m_ObjectHideFlags: 0

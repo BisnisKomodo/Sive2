@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Lethal at close range and Weak at long range
   IsStackable: 0
   maxstack: 1
-  damage: 20
+  damage: 10
   range: 30
   fireRate: 0.1
   magSize: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
   hipSpread: 0.2
   aimSpread: 0.2
   shotgunFire: 1
-  pelletPerShot: 8
+  pelletPerShot: 9
   shootSound: {fileID: 8300000, guid: 86a79c0f05aafa94d8ccb3ee5f39860f, type: 3}
   reloadSound: {fileID: 8300000, guid: 4012d8a3701a03742af7742b7cb5285f, type: 3}
   drawSound: {fileID: 0}

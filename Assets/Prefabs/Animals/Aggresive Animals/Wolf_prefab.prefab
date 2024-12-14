@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 7115176066719454177}
   m_Layer: 0
   m_Name: Wolf_prefab
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.862, y: -0.02, z: 33.373}
-  m_LocalScale: {x: 1.8322357, y: 1.8322357, z: 1.8322357}
+  m_LocalScale: {x: 1.7549521, y: 1.7549521, z: 1.7549521}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 521133596447033507}
@@ -104,22 +104,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
-  health: 20
-  damage: 40
+  maxhealth: 35
+  health: 35
+  isDead: 0
+  damage: 25
   maxChaseDistance: 30
-  minAttackDistance: 3
-  maxAttackDistance: 5
-  wanderWaitTime: 8
+  minAttackDistance: 1.8
+  maxAttackDistance: 3
+  wanderWaitTime: 5
   canMoveWhileAttacking: 1
-  walkSpeed: 2.5
-  runSpeed: 7
-  wanderRange: 50
+  walkSpeed: 1.5
+  runSpeed: 7.5
+  wanderRange: 40
   walk: 0
   run: 0
-  isDead: 0
+  knockbackFlyForce: 5
+  knockbackPushForce: 2
 --- !u!195 &5180752474687136393
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -161,8 +163,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 13
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!65 &5848413443981048332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -199,7 +201,7 @@ MonoBehaviour:
   deathType: 0
   gatherData:
   - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
-  hits: 4
+  hits: 3
   prefferedtools: []
   toolMultiplier: 0
 --- !u!1 &624419267351185127

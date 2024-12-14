@@ -128,7 +128,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 135.8, y: 7.14, z: 58.5}
-  m_LocalScale: {x: 1.9284726, y: 1.9284726, z: 1.9284726}
+  m_LocalScale: {x: 2.303556, y: 2.303556, z: 2.303556}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7846584288525581833}
@@ -168,10 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
+  maxhealth: 100
   health: 20
+  isDead: 0
   damage: 40
   maxChaseDistance: 30
   minAttackDistance: 3.5
@@ -183,7 +184,8 @@ MonoBehaviour:
   wanderRange: 50
   walk: 0
   run: 0
-  isDead: 0
+  knockbackFlyForce: 5
+  knockbackPushForce: 4
 --- !u!195 &8973514510402512402
 NavMeshAgent:
   m_ObjectHideFlags: 0

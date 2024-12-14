@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System.IO;
 
 public class BasicAIFlee : MonoBehaviour
 {
@@ -111,6 +112,7 @@ public class BasicAIFlee : MonoBehaviour
 
             walk = false;
             run = true;
+            target = null;
         }
         else
         {

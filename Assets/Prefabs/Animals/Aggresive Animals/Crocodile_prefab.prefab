@@ -729,8 +729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 50
-  health: 50
+  maxhealth: 65
+  health: 65
   isDead: 0
   damage: 25
   maxChaseDistance: 25
@@ -740,7 +740,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 0
   walkSpeed: 0.8
   runSpeed: 5
-  wanderRange: 20
+  wanderRange: 10
   walk: 0
   run: 0
   knockbackFlyForce: 3

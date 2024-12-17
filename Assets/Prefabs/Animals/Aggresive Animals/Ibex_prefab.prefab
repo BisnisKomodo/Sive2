@@ -1421,8 +1421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 45
-  health: 45
+  maxhealth: 55
+  health: 55
   isDead: 0
   damage: 15
   maxChaseDistance: 30

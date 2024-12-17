@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 4291679139959788121}
   m_Layer: 0
   m_Name: Brown Bear
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,18 +170,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 100
-  health: 20
+  maxhealth: 200
+  health: 200
   isDead: 0
-  damage: 40
+  damage: 25
   maxChaseDistance: 30
-  minAttackDistance: 3.5
-  maxAttackDistance: 5.5
+  minAttackDistance: 4
+  maxAttackDistance: 6
   wanderWaitTime: 8
   canMoveWhileAttacking: 1
   walkSpeed: 2.5
-  runSpeed: 7
-  wanderRange: 50
+  runSpeed: 6.8
+  wanderRange: 15
   walk: 0
   run: 0
   knockbackFlyForce: 5
@@ -227,8 +227,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 13
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 7
+  m_Center: {x: 0, y: 0, z: 6.5}
 --- !u!65 &799603175818448861
 BoxCollider:
   m_ObjectHideFlags: 0

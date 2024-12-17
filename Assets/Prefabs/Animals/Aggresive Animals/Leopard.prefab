@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 5885429171551708465}
   m_Layer: 0
   m_Name: Leopard
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1092,22 +1092,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 100
-  health: 100
+  maxhealth: 120
+  health: 120
   isDead: 0
   damage: 30
   maxChaseDistance: 30
-  minAttackDistance: 2
-  maxAttackDistance: 3
+  minAttackDistance: 3.5
+  maxAttackDistance: 4
   wanderWaitTime: 8
   canMoveWhileAttacking: 1
   walkSpeed: 1
-  runSpeed: 8
-  wanderRange: 50
+  runSpeed: 9
+  wanderRange: 30
   walk: 0
   run: 0
-  knockbackFlyForce: 5
-  knockbackPushForce: 4
+  knockbackFlyForce: 4
+  knockbackPushForce: 2
 --- !u!65 &5885429171551708465
 BoxCollider:
   m_ObjectHideFlags: 0

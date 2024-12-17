@@ -120,7 +120,7 @@ MonoBehaviour:
   wanderRange: 40
   walk: 0
   run: 0
-  knockbackFlyForce: 5
+  knockbackFlyForce: 4
   knockbackPushForce: 2
 --- !u!195 &5180752474687136393
 NavMeshAgent:

@@ -809,15 +809,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 165
-  health: 165
+  maxhealth: 180
+  health: 180
   isDead: 0
-  damage: 20
+  damage: 18
   maxChaseDistance: 30
   minAttackDistance: 4
   maxAttackDistance: 5
   wanderWaitTime: 8
-  canMoveWhileAttacking: 0
+  canMoveWhileAttacking: 1
   walkSpeed: 1
   runSpeed: 6
   wanderRange: 40

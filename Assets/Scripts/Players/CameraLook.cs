@@ -13,7 +13,7 @@ public class CameraLook : MonoBehaviour
     [HideInInspector] public bool lockCursor = true;
 
     [Header("Sensitivity")]
-    [Range(1, 10)]
+    [Range(1, 20)]
     public float sensitivity = 5f;
 
     [Header("Limits")]
@@ -34,12 +34,15 @@ public class CameraLook : MonoBehaviour
     {
         horizontalRot = player.transform.rotation.y;
 
-        sensitivity *= 20;
+        //sensitivity = SettingsManager.Instance.mouseSensitivity * 30;
+         
+        //sensitivity = SettingsManager.Instance.mouseSensitivity * SettingsManager.Instance.sensitivityMultiplier;
     }
 
     // Update is called once per frame
     void Update()
     {
+        sensitivity = SettingsManager.Instance.mouseSensitivity * SettingsManager.Instance.sensitivityMultiplier;
 
         GetMouseMovement();
 

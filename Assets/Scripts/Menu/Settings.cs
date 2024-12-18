@@ -8,4 +8,5 @@ public class Settings : MonoBehaviour
     public static GraphicsQuality graphicsQuality = GraphicsQuality.Ultra;
     public static float fov = 60;
     public static bool postProcessing = true;
+    public static float mouseSensitivity = 5f;
 }

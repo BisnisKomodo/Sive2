@@ -1774,8 +1774,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 13
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: 5.4}
 --- !u!65 &6938098858141031839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1812,7 +1812,7 @@ MonoBehaviour:
   deathType: 0
   gatherData:
   - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
-  hits: 4
+  hits: 8
   prefferedtools: []
   toolMultiplier: 0
 --- !u!114 &672407017675218126
@@ -1829,21 +1829,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   agent: {fileID: 0}
-  maxhealth: 100
-  health: 20
+  maxhealth: 250
+  health: 250
   isDead: 0
-  damage: 40
+  damage: 20
   maxChaseDistance: 30
-  minAttackDistance: 3.5
-  maxAttackDistance: 5.5
+  minAttackDistance: 4.5
+  maxAttackDistance: 5
   wanderWaitTime: 8
   canMoveWhileAttacking: 1
-  walkSpeed: 2.5
-  runSpeed: 7
-  wanderRange: 50
+  walkSpeed: 2
+  runSpeed: 7.1
+  wanderRange: 20
   walk: 0
   run: 0
-  knockbackFlyForce: 5
+  knockbackFlyForce: 10
   knockbackPushForce: 4
 --- !u!1 &8082356173058418038
 GameObject:

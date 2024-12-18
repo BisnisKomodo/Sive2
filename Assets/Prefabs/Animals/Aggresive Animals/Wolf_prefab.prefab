@@ -109,7 +109,7 @@ MonoBehaviour:
   maxhealth: 35
   health: 35
   isDead: 0
-  damage: 25
+  damage: 15
   maxChaseDistance: 30
   minAttackDistance: 1.8
   maxAttackDistance: 3

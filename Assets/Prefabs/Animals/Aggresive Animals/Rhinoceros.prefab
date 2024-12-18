@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 60270798713179225}
   m_Layer: 0
   m_Name: Rhinoceros
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.24, y: -0.08, z: 32.543}
-  m_LocalScale: {x: 2.6319551, y: 2.6319551, z: 2.6319551}
+  m_LocalScale: {x: 3.0599113, y: 3.0599113, z: 3.0599113}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765892004352567729}
@@ -1157,22 +1157,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
-  health: 20
-  damage: 40
+  maxhealth: 500
+  health: 500
+  isDead: 0
+  damage: 35
   maxChaseDistance: 30
-  minAttackDistance: 3.5
-  maxAttackDistance: 5.5
-  wanderWaitTime: 8
+  minAttackDistance: 5
+  maxAttackDistance: 6
+  wanderWaitTime: 5
   canMoveWhileAttacking: 1
-  walkSpeed: 2.5
-  runSpeed: 6
-  wanderRange: 50
+  walkSpeed: 2
+  runSpeed: 7.5
+  wanderRange: 30
   walk: 0
   run: 0
-  isDead: 0
+  knockbackFlyForce: 20
+  knockbackPushForce: 5
 --- !u!195 &4940272060776976116
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1214,8 +1216,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 11
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 3.3}
 --- !u!65 &2293564155452054738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1252,7 +1254,7 @@ MonoBehaviour:
   deathType: 0
   gatherData:
   - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
-  hits: 4
+  hits: 9
   prefferedtools: []
   toolMultiplier: 0
 --- !u!1 &7148612528179150418

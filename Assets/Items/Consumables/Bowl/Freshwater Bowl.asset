@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Raw Meat
+  m_Name: Freshwater Bowl
   m_EditorClassIdentifier: 
   itemtype: 1
-  icon: {fileID: 21300000, guid: 582221645b2fd284e8514c9cf981a0eb, type: 3}
-  ItemName: Raw Meat
-  Description: Cook First to eat this
+  icon: {fileID: 21300000, guid: 6e12b3ee2fcd4024e8e32504be49a10b, type: 3}
+  ItemName: Freshwater Bowl
+  Description: Your main drinkable water
   IsStackable: 1
   maxstack: 10
   damage: 20
@@ -35,11 +35,11 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: -12
-  hungerChange: 5
-  thirstChange: 0
+  healthChange: 0
+  hungerChange: 0
+  thirstChange: 25
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 11400000, guid: b9f930b1ae724ff41b99df814467da83, type: 2}
+  outcome: {fileID: 0}
   outcomeAmount: 1
-  processTimer: 8
+  processTimer: 3

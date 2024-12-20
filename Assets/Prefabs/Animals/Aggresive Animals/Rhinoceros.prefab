@@ -1117,7 +1117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.24, y: -0.08, z: 32.543}
-  m_LocalScale: {x: 3.0599113, y: 3.0599113, z: 3.0599113}
+  m_LocalScale: {x: 2.8002777, y: 2.8002777, z: 2.8002777}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765892004352567729}
@@ -1164,8 +1164,8 @@ MonoBehaviour:
   isDead: 0
   damage: 35
   maxChaseDistance: 30
-  minAttackDistance: 5
-  maxAttackDistance: 6
+  minAttackDistance: 9
+  maxAttackDistance: 10
   wanderWaitTime: 5
   canMoveWhileAttacking: 1
   walkSpeed: 2
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   wanderRange: 30
   walk: 0
   run: 0
-  knockbackFlyForce: 20
+  knockbackFlyForce: 25
   knockbackPushForce: 5
 --- !u!195 &4940272060776976116
 NavMeshAgent:
@@ -1216,8 +1216,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 3.3}
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 2.3}
 --- !u!65 &2293564155452054738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1237,8 +1237,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.583978, y: 1.281816, z: 2.3322854}
-  m_Center: {x: -0.014254427, y: 0.8056905, z: 0.16131231}
+  m_Size: {x: 0.6210447, y: 1.281816, z: 2.3919926}
+  m_Center: {x: -0.021723907, y: 0.80569047, z: 0.1911666}
 --- !u!114 &60270798713179225
 MonoBehaviour:
   m_ObjectHideFlags: 0

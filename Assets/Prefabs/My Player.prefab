@@ -26621,6 +26621,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 287a2354726a6694d9a8a3af1cdd4d75, type: 2}
   - {fileID: 11400000, guid: 97e5694ca64c50e41ab174b8bd352687, type: 2}
   - {fileID: 11400000, guid: 8f2cadc4cb806e047a088ec8a81e6742, type: 2}
+  - {fileID: 11400000, guid: 5781200778fb44144a336787af20aba2, type: 2}
   contentHolder: {fileID: 5218375765966346562}
   recipeInCraft: {fileID: 0}
   opened: 0
@@ -29403,7 +29404,7 @@ GameObject:
   - component: {fileID: 7455497260445735779}
   m_Layer: 6
   m_Name: My Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37053,7 +37054,7 @@ GameObject:
   - component: {fileID: 7326011456885598473}
   m_Layer: 5
   m_Name: All Menu
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

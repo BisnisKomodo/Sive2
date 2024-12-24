@@ -18,9 +18,9 @@ MonoBehaviour:
   Description: Simple weapon for hunting
   IsStackable: 0
   maxstack: 1
-  damage: 20
-  range: 200
-  fireRate: 0.1
+  damage: 4
+  range: 2.5
+  fireRate: 0.6
   magSize: 30
   bulletData: {fileID: 0}
   zoomFOV: 50

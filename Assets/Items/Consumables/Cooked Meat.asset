@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemName: Cooked Meat
   Description: Eat this to reach full bursting
   IsStackable: 1
-  maxstack: 10
+  maxstack: 5
   damage: 20
   range: 200
   fireRate: 0.1
@@ -35,7 +35,7 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: 1
+  healthChange: 0
   hungerChange: 10
   thirstChange: 0
   ghost: {fileID: 0}

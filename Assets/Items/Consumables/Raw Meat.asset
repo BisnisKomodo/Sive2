@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemName: Raw Meat
   Description: Cook First to eat this
   IsStackable: 1
-  maxstack: 10
+  maxstack: 5
   damage: 20
   range: 200
   fireRate: 0.1
@@ -35,7 +35,7 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: -12
+  healthChange: -10
   hungerChange: 5
   thirstChange: 0
   ghost: {fileID: 0}

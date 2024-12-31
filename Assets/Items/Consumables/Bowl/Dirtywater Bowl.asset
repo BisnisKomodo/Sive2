@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemName: Dirtywater Bowl
   Description: You can drink this but prepare yourself
   IsStackable: 1
-  maxstack: 10
+  maxstack: 5
   damage: 20
   range: 200
   fireRate: 0.1

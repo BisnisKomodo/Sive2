@@ -24,6 +24,7 @@ public class InteractionHandler : MonoBehaviour
         {
             Pickup pickup = hit.transform.GetComponent<Pickup>();
             Storage storage = hit.transform.GetComponent<Storage>();
+            CraftingStation craftingStation = hit.transform.GetComponent<CraftingStation>();
 
             if (Input.GetKeyDown(interactionKey))
             {
@@ -40,9 +41,20 @@ public class InteractionHandler : MonoBehaviour
                         storage.Open(GetComponentInParent<WindowHandler>().storage);
                     }
                 }
+                if (craftingStation != null)
+                {
+                    if (craftingStation.opened)
+                    {
+                        craftingStation.Close(); 
+                    }
+                    else
+                    {
+                        craftingStation.Open();
+                    }
+                }
             }
 
-            if (pickup != null || storage != null)
+            if (pickup != null || storage != null || craftingStation != null)
             {
                 interactionText.gameObject.SetActive(true);
 
@@ -52,6 +64,11 @@ public class InteractionHandler : MonoBehaviour
                 }
 
                 if (storage != null)
+                {
+                    interactionText.text = $"Open";
+                }
+
+                if (craftingStation != null)
                 {
                     interactionText.text = $"Open";
                 }

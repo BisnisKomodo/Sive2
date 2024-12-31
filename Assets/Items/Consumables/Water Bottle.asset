@@ -17,7 +17,29 @@ MonoBehaviour:
   ItemName: Water Bottle
   Description: Drink this to stay hydrated
   IsStackable: 1
-  maxstack: 10
+  maxstack: 5
+  damage: 20
+  range: 200
+  fireRate: 0.1
+  magSize: 30
+  bulletData: {fileID: 0}
+  zoomFOV: 50
+  horizontalRecoil: 0
+  minVerticalRecoil: 0
+  maxVerticalRecoil: 0
+  hipSpread: 0.04
+  aimSpread: 0
+  shotgunFire: 0
+  pelletPerShot: 8
+  shootSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  drawSound: {fileID: 0}
+  emptySound: {fileID: 0}
   healthChange: 0
   hungerChange: 0
   thirstChange: 25
+  ghost: {fileID: 0}
+  isFuel: 0
+  outcome: {fileID: 0}
+  outcomeAmount: 1
+  processTimer: 3

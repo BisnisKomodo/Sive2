@@ -17,7 +17,7 @@ MonoBehaviour:
   ItemName: Wood
   Description: Basic flammable natural resources
   IsStackable: 1
-  maxstack: 30
+  maxstack: 40
   damage: 20
   range: 200
   fireRate: 0.1

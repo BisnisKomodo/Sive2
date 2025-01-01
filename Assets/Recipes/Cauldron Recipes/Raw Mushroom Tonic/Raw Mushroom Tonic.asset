@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Raw Mushroom Tonic
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 9fe56dd7d78dc1c43916d7af13e628e5, type: 3}
+  recipeName: Raw Mushroom Tonic
+  requirements:
+  - {fileID: 11400000, guid: e507c5db25f6a484cb3a574e1e260715, type: 2}
+  - {fileID: 11400000, guid: a2303d55e6d1aa74a854112fb1b51c69, type: 2}
+  - {fileID: 11400000, guid: ec4ce3ff07a5963418fef23cbe0c0d7d, type: 2}
+  - {fileID: 11400000, guid: c8d480bb093b2c64fa6175d2b0aed97f, type: 2}
+  craftingTime: 12
+  outcome: {fileID: 11400000, guid: 9d58e45921566a74ea3f870df45cf4db, type: 2}
+  outcomeAmount: 1

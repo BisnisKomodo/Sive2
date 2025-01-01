@@ -71,11 +71,11 @@ public class CraftingManager : MonoBehaviour
             {
                 if (b == 0)
                 {
-                    recipe.requirementText.text = $"{recipes[i].requirements[b].data.ItemName} {recipes[i].requirements[b].amountNeeded}";
+                    recipe.requirementText.text = $"{recipes[i].requirements[b].amountNeeded} {recipes[i].requirements[b].data.ItemName}";
                 }
                 else
                 {
-                    recipe.requirementText.text = $"{recipe.requirementText.text}, {recipes[i].requirements[b].data.ItemName} {recipes[i].requirements[b].amountNeeded}\n";
+                    recipe.requirementText.text = $"{recipe.requirementText.text}, {recipes[i].requirements[b].amountNeeded} {recipes[i].requirements[b].data.ItemName}";
                 }
             }
         }

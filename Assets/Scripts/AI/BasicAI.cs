@@ -327,7 +327,23 @@ public class BasicAI : MonoBehaviour
             PlayerStats playerStats = target.GetComponent<PlayerStats>();
             if (playerStats != null)
             {
-                playerStats.health -= damage; // Directly decrease health
+
+                if (playerStats.armor > 0)
+                {
+                    playerStats.armor -= damage;
+                    //if armor is gone, damage goes to health
+                    if (playerStats.armor < 0)
+                    {
+                        playerStats.health += playerStats.armor; // Add because armor is negative
+                        playerStats.armor = 0;
+                    }
+                }
+                else
+                {
+                    playerStats.health -= damage;
+                }
+
+                //playerStats.health -= damage; // Directly decrease health
                 playerStats.redOverlay.gameObject.SetActive(true);
                 StartCoroutine(playerStats.FadeOverlayOut()); // Call the red overlay fade function
 

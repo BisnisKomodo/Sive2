@@ -15,6 +15,10 @@ public class PlayerStats : MonoBehaviour
     public float maxthirst = 100f;
 
     [Space]
+    public float armor;
+    public float maxarmor = 100f;
+
+    [Space]
 
     public float HungerDepletion = 0.6f;
     public float ThirstDepletion = 0.75f;
@@ -29,6 +33,7 @@ public class PlayerStats : MonoBehaviour
     public StatsBar Healthbar;
     public StatsBar Hungerbar;
     public StatsBar Thirstbar;
+    public StatsBar Armorbar;
     public Image redOverlay;
 
     private void Start()
@@ -36,6 +41,7 @@ public class PlayerStats : MonoBehaviour
         health = maxhealth;
         hunger = maxhunger;
         thirst = maxthirst;
+        armor = maxarmor;
     }
 
     private void Update()
@@ -54,6 +60,9 @@ public class PlayerStats : MonoBehaviour
 
         Thirstbar.numberText.text = thirst.ToString("f0");
         Thirstbar.bar.fillAmount = thirst / 100;
+
+        Armorbar.numberText.text = armor.ToString("f0");
+        Armorbar.bar.fillAmount = armor / 100;
     }
 
     private void UpdateStats()
@@ -83,6 +92,15 @@ public class PlayerStats : MonoBehaviour
         if (thirst >= maxthirst)
         {
             thirst = maxthirst;
+        }
+        //--------------------------------------------//
+        if (armor <= 0)
+        {
+            armor = 0;
+        }
+        if (armor >= maxarmor)
+        {
+            armor = maxarmor;
         }
 
         //Player Stats Get Damages

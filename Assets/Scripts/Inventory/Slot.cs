@@ -331,6 +331,7 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         stats.health += data.healthChange;
         stats.hunger += data.hungerChange;
         stats.thirst += data.thirstChange;
+        stats.armor += data.armorChange;
 
         StackSize--;
         UpdateSlot();

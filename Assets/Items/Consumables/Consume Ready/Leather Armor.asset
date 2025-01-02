@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Uncooked Verdania Soup
+  m_Name: Leather Armor
   m_EditorClassIdentifier: 
   itemtype: 1
-  icon: {fileID: 21300000, guid: 06ca828b0086a5540a9c2f8d891ed505, type: 3}
-  ItemName: Uncooked Verdania Soup
-  Description: Best uncooked soup
+  icon: {fileID: 21300000, guid: e0b0221e4b9bea34fa52d369c1d26f76, type: 3}
+  ItemName: Leather Armor
+  Description: Basic armor for your protection
   IsStackable: 1
   maxstack: 5
   damage: 20
@@ -35,12 +35,12 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: -15
-  hungerChange: 10
-  thirstChange: 15
-  armorChange: 0
+  healthChange: 0
+  hungerChange: 0
+  thirstChange: 0
+  armorChange: 5
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 11400000, guid: 577f4ad70c118304b96099dae918bee4, type: 2}
+  outcome: {fileID: 0}
   outcomeAmount: 1
-  processTimer: 12
+  processTimer: 3

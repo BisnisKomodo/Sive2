@@ -38,6 +38,7 @@ MonoBehaviour:
   healthChange: -15
   hungerChange: 4
   thirstChange: 1
+  armorChange: 0
   ghost: {fileID: 0}
   isFuel: 0
   outcome: {fileID: 0}

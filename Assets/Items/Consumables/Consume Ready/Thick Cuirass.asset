@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Uncooked Verdania Soup
+  m_Name: Thick Cuirass
   m_EditorClassIdentifier: 
   itemtype: 1
-  icon: {fileID: 21300000, guid: 06ca828b0086a5540a9c2f8d891ed505, type: 3}
-  ItemName: Uncooked Verdania Soup
-  Description: Best uncooked soup
+  icon: {fileID: 21300000, guid: ffb63fd8c2fca9c44afdf223c1dddb98, type: 3}
+  ItemName: Thick Cuirass
+  Description: Best Armor in the game
   IsStackable: 1
   maxstack: 5
   damage: 20
@@ -35,12 +35,12 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: -15
-  hungerChange: 10
-  thirstChange: 15
-  armorChange: 0
+  healthChange: 0
+  hungerChange: 0
+  thirstChange: 0
+  armorChange: 50
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 11400000, guid: 577f4ad70c118304b96099dae918bee4, type: 2}
+  outcome: {fileID: 0}
   outcomeAmount: 1
-  processTimer: 12
+  processTimer: 3

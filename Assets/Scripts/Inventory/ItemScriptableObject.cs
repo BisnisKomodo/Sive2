@@ -50,6 +50,7 @@ public class ItemScriptableObject : ScriptableObject
     public float healthChange = 10f;
     public float hungerChange = 10f;
     public float thirstChange = 10f;
+    public float armorChange = 10f;
 
 
 

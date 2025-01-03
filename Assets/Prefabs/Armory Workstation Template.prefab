@@ -97,6 +97,7 @@ MonoBehaviour:
   icon: {fileID: 2668423156744134554}
   nameText: {fileID: 8553538575969088189}
   requirementText: {fileID: 6503647732357242357}
+  descriptionText: {fileID: 0}
   timerText: {fileID: 6397685810341128647}
 --- !u!1 &5181294176476452942
 GameObject:
@@ -211,8 +212,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.13, y: -1.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 11.802493, y: -1.1}
+  m_SizeDelta: {x: 209.0525, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5818178518676566851
 CanvasRenderer:

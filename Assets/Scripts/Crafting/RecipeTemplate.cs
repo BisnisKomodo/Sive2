@@ -12,6 +12,7 @@ public class RecipeTemplate : MonoBehaviour, IPointerDownHandler
     public Image icon;
     public Text nameText;
     public Text requirementText;
+    public Text descriptionText;
     public Text timerText;
 
     public void Start()

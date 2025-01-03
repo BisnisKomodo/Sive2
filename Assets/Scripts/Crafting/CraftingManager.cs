@@ -65,6 +65,7 @@ public class CraftingManager : MonoBehaviour
             recipe.recipe = recipes[i];
             recipe.icon.sprite = recipes[i].icon;
             recipe.nameText.text = recipes[i].recipeName;
+            recipe.descriptionText.text = recipes[i].recipeDescription;
             recipe.timerText.text = "";
 
             for (int b = 0; b < recipes[i].requirements.Length; b++)

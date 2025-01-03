@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Furnace
+  m_Name: Cauldron
   m_EditorClassIdentifier: 
   itemtype: 4
-  icon: {fileID: 21300000, guid: e8ce796e2197f6e42857de8bc5ea9b2a, type: 3}
-  ItemName: Furnace
-  Description: You may cook and burn stuffs here
+  icon: {fileID: 21300000, guid: 875e855fe347df94f84477513d5d4c75, type: 3}
+  ItemName: Cauldron
+  Description: Used to make healthy food and drinks!
   IsStackable: 0
   maxstack: 1
   damage: 20
@@ -39,7 +39,7 @@ MonoBehaviour:
   hungerChange: 10
   thirstChange: 10
   armorChange: 10
-  ghost: {fileID: 802958661667724057, guid: 20b1db6dea46cc64db5b102a4556bcef, type: 3}
+  ghost: {fileID: 1900846539840736623, guid: 554c7a3d0845fb141acdd95fe6be67ae, type: 3}
   isFuel: 0
   outcome: {fileID: 0}
   outcomeAmount: 1

@@ -7,6 +7,7 @@ public class CraftingRecipeScriptableObject : ScriptableObject
 {
     public Sprite icon;
     public string recipeName;
+    public string recipeDescription;
     public CraftingRequirement[] requirements;
     [Space]
     public float craftingTime;

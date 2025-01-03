@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CraftingStation : MonoBehaviour
+public class ArmoryStation : MonoBehaviour
 {
     public GameObject craftingUI;
     public bool opened = false;
-    //public string cauldronTag = "CauldronCrafting";
+    public string armoryTag = "ArmoryCrafting";
 
     private void Start()
     {
-        FindCauldronCraftingUI();
+        FindArmoryCraftingUI();
     }
 
-    private void FindCauldronCraftingUI()
+    private void FindArmoryCraftingUI()
     {
-        //craftingUI = GameObject.FindWithTag(cauldronTag);
-        craftingUI = GameObject.Find("CauldronCrafting");
+        craftingUI = GameObject.FindWithTag(armoryTag); 
     }
     public void Open()
     {

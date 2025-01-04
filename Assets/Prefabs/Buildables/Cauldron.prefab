@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftingUI: {fileID: 0}
   opened: 0
+  cauldronTag: CauldronCrafting
 --- !u!65 &4963612510294837005
 BoxCollider:
   m_ObjectHideFlags: 0

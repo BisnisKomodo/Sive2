@@ -166,7 +166,7 @@ MonoBehaviour:
   hits: 20
   prefferedtools:
   - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
-  toolMultiplier: 1
+  toolMultiplier: 2
 --- !u!208 &-8198521288815948706
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -139,7 +139,7 @@ MonoBehaviour:
   hits: 15
   prefferedtools:
   - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
-  toolMultiplier: 1
+  toolMultiplier: 2
 --- !u!54 &1561042858296435750
 Rigidbody:
   m_ObjectHideFlags: 0

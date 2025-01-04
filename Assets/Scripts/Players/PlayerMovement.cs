@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
+    [Header("Interaction Settings")]
+    public bool isInteracting = false;
 
     void Start()
     {
@@ -125,7 +126,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Movement();
+        if (!isInteracting)
+        {
+            Movement();
+        }
     }
 
     private void Movement()

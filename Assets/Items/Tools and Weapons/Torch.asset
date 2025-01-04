@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: To light up your surrounding
   IsStackable: 0
   maxstack: 1
-  damage: 5
+  damage: 2
   range: 2
   fireRate: 0.5
   magSize: 30
@@ -38,6 +38,7 @@ MonoBehaviour:
   healthChange: 0
   hungerChange: 0
   thirstChange: 0
+  armorChange: 10
   ghost: {fileID: 0}
   isFuel: 0
   outcome: {fileID: 0}

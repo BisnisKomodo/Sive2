@@ -10,6 +10,13 @@ public class InteractionHandler : MonoBehaviour
     public KeyCode interactionKey = KeyCode.E;
     public Text interactionText;
 
+    private PlayerMovement playerMovement;
+
+    // private void Start()
+    // {
+    //     playerMovement = GetComponentInParent<PlayerMovement>();
+    // }
+
     private void Update()
     {
         Interact();
@@ -25,6 +32,7 @@ public class InteractionHandler : MonoBehaviour
             Pickup pickup = hit.transform.GetComponent<Pickup>();
             Storage storage = hit.transform.GetComponent<Storage>();
             CraftingStation craftingStation = hit.transform.GetComponent<CraftingStation>();
+            ArmoryStation armoryStation = hit.transform.GetComponent<ArmoryStation>();
 
             if (Input.GetKeyDown(interactionKey))
             {
@@ -39,22 +47,40 @@ public class InteractionHandler : MonoBehaviour
                         GetComponentInParent<WindowHandler>().inventory.opened = true;
 
                         storage.Open(GetComponentInParent<WindowHandler>().storage);
+
+                        //playerMovement.isInteracting = true;
                     }
                 }
+
                 if (craftingStation != null)
                 {
                     if (craftingStation.opened)
                     {
-                        craftingStation.Close(); 
+                        craftingStation.Close();
+                        //playerMovement.isInteracting = false; 
                     }
                     else
                     {
                         craftingStation.Open();
+                        //playerMovement.isInteracting = true;
+                    }
+                }
+                if (armoryStation != null)
+                {
+                    if (armoryStation.opened)
+                    {
+                        armoryStation.Close();
+                        //playerMovement.isInteracting = false; 
+                    }
+                    else
+                    {
+                        armoryStation.Open();
+                        //playerMovement.isInteracting = true;
                     }
                 }
             }
 
-            if (pickup != null || storage != null || craftingStation != null)
+            if (pickup != null || storage != null || craftingStation != null || armoryStation != null)
             {
                 interactionText.gameObject.SetActive(true);
 
@@ -69,6 +95,11 @@ public class InteractionHandler : MonoBehaviour
                 }
 
                 if (craftingStation != null)
+                {
+                    interactionText.text = $"Open";
+                }
+
+                if (armoryStation != null)
                 {
                     interactionText.text = $"Open";
                 }

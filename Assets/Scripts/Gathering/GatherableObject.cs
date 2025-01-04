@@ -49,17 +49,47 @@ public class GatherableObject : MonoBehaviour
 
 
 
+    // public void Gather(ItemScriptableObject toolUsed, InventoryManager inventory)
+    // {
+
+    //     if (hits <= 0)
+    //     {
+    //         return;
+    //     }
+    //     bool usingRightTool = false;
+
+    //     //CHECK FOR TOOLS
+    //     if(prefferedtools.Length > 0)
+    //     {
+    //         for (int i = 0; i < prefferedtools.Length; i++)
+    //         {
+    //             if (prefferedtools[i] == toolUsed)
+    //             {
+    //                 usingRightTool = true;
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+
+    //     //Gather
+    //     int selectedGatherData = Random.Range(0, gatherData.Length);
+    //     inventory.AddItem(gatherData[selectedGatherData].item, gatherData[selectedGatherData].amount);
+
+    //     hits--;
+    // }
+
     public void Gather(ItemScriptableObject toolUsed, InventoryManager inventory)
     {
-
         if (hits <= 0)
         {
             return;
         }
+
         bool usingRightTool = false;
 
-        //CHECK FOR TOOLS
-        if(prefferedtools.Length > 0)
+        // CHECK FOR TOOLS
+        if (prefferedtools.Length > 0)
         {
             for (int i = 0; i < prefferedtools.Length; i++)
             {
@@ -71,11 +101,21 @@ public class GatherableObject : MonoBehaviour
             }
         }
 
-
-        //Gather
+        // Select gather data (only once)
         int selectedGatherData = Random.Range(0, gatherData.Length);
-        inventory.AddItem(gatherData[selectedGatherData].item, gatherData[selectedGatherData].amount);
+
+        // If the correct tool is being used, apply the tool multiplier
+        int gatherAmount = gatherData[selectedGatherData].amount;
+        if (usingRightTool)
+        {
+            gatherAmount *= toolMultiplier; // Apply multiplier
+        }
+
+        // Add gathered items to inventory
+        inventory.AddItem(gatherData[selectedGatherData].item, gatherAmount);
 
         hits--;
     }
+
+
 }

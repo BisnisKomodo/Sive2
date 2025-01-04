@@ -97,7 +97,7 @@ MonoBehaviour:
   icon: {fileID: 2668423156744134554}
   nameText: {fileID: 8553538575969088189}
   requirementText: {fileID: 6503647732357242357}
-  descriptionText: {fileID: 0}
+  descriptionText: {fileID: 8806218054975327140}
   timerText: {fileID: 6397685810341128647}
 --- !u!1 &5181294176476452942
 GameObject:

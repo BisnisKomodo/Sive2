@@ -4,40 +4,22 @@ using UnityEngine;
 
 public class ArmoryStation : MonoBehaviour
 {
-    public GameObject craftingUI;
     public bool opened = false;
-    public string armoryTag = "ArmoryCrafting";
-
-    private void Start()
-    {
-        FindArmoryCraftingUI();
-    }
-
-    private void FindArmoryCraftingUI()
-    {
-        craftingUI = GameObject.FindWithTag(armoryTag); 
-    }
     public void Open()
     {
         if (!opened)
         {
-            if (craftingUI != null)
-            {
-                craftingUI.SetActive(true); 
-            }
-
-            opened = true; 
+            UIManager.instance.SetArmoryCraftingUI(true);
+            FindObjectOfType<WindowHandler>().SetArmoryUIState(true);
+            opened = true;
         }
     }
     public void Close()
     {
         if (opened)
         {
-            if (craftingUI != null)
-            {
-                craftingUI.SetActive(false); 
-            }
-
+            UIManager.instance.SetArmoryCraftingUI(false);
+            FindObjectOfType<WindowHandler>().SetArmoryUIState(false);
             opened = false; 
         }
     }

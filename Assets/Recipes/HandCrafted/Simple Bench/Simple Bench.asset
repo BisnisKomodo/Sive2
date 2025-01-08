@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Simple Bench
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 454c54256e8c81c4c856c54d4287e690, type: 3}
+  recipeName: Simple Bench
+  recipeDescription: Basic weaponry are made here
+  requirements:
+  - {fileID: 11400000, guid: 3fc001f10c1e86d4ab7ecf47b1cd31ef, type: 2}
+  - {fileID: 11400000, guid: 8d5bf825b62f68d4bac7e53ec35eb6fc, type: 2}
+  - {fileID: 11400000, guid: 86f4bd4db82f23e4d9eb95cc78a1b180, type: 2}
+  craftingTime: 10
+  outcome: {fileID: 11400000, guid: e4aaa2d6e629c084c9468b1f95fde75d, type: 2}
+  outcomeAmount: 1

@@ -33,6 +33,7 @@ public class InteractionHandler : MonoBehaviour
             Storage storage = hit.transform.GetComponent<Storage>();
             CraftingStation craftingStation = hit.transform.GetComponent<CraftingStation>();
             ArmoryStation armoryStation = hit.transform.GetComponent<ArmoryStation>();
+            SimpleBenchCraft simpleBenchCraft = hit.transform.GetComponent<SimpleBenchCraft>();
 
             if (Input.GetKeyDown(interactionKey))
             {
@@ -78,9 +79,20 @@ public class InteractionHandler : MonoBehaviour
                         //playerMovement.isInteracting = true;
                     }
                 }
+                if (simpleBenchCraft != null)
+                {
+                    if (simpleBenchCraft.opened)
+                    {
+                        simpleBenchCraft.Close();
+                    }
+                    else    
+                    {
+                        simpleBenchCraft.Open();
+                    }
+                }
             }
 
-            if (pickup != null || storage != null || craftingStation != null || armoryStation != null)
+            if (pickup != null || storage != null || craftingStation != null || armoryStation != null || simpleBenchCraft != null)
             {
                 interactionText.gameObject.SetActive(true);
 
@@ -100,6 +112,11 @@ public class InteractionHandler : MonoBehaviour
                 }
 
                 if (armoryStation != null)
+                {
+                    interactionText.text = $"Open";
+                }
+
+                if (simpleBenchCraft != null)
                 {
                     interactionText.text = $"Open";
                 }

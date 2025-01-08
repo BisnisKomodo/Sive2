@@ -75,6 +75,7 @@ public class WindowHandler : MonoBehaviour
     
     [HideInInspector] public bool armoryUIOpened;
     [HideInInspector] public bool cauldronUIOpened;
+    [HideInInspector] public bool benchUIOpened;
 
     private void Start()
     {
@@ -89,7 +90,7 @@ public class WindowHandler : MonoBehaviour
     private void FixedUpdate()
     {
         
-        if (inventory.opened || gameMenu.opened || armoryUIOpened || cauldronUIOpened)
+        if (inventory.opened || gameMenu.opened || armoryUIOpened || cauldronUIOpened || benchUIOpened)
         {
             WindowOpened = true;
         }
@@ -114,6 +115,13 @@ public class WindowHandler : MonoBehaviour
     public void SetCauldronUIState(bool isOpen)
     {
         cauldronUIOpened = isOpen;
+        Cursor.visible = isOpen;
+        Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
+    }
+
+    public void SetBenchUIState(bool isOpen)
+    {
+        benchUIOpened = isOpen;
         Cursor.visible = isOpen;
         Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
     }

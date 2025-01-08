@@ -195,7 +195,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 146.544, y: 6.081, z: 70.98}
-  m_LocalScale: {x: 0.95757, y: 0.95757, z: 0.95757}
+  m_LocalScale: {x: 0.8845173, y: 0.8845173, z: 0.8845173}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4172431338574782914}
@@ -213,9 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a66160cc9ba2164eaf8eadcf0ef410b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  craftingUI: {fileID: 0}
   opened: 0
-  cauldronTag: CauldronCrafting
 --- !u!65 &4963612510294837005
 BoxCollider:
   m_ObjectHideFlags: 0

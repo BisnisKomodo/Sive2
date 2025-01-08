@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     public GameObject cauldronCraftingUI;
     public GameObject armoryCraftingUI;
+    public GameObject benchCraftingUI;
 
     private void Awake()
     {
@@ -33,6 +34,14 @@ public class UIManager : MonoBehaviour
         if (armoryCraftingUI != null)
         {
             armoryCraftingUI.SetActive(isActive);
+        }
+    }
+
+    public void SetBenchCraftingUI(bool isActive)
+    {
+        if (benchCraftingUI != null)
+        {
+            benchCraftingUI.SetActive(isActive);
         }
     }
 }

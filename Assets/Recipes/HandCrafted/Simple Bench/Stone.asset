@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf5a50ae7ba901b43a414112cd869e7a, type: 3}
-  m_Name: Potassium Nitrate
+  m_Name: Stone
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
-  amountNeeded: 0
+  data: {fileID: 11400000, guid: 33413cb943f49ca4a81987dfb575fff6, type: 2}
+  amountNeeded: 5

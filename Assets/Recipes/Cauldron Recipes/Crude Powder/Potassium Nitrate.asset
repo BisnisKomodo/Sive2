@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf5a50ae7ba901b43a414112cd869e7a, type: 3}
-  m_Name: Charcoal
+  m_Name: Potassium Nitrate
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: c0b31f85ed6b9494eba417c0230aa8a9, type: 2}
+  data: {fileID: 11400000, guid: c40cd5a060d38e040a42960287762c08, type: 2}
   amountNeeded: 3

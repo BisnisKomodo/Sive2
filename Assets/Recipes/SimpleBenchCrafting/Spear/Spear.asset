@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: fb1d416a7e5850148916fdd7e8c742d0, type: 3}
   recipeName: Spear
+  recipeDescription: 
   requirements:
   - {fileID: 11400000, guid: 69fb89278a135b140a378247ac0bce62, type: 2}
   - {fileID: 11400000, guid: c8d03693fccf4074eb7bd11670e0bb32, type: 2}
   - {fileID: 11400000, guid: 0b5653bbc778298419066d1bd5a20f5b, type: 2}
-  craftingTime: 5
+  craftingTime: 4
   outcome: {fileID: 11400000, guid: 1ef44758e472fc24fa3f414bdba1cb2f, type: 2}
   outcomeAmount: 1

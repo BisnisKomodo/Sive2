@@ -16,9 +16,9 @@ MonoBehaviour:
   recipeName: Torch
   recipeDescription: You are a sunshine in dark
   requirements:
-  - {fileID: 11400000, guid: e60662449ee889747909a04f71e39e3b, type: 2}
-  - {fileID: 11400000, guid: 6a88fb879163bb040a4940bf40af05d9, type: 2}
   - {fileID: 11400000, guid: 92e3cdad0f24b9441916f2e5604afac4, type: 2}
+  - {fileID: 11400000, guid: 6a88fb879163bb040a4940bf40af05d9, type: 2}
+  - {fileID: 11400000, guid: e60662449ee889747909a04f71e39e3b, type: 2}
   craftingTime: 4
   outcome: {fileID: 11400000, guid: 0bcb56f178e64634187bf888e38f9b41, type: 2}
   outcomeAmount: 1

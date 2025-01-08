@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Crocodile Scale
+  m_Name: Crude Powder
   m_EditorClassIdentifier: 
-  itemtype: 1
-  icon: {fileID: 21300000, guid: 3c46a1006508905469afe9fd8a89f15e, type: 3}
-  ItemName: Crocodile Armor
-  Description: Decent armor for your safety
+  itemtype: 0
+  icon: {fileID: 21300000, guid: 2a88386e3134bed46805f0b32df94db4, type: 3}
+  ItemName: Crude Powder
+  Description: Almost a gunpowder
   IsStackable: 1
-  maxstack: 5
+  maxstack: 50
   damage: 20
   range: 200
   fireRate: 0.1
@@ -35,12 +35,12 @@ MonoBehaviour:
   reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
-  healthChange: 0
-  hungerChange: 0
-  thirstChange: 0
-  armorChange: 15
+  healthChange: 10
+  hungerChange: 10
+  thirstChange: 10
+  armorChange: 10
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 0}
-  outcomeAmount: 1
-  processTimer: 3
+  outcome: {fileID: 11400000, guid: 12b611104d516504c83005234b7c2327, type: 2}
+  outcomeAmount: 5
+  processTimer: 2

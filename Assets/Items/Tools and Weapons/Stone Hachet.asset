@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 3
   icon: {fileID: 21300000, guid: 0b4989ce17f9ed74aa0d0c8ecbde1daa, type: 3}
-  ItemName: Stone Hatchet
+  ItemName: Primitive Hachet
   Description: A Stone Hatchet made for cutting tree
   IsStackable: 0
   maxstack: 1
-  damage: 2
+  damage: 1
   range: 2
   fireRate: 0.5
   magSize: 30
@@ -38,6 +38,7 @@ MonoBehaviour:
   healthChange: 0
   hungerChange: 0
   thirstChange: 0
+  armorChange: 10
   ghost: {fileID: 0}
   isFuel: 0
   outcome: {fileID: 0}

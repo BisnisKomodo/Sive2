@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
-  m_Name: Bow
+  m_Name: Bauxite Ore
   m_EditorClassIdentifier: 
-  itemtype: 2
-  icon: {fileID: 21300000, guid: c57b477da512f8e41b1cc37b59223ecb, type: 3}
-  ItemName: Bow
-  Description: Primitive ranged weapon
-  IsStackable: 0
-  maxstack: 1
-  damage: 10
+  itemtype: 0
+  icon: {fileID: 21300000, guid: 3a38561986f86694eb985e209a6225fb, type: 3}
+  ItemName: Bauxite Ore
+  Description: This can turn into aluminum
+  IsStackable: 1
+  maxstack: 50
+  damage: 20
   range: 200
   fireRate: 0.1
-  magSize: 1
-  bulletData: {fileID: 11400000, guid: 900550205218e83439519b1d8bd2e950, type: 2}
+  magSize: 30
+  bulletData: {fileID: 0}
   zoomFOV: 50
-  horizontalRecoil: 7
-  minVerticalRecoil: 6
-  maxVerticalRecoil: 8
+  horizontalRecoil: 0
+  minVerticalRecoil: 0
+  maxVerticalRecoil: 0
   hipSpread: 0.04
   aimSpread: 0
   shotgunFire: 0
   pelletPerShot: 8
-  shootSound: {fileID: 8300000, guid: ee71e04b65ac0724c958f34f3d8e1153, type: 3}
-  reloadSound: {fileID: 8300000, guid: 4c648a4eac2b1d24eb585754b2a6bfc6, type: 3}
+  shootSound: {fileID: 0}
+  reloadSound: {fileID: 0}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
   healthChange: 10
@@ -41,6 +41,6 @@ MonoBehaviour:
   armorChange: 10
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 0}
+  outcome: {fileID: 11400000, guid: 505aadc4ed5dd264e84e8a310af43db8, type: 2}
   outcomeAmount: 1
-  processTimer: 3
+  processTimer: 5

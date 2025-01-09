@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemtype: 3
   icon: {fileID: 21300000, guid: fb1d416a7e5850148916fdd7e8c742d0, type: 3}
-  ItemName: Spear
+  ItemName: Primitive Spear
   Description: Simple weapon for hunting
   IsStackable: 0
   maxstack: 1
-  damage: 4
-  range: 2.5
-  fireRate: 0.6
+  damage: 5
+  range: 2.25
+  fireRate: 0.5
   magSize: 30
   bulletData: {fileID: 0}
   zoomFOV: 50
@@ -38,6 +38,7 @@ MonoBehaviour:
   healthChange: 0
   hungerChange: 0
   thirstChange: 0
+  armorChange: 10
   ghost: {fileID: 0}
   isFuel: 0
   outcome: {fileID: 0}

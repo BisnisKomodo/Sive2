@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: c57b477da512f8e41b1cc37b59223ecb, type: 3}
   recipeName: Wooden Bow
-  recipeDescription: At least you can shoot now
+  recipeDescription: '"At least you can shoot now"'
   requirements:
   - {fileID: 11400000, guid: c102038799925dd44836669ed046c062, type: 2}
   - {fileID: 11400000, guid: b6f95de342c4b4c4eaecb06ab6db253b, type: 2}

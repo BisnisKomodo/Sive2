@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 454c54256e8c81c4c856c54d4287e690, type: 3}
   recipeName: Simple Bench
-  recipeDescription: Basic weaponry are made here
+  recipeDescription: '"Basic weaponry are made here!"'
   requirements:
   - {fileID: 11400000, guid: 3fc001f10c1e86d4ab7ecf47b1cd31ef, type: 2}
   - {fileID: 11400000, guid: 8d5bf825b62f68d4bac7e53ec35eb6fc, type: 2}

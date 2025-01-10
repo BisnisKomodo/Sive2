@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 0b4989ce17f9ed74aa0d0c8ecbde1daa, type: 3}
   recipeName: Stone Hachet
-  recipeDescription: Get this for better wood yield
+  recipeDescription: '"Get this for better wood yield"'
   requirements:
   - {fileID: 11400000, guid: 4c2c64494eb9f6f4aac17cdb3c98f1b5, type: 2}
   - {fileID: 11400000, guid: c6d2b07fc77017047a60e4a54b4c888d, type: 2}

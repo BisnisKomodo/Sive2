@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Winchester Shotgun
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b57256ff6c8c2b34d9017df734af2d8a, type: 3}
+  recipeName: Winchester Shotgun
+  recipeDescription: '"You''ll have to be at close range"'
+  requirements:
+  - {fileID: 11400000, guid: c5c85c32e31ea0e48ac8bb5f7a8c9c6a, type: 2}
+  - {fileID: 11400000, guid: d118ef9abdc9afe4899ee7219d8d5d3d, type: 2}
+  - {fileID: 11400000, guid: e6be84e49dd98cf48b1f09be61ea9d60, type: 2}
+  craftingTime: 10
+  outcome: {fileID: 11400000, guid: 96ba67a8f071a3d439eb6943bf332707, type: 2}
+  outcomeAmount: 1

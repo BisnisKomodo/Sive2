@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 781ec1283dbd1ba4d9e90574f392e793, type: 3}
   recipeName: Arrow
-  recipeDescription: Basic ammunition for bow
+  recipeDescription: '"Basic ammunition for wooden bow"'
   requirements:
   - {fileID: 11400000, guid: 502b170c1ded8bd43b438643762f966a, type: 2}
   - {fileID: 11400000, guid: 63e03741da916394c89bb9a512979e8c, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Uncooked Verdania Soup
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 06ca828b0086a5540a9c2f8d891ed505, type: 3}
+  recipeName: Uncooked Verdania Soup
+  recipeDescription: '"Cook this to taste the power!"'
+  requirements:
+  - {fileID: 11400000, guid: 8ef6274c96d9b6144b5e3c4e0a4e474e, type: 2}
+  - {fileID: 11400000, guid: 8c1550bed9fc95f40a4d8c4bf5f168e1, type: 2}
+  - {fileID: 11400000, guid: f1b766e39848fd64ba93986fe2fca17c, type: 2}
+  - {fileID: 11400000, guid: d8ae41fba71d25a498fc92394f8d7f24, type: 2}
+  - {fileID: 11400000, guid: 923b11eaae07d3d42845d374ca117ae4, type: 2}
+  craftingTime: 15
+  outcome: {fileID: 11400000, guid: 3e5a7358ee5a33e48a892f3332cf8c0b, type: 2}
+  outcomeAmount: 1

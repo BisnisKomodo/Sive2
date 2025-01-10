@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7e69efd1ed150d44cafe68259c73057b, type: 3}
   recipeName: Metal Spear
-  recipeDescription: A spear with more damage
+  recipeDescription: '"A spear with more damage"'
   requirements:
   - {fileID: 11400000, guid: 799187e45616e0c46a36bd6adc7ea665, type: 2}
   - {fileID: 11400000, guid: 9d27558018489784fb40d745ade63dca, type: 2}

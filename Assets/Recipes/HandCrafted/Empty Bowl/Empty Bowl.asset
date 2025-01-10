@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e66cd10bdc0d60940b308b7c74e49505, type: 3}
   recipeName: Empty Bowl
-  recipeDescription: Find pond and enter the water
+  recipeDescription: '"Find pond and enter the water"'
   requirements:
   - {fileID: 11400000, guid: c65e410a5e7ea6443b668cbe366cde35, type: 2}
   craftingTime: 3

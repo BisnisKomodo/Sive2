@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Pistol Ammo
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 435581b61ec9c9245921c14bd5526ea1, type: 3}
+  recipeName: Pistol Ammo
+  recipeDescription: Ammunition for your pistol
+  requirements:
+  - {fileID: 11400000, guid: 8bc1a044930baea4cbfee4d690499ffb, type: 2}
+  - {fileID: 11400000, guid: eb79a7b7a423f9c499234d1d4621f6d1, type: 2}
+  craftingTime: 5
+  outcome: {fileID: 11400000, guid: 97cbd87f99d6ff74aaf2b108b0f14640, type: 2}
+  outcomeAmount: 5

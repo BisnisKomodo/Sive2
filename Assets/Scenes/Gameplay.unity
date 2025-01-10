@@ -227,6 +227,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4352826d0659c31439800305eee7e4c2, type: 2}
   - {fileID: 11400000, guid: 42b89cdee5216a540a34d35e70972be5, type: 2}
   - {fileID: 11400000, guid: 31d0cc2581528014b950017ca2b1eb72, type: 2}
+  - {fileID: 11400000, guid: 8bfc853bc7d79e3478ab460b35e60d1d, type: 2}
   contentHolder: {fileID: 690996868}
   recipeInCraft: {fileID: 0}
   opened: 0
@@ -322,7 +323,7 @@ RectTransform:
   m_GameObject: {fileID: 9778592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12.769577, y: 11.776217, z: 0.94239295}
+  m_LocalScale: {x: 13.538305, y: 12.047145, z: 0.94239295}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2104023887}
@@ -331,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8496, y: 516}
+  m_AnchoredPosition: {x: 8496, y: 510}
   m_SizeDelta: {x: 98, y: 98.0086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9778594
@@ -2272,7 +2273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -450}
+  m_AnchoredPosition: {x: 406, y: -450}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106549918
@@ -5793,7 +5794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: 986}
+  m_AnchoredPosition: {x: 115, y: 1075}
   m_SizeDelta: {x: 1236.8732, y: 309.26608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275392720
@@ -5818,8 +5819,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 58ce5204c0831c940a3e861178362db9, type: 3}
-    m_FontSize: 65
-    m_FontStyle: 1
+    m_FontSize: 60
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -18559,7 +18560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1169.7375, y: -314}
+  m_AnchoredPosition: {x: 1169.7375, y: -297}
   m_SizeDelta: {x: 862.768, y: 937.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445998032
@@ -18575,7 +18576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18600,10 +18601,10 @@ MonoBehaviour:
     2). Mix them by clicking the
     recipe (Right click to cancel mix)
 
-    3). Once you obtain the raw result, bring
-    it to furnace and cook it
+    3). After obtaining the raw result, Burn
+    it in the furnace!
 
-    4). You will get result as below :'
+    4). Burn the raw stuffs will get result as below :'
 --- !u!222 &445998033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23081,7 +23082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1214.6794, y: 651}
+  m_AnchoredPosition: {x: -1214.6794, y: 723}
   m_SizeDelta: {x: -5381.331, y: -6290.396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690996869
@@ -23105,7 +23106,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 93, y: 10}
-  m_Spacing: {x: 0, y: 5}
+  m_Spacing: {x: 0, y: 2.8}
   m_Constraint: 1
   m_ConstraintCount: 1
 --- !u!1001 &694320961
@@ -23648,7 +23649,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 461, y: -137.9999}
+  m_AnchoredPosition: {x: 395, y: -137.9999}
   m_SizeDelta: {x: 1236.8732, y: 309.26608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725367044
@@ -23684,7 +23685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ammo
+  m_Text: Ammunition
 --- !u!222 &725367045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24244,6 +24245,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 287a2354726a6694d9a8a3af1cdd4d75, type: 2}
   - {fileID: 11400000, guid: 5781200778fb44144a336787af20aba2, type: 2}
   - {fileID: 11400000, guid: 2fbd163c17beae540bc236ff97269204, type: 2}
+  - {fileID: 11400000, guid: 8f2cadc4cb806e047a088ec8a81e6742, type: 2}
   contentHolder: {fileID: 96135263}
   recipeInCraft: {fileID: 0}
   opened: 0
@@ -33657,6 +33659,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeTemplate: {fileID: 7193545063369568633, guid: 01a339fe06c939345a25af1e21aa11a8, type: 3}
   recipes:
+  - {fileID: 11400000, guid: 95a0060b34f2555479709986a37f38c6, type: 2}
+  - {fileID: 11400000, guid: a4bae9b6c2267e1499ed7b8ea9bd562f, type: 2}
+  - {fileID: 11400000, guid: af819d8dcb909194d87976eaebb577d0, type: 2}
+  - {fileID: 11400000, guid: 2a5741cf734ea144686ba1d9661cd292, type: 2}
   - {fileID: 11400000, guid: 287a2354726a6694d9a8a3af1cdd4d75, type: 2}
   contentHolder: {fileID: 408260642}
   recipeInCraft: {fileID: 0}
@@ -35414,7 +35420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: -1362}
+  m_AnchoredPosition: {x: 146, y: -929}
   m_SizeDelta: {x: 1236.8732, y: 309.26608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035358859
@@ -35439,8 +35445,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 58ce5204c0831c940a3e861178362db9, type: 3}
-    m_FontSize: 65
-    m_FontStyle: 1
+    m_FontSize: 60
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -35746,6 +35752,85 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
+--- !u!1 &1045774988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045774989}
+  - component: {fileID: 1045774991}
+  - component: {fileID: 1045774990}
+  m_Layer: 5
+  m_Name: Highlighted Writing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1045774989
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045774988}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2948954, y: 4.1917706, z: 7.004206}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1236801564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1511, y: -1345}
+  m_SizeDelta: {x: 862.768, y: 937.62}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1045774990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045774988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6981132, g: 0.025585301, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 58ce5204c0831c940a3e861178362db9, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: (Leather Armor is exception!)
+--- !u!222 &1045774991
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045774988}
+  m_CullTransparentMesh: 1
 --- !u!4 &1046155902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4015665908640493844, guid: 05fbedb4f104a954485a9d52ee9e4695, type: 3}
@@ -44136,6 +44221,7 @@ RectTransform:
   - {fileID: 1035358858}
   - {fileID: 1069924865}
   - {fileID: 445998031}
+  - {fileID: 1045774989}
   - {fileID: 612976717}
   - {fileID: 745216339}
   m_Father: {fileID: 317385947}
@@ -53924,7 +54010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280, y: -138}
+  m_AnchoredPosition: {x: -307, y: -138}
   m_SizeDelta: {x: 1236.8732, y: 309.26608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696049444
@@ -53960,7 +54046,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Firearm/Weapon
+  m_Text: Advanced Weapon
 --- !u!222 &1696049445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54991,7 +55077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1003, y: -137.9999}
+  m_AnchoredPosition: {x: 985, y: -137.9999}
   m_SizeDelta: {x: 1236.8732, y: 309.26608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755060515

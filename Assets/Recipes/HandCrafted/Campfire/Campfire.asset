@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7d30fb26b5923634ea2c3f4a2b27775c, type: 3}
   recipeName: Campfire
-  recipeDescription: Place this for lights around you
+  recipeDescription: '"Place this for lights around you"'
   requirements:
   - {fileID: 11400000, guid: 49d8f57df1cba09418f4ede900782a5c, type: 2}
   - {fileID: 11400000, guid: 0c8819652ea3df74b999728a10cf3df8, type: 2}

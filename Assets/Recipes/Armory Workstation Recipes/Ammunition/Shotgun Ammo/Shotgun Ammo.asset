@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Shotgun Ammo
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 7dbee9bd7cdc2c941a11e2b221f4557d, type: 3}
+  recipeName: Shotgun Ammo
+  recipeDescription: Ammunition for your shotgun
+  requirements:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  craftingTime: 5
+  outcome: {fileID: 11400000, guid: a6a84a83cc5c2094ea0d28db478019c6, type: 2}
+  outcomeAmount: 5

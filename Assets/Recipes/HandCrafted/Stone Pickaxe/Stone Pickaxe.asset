@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e8a2bb466907b1b45a81d8113565b312, type: 3}
   recipeName: Stone Pickaxe
-  recipeDescription: Stone produces more from this
+  recipeDescription: '"Stone produces more from this"'
   requirements:
   - {fileID: 11400000, guid: eddd24f3056678b499b55daa9f006988, type: 2}
   - {fileID: 11400000, guid: 15ad49652bc99fc468f417b093773f5d, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: c9f88e1d1ec89b04aabda0a80555c311, type: 3}
   recipeName: Rope
-  recipeDescription: Maybe craft bow with this?
+  recipeDescription: '"Maybe craft bow with this?"'
   requirements:
   - {fileID: 11400000, guid: c22b92e0e0aebc74cbf80771770aa695, type: 2}
   craftingTime: 2

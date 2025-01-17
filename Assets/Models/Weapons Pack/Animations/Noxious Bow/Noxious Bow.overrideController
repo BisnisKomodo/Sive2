@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Noxious Bow
+  m_Controller: {fileID: 9100000, guid: 5b4b6a4d2a1a58648a583318db7c1580, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8c1db3565de623a4f9ec9560bc1c0b69, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f471a8594d768545bc9b7afeb29ce11, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1130772c54301ce4081db92ee8b8b69c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fe60483d9fcfecf47ab6110e334d422d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 42e7b93b6d78ced40b70029e0f5dcffc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cb2cade6a1b57ef4b917b12c1e969c5d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 17656961d6e47f64292cf48c100421e2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ca4472fc02750e74d9dc40ffe53d8793, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9d836e4f201e6654ca2e3b226a22fbb0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f74badadf2f52a24989ae52bc9efd720, type: 2}

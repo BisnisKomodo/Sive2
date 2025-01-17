@@ -43,25 +43,37 @@ public class Sway : MonoBehaviour
 
         initialPosition = transform.localPosition;
         initialRotation = transform.localRotation;
+
+        //Debug.Log($"Sway script initialized for {gameObject.name}");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log($"Update called for {gameObject.name}");
+
         MoveSway();
         TiltSway();
 
         if (cam.canMove && cam.verticalRot > cam.verticalTopLimit && cam.verticalRot < cam.verticalBottomLimit && !lockSway && !lockSway && !GetComponentInParent<Weapon>().isAiming)
+        {
             CalculateVerticalSway();
+            //Debug.Log($"Vertical sway calculated: InputY = {InputY}");
+        }
         else
             InputY = 0;
+            //Debug.Log($"Vertical sway locked: InputY set to 0");
 
 
 
         if (cam.canMove && !windowHandler.WindowOpened) //!lockSway && !GetComponentInParent<Weapon>().isAiming &&
+            {
             CalculateHorizontalSway();
+            //Debug.Log($"Horizontal sway calculated: InputX = {InputX}");
+            }
         else
             InputX = 0;
+            //Debug.Log($"Horizontal sway locked: InputX set to 0");
 
     }
 
@@ -83,6 +95,7 @@ public class Sway : MonoBehaviour
 
         Vector3 finalPosition = new Vector3(moveX, moveY, 0);
 
+        //Debug.Log($"MoveSway -> FinalPosition: {finalPosition}");
         transform.localPosition = Vector3.Lerp(transform.localPosition, finalPosition + initialPosition, Time.deltaTime * smoothAmount);
     }
 
@@ -93,6 +106,7 @@ public class Sway : MonoBehaviour
 
         Quaternion finalRotation = Quaternion.Euler(new Vector3(rotationX ? -tiltX : 0f, rotationY ? tiltY : 0f, rotationZ ? tiltY : 0));
 
+        //Debug.Log($"TiltSway -> FinalRotation: {finalRotation.eulerAngles}");
         transform.localRotation = Quaternion.Slerp(transform.localRotation, finalRotation * initialRotation, Time.deltaTime * smoothRotation);
     }
 }

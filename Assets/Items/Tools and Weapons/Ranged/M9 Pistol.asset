@@ -20,7 +20,7 @@ MonoBehaviour:
   maxstack: 1
   damage: 10
   range: 200
-  fireRate: 0.1
+  fireRate: 0.13
   magSize: 8
   bulletData: {fileID: 11400000, guid: 97cbd87f99d6ff74aaf2b108b0f14640, type: 2}
   zoomFOV: 50

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Noxious Bow
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  recipeName: Noxious Bow
+  recipeDescription: '"Special Bow, only for poison arrows"'
+  requirements:
+  - {fileID: 11400000, guid: 8a5c3686ef832fa4a89e4ec2af741180, type: 2}
+  - {fileID: 11400000, guid: f5c2d59e10d97d04bb238bb2250d484c, type: 2}
+  - {fileID: 11400000, guid: b93c5f7d0d303344e96ec0781b748b2e, type: 2}
+  craftingTime: 8
+  outcome: {fileID: 11400000, guid: 6be2afbf958f1794c92f0f51aff3cbbc, type: 2}
+  outcomeAmount: 1

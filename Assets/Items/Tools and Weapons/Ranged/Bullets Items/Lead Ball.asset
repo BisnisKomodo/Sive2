@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lead Ball
   m_EditorClassIdentifier: 
   itemtype: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2f413f3dbf443e04b8be2af49bf8dcaa, type: 3}
   ItemName: Lead Ball
   Description: '"Rounded old bullets"'
   IsStackable: 1

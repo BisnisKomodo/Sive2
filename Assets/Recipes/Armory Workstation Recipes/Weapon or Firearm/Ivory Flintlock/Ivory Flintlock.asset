@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Ivory Flintlock
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  recipeName: Ivory Flintlock
+  recipeDescription: '"Gun that crafted from bones"'
+  requirements:
+  - {fileID: 11400000, guid: a1ad2294433585a44a98b484edb7f0f0, type: 2}
+  - {fileID: 11400000, guid: 8ff744d4fd506ce4c8bbf6144642eee4, type: 2}
+  - {fileID: 11400000, guid: 2b1cfd66a692cbf4890f434969ddaeb5, type: 2}
+  craftingTime: 8
+  outcome: {fileID: 11400000, guid: 43d32f8a582e92f479379310c82ba957, type: 2}
+  outcomeAmount: 1

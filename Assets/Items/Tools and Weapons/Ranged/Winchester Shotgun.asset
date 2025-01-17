@@ -20,13 +20,13 @@ MonoBehaviour:
   maxstack: 1
   damage: 10
   range: 30
-  fireRate: 0.1
+  fireRate: 0.15
   magSize: 1
   bulletData: {fileID: 11400000, guid: a6a84a83cc5c2094ea0d28db478019c6, type: 2}
-  zoomFOV: 40
-  horizontalRecoil: 15
-  minVerticalRecoil: 14
-  maxVerticalRecoil: 16
+  zoomFOV: 38
+  horizontalRecoil: 16
+  minVerticalRecoil: 15
+  maxVerticalRecoil: 17
   hipSpread: 0.2
   aimSpread: 0.2
   shotgunFire: 1

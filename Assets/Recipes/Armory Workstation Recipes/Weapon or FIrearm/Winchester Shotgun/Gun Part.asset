@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Gun Part
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: cc97d3775cd55c54d8f6e965f8ec32b3, type: 2}
-  amountNeeded: 3
+  amountNeeded: 2

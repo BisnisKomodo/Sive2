@@ -16,6 +16,7 @@ MonoBehaviour:
   recipeName: Infused Crocodile Scale
   recipeDescription: '"Woah, you are armored!"'
   requirements:
+  - {fileID: 11400000, guid: d7885205400316d4c82df1c7c6d3074c, type: 2}
   - {fileID: 11400000, guid: ad95882706d75e7469407d9a235de844, type: 2}
   craftingTime: 4
   outcome: {fileID: 11400000, guid: fc79749c48e65404e8d4fa4d4718520e, type: 2}

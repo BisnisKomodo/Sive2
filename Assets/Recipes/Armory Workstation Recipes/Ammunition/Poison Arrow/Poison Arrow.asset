@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Poison Arrow
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 67753b9983c87074898ae22aa2be6d03, type: 3}
+  recipeName: Poison Arrow
+  recipeDescription: '"Stronger than standard arrow"'
+  requirements:
+  - {fileID: 11400000, guid: 1837321342d2e574d9c1c17f52f2e267, type: 2}
+  - {fileID: 11400000, guid: ec7dd1fac4f9f314ab2dc60f8b2e7c2c, type: 2}
+  craftingTime: 5
+  outcome: {fileID: 11400000, guid: febf2e22b7bb85441b074f98353365c7, type: 2}
+  outcomeAmount: 5

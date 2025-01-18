@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7dbee9bd7cdc2c941a11e2b221f4557d, type: 3}
   recipeName: Shotgun Ammo
-  recipeDescription: Ammunition for your shotgun
+  recipeDescription: '"Ammunition for your shotgun"'
   requirements:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 31e1bb219065c814fa9104a80dda3c4a, type: 2}
+  - {fileID: 11400000, guid: 0f61fa7364837914f8d76561bbf1bc73, type: 2}
+  - {fileID: 11400000, guid: dbc51ad602567074f8e0763fafbcfc37, type: 2}
   craftingTime: 5
   outcome: {fileID: 11400000, guid: a6a84a83cc5c2094ea0d28db478019c6, type: 2}
   outcomeAmount: 5

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Lead Ball
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  recipeName: Lead Ball
+  recipeDescription: '"Oldest ammunition available"'
+  requirements:
+  - {fileID: 11400000, guid: bf9b71f24feeb3e4eaadbb8002fbebeb, type: 2}
+  - {fileID: 11400000, guid: 51eaee9366fc5db4aa4d15cc45871638, type: 2}
+  - {fileID: 11400000, guid: e453c0c0178531248bee10632db1a3c6, type: 2}
+  craftingTime: 5
+  outcome: {fileID: 0}
+  outcomeAmount: 1

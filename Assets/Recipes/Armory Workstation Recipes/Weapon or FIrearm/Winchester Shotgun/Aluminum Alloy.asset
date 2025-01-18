@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Aluminum Alloy
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 505aadc4ed5dd264e84e8a310af43db8, type: 2}
-  amountNeeded: 25
+  amountNeeded: 20

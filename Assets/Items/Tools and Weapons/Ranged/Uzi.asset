@@ -31,8 +31,8 @@ MonoBehaviour:
   aimSpread: 0
   shotgunFire: 0
   pelletPerShot: 8
-  shootSound: {fileID: 0}
-  reloadSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 6fd0a22dd8f452440880e123016d2302, type: 3}
+  reloadSound: {fileID: 8300000, guid: ee06ea98662d97a43aaf11434533c373, type: 3}
   drawSound: {fileID: 0}
   emptySound: {fileID: 0}
   healthChange: 10

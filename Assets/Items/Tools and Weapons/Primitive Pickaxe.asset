@@ -18,9 +18,9 @@ MonoBehaviour:
   Description: Tools to get a stone and metals
   IsStackable: 0
   maxstack: 1
-  damage: 20
-  range: 200
-  fireRate: 0.1
+  damage: 1
+  range: 2
+  fireRate: 0.7
   magSize: 30
   bulletData: {fileID: 0}
   zoomFOV: 50

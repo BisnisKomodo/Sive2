@@ -17,6 +17,6 @@ MonoBehaviour:
   recipeDescription: '"You can store stuff inside!"'
   requirements:
   - {fileID: 11400000, guid: 8c2800c76ba8e694c842491bac82a23b, type: 2}
-  craftingTime: 8
+  craftingTime: 6
   outcome: {fileID: 11400000, guid: df440174bfd6e59459bcf433e0c200ee, type: 2}
   outcomeAmount: 1

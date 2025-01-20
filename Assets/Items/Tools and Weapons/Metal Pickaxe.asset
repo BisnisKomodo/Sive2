@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2427a0a0a899d540b9719b3607311d3, type: 3}
   m_Name: Metal Pickaxe
   m_EditorClassIdentifier: 
-  itemtype: 0
+  itemtype: 3
   icon: {fileID: 21300000, guid: 634e50024e7c6a646854c66e138b3acc, type: 3}
   ItemName: Metal Pickaxe
   Description: '"Swing faster than primitive one"'
   IsStackable: 0
   maxstack: 1
-  damage: 20
-  range: 200
-  fireRate: 0.1
+  damage: 2
+  range: 2.15
+  fireRate: 0.3
   magSize: 30
   bulletData: {fileID: 0}
   zoomFOV: 50

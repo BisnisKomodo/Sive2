@@ -19,8 +19,8 @@ MonoBehaviour:
   IsStackable: 0
   maxstack: 1
   damage: 2
-  range: 2.1
-  fireRate: 0.1
+  range: 2.15
+  fireRate: 0.3
   magSize: 30
   bulletData: {fileID: 0}
   zoomFOV: 50

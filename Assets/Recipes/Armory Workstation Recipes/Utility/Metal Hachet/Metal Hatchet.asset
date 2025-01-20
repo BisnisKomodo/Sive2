@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Metal Hatchet
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 9ca05f4c2781c8949850e4a5b89ccf84, type: 3}
+  recipeName: Metal Hatchet
+  recipeDescription: '"Gather meat and wood faster"'
+  requirements:
+  - {fileID: 11400000, guid: be52abf71f254484aaff376c46c69652, type: 2}
+  - {fileID: 11400000, guid: a5a91ea9465686c4f86bf0a4074a020f, type: 2}
+  craftingTime: 6
+  outcome: {fileID: 11400000, guid: 9eb4278d87de1054682577aa0c1baa55, type: 2}
+  outcomeAmount: 1

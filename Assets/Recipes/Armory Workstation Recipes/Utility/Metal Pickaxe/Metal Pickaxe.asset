@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfca660b42bdf4ab39a4437c273da4, type: 3}
+  m_Name: Metal Pickaxe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 634e50024e7c6a646854c66e138b3acc, type: 3}
+  recipeName: Metal Pickaxe
+  recipeDescription: '"Gather vegetation and stone better!"'
+  requirements:
+  - {fileID: 11400000, guid: aa4ff4a8c72b5aa438008a99616c37cf, type: 2}
+  - {fileID: 11400000, guid: 60c15a8508254824095462f26bcb3c4b, type: 2}
+  craftingTime: 6
+  outcome: {fileID: 11400000, guid: 7752b24a42e571a4fb96bdab3ab8b8c0, type: 2}
+  outcomeAmount: 1

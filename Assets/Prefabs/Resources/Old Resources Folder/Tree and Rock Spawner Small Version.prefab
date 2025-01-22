@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8981578393221352279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150616989362206417}
+  - component: {fileID: 5702268430118321836}
+  m_Layer: 0
+  m_Name: Tree and Rock Spawner Small Version
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150616989362206417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981578393221352279}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 160.9, y: 7.0999994, z: 168.85156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5702268430118321836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981578393221352279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 300
+  maxEntities: 1
+  spawnablesEntities:
+  - {fileID: 8616618656984062821, guid: eb302f67bbbcfc147b0ac2c5fdc4db6d, type: 3}
+  - {fileID: 899342625530382165, guid: d1f3bf972b4968346bf0344f7a971e67, type: 3}
+  - {fileID: 5100205404660660488, guid: 7488bdd7b5d1acd4caa6da152da7f81c, type: 3}
+  - {fileID: 1283908595010877256, guid: e85fd88081745d548bb17619ae4638b9, type: 3}
+  - {fileID: 2687116067011169358, guid: 84258b064221f88409b298afd8cf6a84, type: 3}
+  - {fileID: 7495640482840304990, guid: 400610b23037bb741840331638f73fa7, type: 3}
+  spawnedEntities: []
+  width: 10
+  length: 10
+  height: 10
+  color: {r: 0.023673857, g: 0.3584906, b: 0.023673857, a: 0.62352943}

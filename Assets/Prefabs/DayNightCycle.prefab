@@ -177,8 +177,8 @@ MonoBehaviour:
   cycleDuration: 360
   dayStartTime: 0
   dayEndTime: 180
-  cycleSpeed: 15
-  sunSpeed: 15
+  cycleSpeed: 1
+  sunSpeed: 1
   dayTimeSunIntensity: 1
   nightTimeSunIntensity: 0
   dayTimeAmbientIntensity: 1

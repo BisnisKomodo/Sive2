@@ -327,7 +327,7 @@ Material:
     - _CascadeTiling: {r: 2, g: 3, b: 0, a: 0}
     - _Color0: {r: 0, g: 0.6749488, b: 0.8088235, a: 0}
     - _Color1: {r: 0, g: 0.048731543, b: 0.22794023, a: 0}
-    - _DeepColor: {r: 0, g: 0, b: 0, a: 0}
+    - _DeepColor: {r: 0, g: 0, b: 0, a: 1}
     - _Detail1MainSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _Detail1Tiling: {r: 30, g: 30, b: 0, a: 0}
     - _Detail2AlbedoColor: {r: 1, g: 1, b: 1, a: 0}
@@ -343,7 +343,7 @@ Material:
     - _NoiseTiling: {r: 2, g: 2, b: 0, a: 0}
     - _NoiseTiling1: {r: 5, g: 5, b: 0, a: 0}
     - _NoiseTiling2: {r: 8, g: 8, b: 0, a: 0}
-    - _ShalowColor: {r: 0.2627451, g: 0.32156864, b: 0.24313726, a: 0}
+    - _ShalowColor: {r: 0.26274508, g: 0.3215686, b: 0.24313721, a: 1}
     - _SlowCascadeColor: {r: 20, g: 20, b: 20, a: 0}
     - _SmallCascadeColor: {r: 20, g: 20, b: 20, a: 0}
     - _SmallCascadeMainSpeed: {r: 2.5, g: 2.5, b: 0, a: 0}

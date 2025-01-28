@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
         cc = GetComponent<CharacterController>();
         cam = GetComponentInChildren<CameraLook>();
         audioS = GetComponent<AudioSource>();
+
+        cc.slopeLimit = 45f;
         // if (cam == null)
         // {
         //     Debug.LogError("CameraLook component not found on child objects!");

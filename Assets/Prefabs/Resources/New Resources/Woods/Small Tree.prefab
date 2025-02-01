@@ -130,7 +130,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -154,9 +154,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.27066803
-  m_Height: 7.593151
+  m_Height: 7.919633
   m_Direction: 1
-  m_Center: {x: 0.1788559, y: 4.163332, z: -0.16550493}
+  m_Center: {x: 0.1788559, y: 4.000091, z: -0.16550493}
 --- !u!208 &806816784534252077
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1831174863873747567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2331950208633654972}
+  - component: {fileID: 6891258438741913664}
+  m_Layer: 0
+  m_Name: Easy Animal Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2331950208633654972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831174863873747567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 218.5, y: 4.9990807, z: 246.73326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6891258438741913664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831174863873747567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 300
+  maxEntities: 4
+  spawnablesEntities:
+  - {fileID: 2802449517031602396, guid: c5e56d9fe9cfb114c869b75b0c3f9538, type: 3}
+  - {fileID: 7446256520033851003, guid: 6ed3db8229f69c7488b4c272aae0b4ef, type: 3}
+  - {fileID: 274786484688848842, guid: 25f23c0e7da2cd64a9e9a25afc4ebb9d, type: 3}
+  - {fileID: 7367453725081960445, guid: 65983ee9c1a147443a07f5009b073037, type: 3}
+  - {fileID: 7892764554927416883, guid: fe216742e5f1db24f96b61e8c298fc74, type: 3}
+  - {fileID: 1711203527124735221, guid: 15fd417d75d68ce43b678e72cb63fb4c, type: 3}
+  - {fileID: 8015852479505427876, guid: c2ce4b1f4c6aec646932301d8ad266ee, type: 3}
+  spawnedEntities: []
+  width: 10
+  length: 10
+  height: 10
+  color: {r: 0.25929016, g: 0.3886792, b: 0.18993945, a: 0.78431374}

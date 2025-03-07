@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    private BulletObjectPool bulletPool;
+    private SmokeObjectPool smokePool;
+    private BloodObjectPool bloodPool;
+    //----------------------Object Pooling------------------------------//
     private PlayerMovement player;
     private AudioSource audioS;
     public GameObject bloodEffect;
@@ -38,6 +42,10 @@ public class Weapon : MonoBehaviour
         player = GetComponentInParent<PlayerMovement>();
         audioS = GetComponent<AudioSource>();
         gameMenu = FindObjectOfType<Gamemenu>();
+
+        bulletPool = FindObjectOfType<BulletObjectPool>();
+        smokePool = FindObjectOfType<SmokeObjectPool>();
+        bloodPool = FindObjectOfType<BloodObjectPool>();
 
         transform.localPosition = hipPos;
 
@@ -145,19 +153,22 @@ public class Weapon : MonoBehaviour
 
         if (Physics.Raycast(shootPoint.position, shootDir, out hit, weaponData.range, shootableLayers))
         {
-            GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+            //GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+            bulletPool.SpawnBulletHole(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             BasicAI ai = hit.transform.GetComponent<BasicAI>();
             BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
 
             if (hit.collider.CompareTag("Animal"))
             {
-                GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(blood, 2f);
+                //GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                bloodPool.SpawnBloodEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                //Destroy(blood, 2f);
             }
             else
             {
-                GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(smoke, 2f);
+                //GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                smokePool.SpawnSmokeEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                //Destroy(smoke, 2f);
             }
 
             if (ai != null)

@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DayController : MonoBehaviour
 {
     public float gameTimer = 0f;
     public int dayIndicator = 1;
-    public float cyclingSpeed = 1f; 
+    public float cyclingSpeed = 1f;
+    public Text dayText;
 
     private void Start()
     {
         gameTimer = Mathf.Clamp(gameTimer, 0, 360);
+        UpdateDayText();
     }
 
     void Update()
@@ -25,7 +28,12 @@ public class DayController : MonoBehaviour
         {
             gameTimer = 0;
             dayIndicator++;
-            Debug.Log("Day right now : " + dayIndicator);
+            UpdateDayText();
         }
+    }
+
+    private void UpdateDayText()
+    {
+        dayText.text = "Day : " + dayIndicator;
     }
 }

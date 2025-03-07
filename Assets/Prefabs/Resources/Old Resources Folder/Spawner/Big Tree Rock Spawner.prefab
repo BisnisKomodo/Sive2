@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3325149067746221916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073483226122408213}
+  - component: {fileID: 2345106695876592559}
+  m_Layer: 0
+  m_Name: Big Tree Rock Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073483226122408213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325149067746221916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 274.4, y: 8, z: 365.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2345106695876592559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325149067746221916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432643c176560b4dbf5a0ead498c10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 300
+  maxEntities: 5
+  spawnablesEntities:
+  - {fileID: 3353472503347065330, guid: 136a257bfe3ea9e4b84333b422ffe700, type: 3}
+  - {fileID: 7392994537395972453, guid: c26bccb578fb75d4f9eb1bcd692df914, type: 3}
+  - {fileID: 2109510637552064222, guid: ae6d60a881911dd4a9319a1450f28f49, type: 3}
+  - {fileID: 7853792967678895463, guid: e7ee16250862f2c41b3d2f9370251a1d, type: 3}
+  - {fileID: 2629321369476776012, guid: 409e1ea4056d8dd48bd65d5ec9a99a0c, type: 3}
+  - {fileID: 9029648146724511986, guid: 614f757342b772c4fbc7128e2c15b9cc, type: 3}
+  - {fileID: 2831438992859693218, guid: df29a7df92ed98348adcaa10e2dc9f7b, type: 3}
+  - {fileID: 3366452379567331776, guid: b0cf2d77ad50156468579710868dc1a5, type: 3}
+  spawnedEntities: []
+  width: 30
+  length: 30
+  height: 30
+  color: {r: 0, g: 1, b: 0.55389, a: 0.24313726}

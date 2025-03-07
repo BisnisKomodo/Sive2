@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Rhinoceros
+  m_Controller: {fileID: 9100000, guid: dd1508b2302d1814fa5f2f1ed43e5553, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4c49da75b3963e249bc2f41e993f9f27, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 93894269a9952094a88f6ff989eb77a2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 239ca95ea9ca7274bb3f7e9e0ad7b6a4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1ab2629f7d0eee0479155329f4ea93b8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: aafbd47df6fad2d49a48e207af511753, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 094c5587f22e8c949864bf5465710794, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5151436165d70f04480e2519e9c33f7c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1a75b68eeccef21409dc08af47bfc6c6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 659bfd4140d15a649895c650f014b826, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aeaf75fb02b3e5b4fb39ae38eb9754c1, type: 2}

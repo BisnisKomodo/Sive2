@@ -51,7 +51,7 @@ MonoBehaviour:
   - {fileID: 7049004581020738479, guid: c9ada6087ccef6c43a2a6d94fe360cee, type: 3}
   - {fileID: 8026824589072558871, guid: 599e4fc1ae597514385dd9e5a42bf83f, type: 3}
   spawnedEntities: []
-  width: 10
-  length: 10
-  height: 10
+  width: 15
+  length: 15
+  height: 15
   color: {r: 0.15777892, g: 0, b: 0.16226411, a: 0.78431374}

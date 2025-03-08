@@ -10,6 +10,7 @@ public class Gamemenu : MonoBehaviour
     public MenuMode menuMode;
 
     [Header("General")]
+    public GameObject loadingScreenActivate;
     public Transform UI;
     public GameObject introButton;
     public GameObject playButton;
@@ -133,6 +134,7 @@ public class Gamemenu : MonoBehaviour
 
     public void StartGame()
     {
+        loadingScreenActivate.gameObject.SetActive(true);
         menuMode = MenuMode.Pause;
         UI.transform.localPosition = new Vector3(-10000, 0, 0);
         SceneManager.LoadScene(1);

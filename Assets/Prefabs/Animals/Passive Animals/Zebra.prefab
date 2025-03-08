@@ -1396,7 +1396,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 0
   walkSpeed: 1
   runSpeed: 6.5
-  wanderRange: 50
+  wanderRange: 40
   walk: 0
   run: 0
 --- !u!195 &2587092347984912898

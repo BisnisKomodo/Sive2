@@ -775,8 +775,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 7
-  m_Center: {x: 0, y: 0, z: 6.3}
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: 5.6}
 --- !u!114 &1490813516757462459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 1
   walkSpeed: 1
   runSpeed: 6
-  wanderRange: 40
+  wanderRange: 30
   walk: 0
   run: 0
   knockbackFlyForce: 8

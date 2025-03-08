@@ -1173,7 +1173,7 @@ MonoBehaviour:
   wanderRange: 30
   walk: 0
   run: 0
-  knockbackFlyForce: 25
+  knockbackFlyForce: 20
   knockbackPushForce: 5
 --- !u!195 &4940272060776976116
 NavMeshAgent:
@@ -1216,8 +1216,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 2.3}
+  m_Radius: 1.8
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!65 &2293564155452054738
 BoxCollider:
   m_ObjectHideFlags: 0

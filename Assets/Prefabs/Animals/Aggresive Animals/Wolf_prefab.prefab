@@ -117,7 +117,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 1
   walkSpeed: 1.5
   runSpeed: 7.5
-  wanderRange: 40
+  wanderRange: 30
   walk: 0
   run: 0
   knockbackFlyForce: 3
@@ -163,7 +163,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 8
+  m_Radius: 7
   m_Center: {x: 0, y: 0, z: 1}
 --- !u!65 &5848413443981048332
 BoxCollider:

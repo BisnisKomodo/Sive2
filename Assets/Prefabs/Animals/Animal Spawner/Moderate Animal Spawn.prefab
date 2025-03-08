@@ -45,16 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 300
-  maxEntities: 4
+  maxEntities: 3
   spawnablesEntities:
   - {fileID: 4880110899382175533, guid: b70429464413a8c44839c85a40430d15, type: 3}
   - {fileID: 543154873772702200, guid: 2c23ba158877b2c499de8179d9b17026, type: 3}
   - {fileID: 3812463222369448611, guid: fd1b5a88deaf57a4c908841411c4c0fa, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 713117585939228107, guid: 316f85cc7815e3943a9f1b1222c9e19f, type: 3}
+  - {fileID: 4429486544906638786, guid: 6cd0851678682b8479f0245e73927291, type: 3}
+  - {fileID: 3370759210238514181, guid: 64feb7455cea1244696409fbb9668af8, type: 3}
+  - {fileID: 7592962869984778764, guid: d5bc06cab380cc0439e70fa7e53ae2d9, type: 3}
+  - {fileID: 4245688478850297489, guid: 7c7069a5824568044be2d32ce7e9856e, type: 3}
+  - {fileID: 1498829153590400946, guid: 87f1cd41575793844819931d97326e99, type: 3}
+  - {fileID: 2469317566983661684, guid: 685ed7a439625ef4b878933f8ce2cd35, type: 3}
+  - {fileID: 7367453725081960445, guid: 65983ee9c1a147443a07f5009b073037, type: 3}
+  - {fileID: 274786484688848842, guid: 25f23c0e7da2cd64a9e9a25afc4ebb9d, type: 3}
   spawnedEntities: []
   width: 10
   length: 10

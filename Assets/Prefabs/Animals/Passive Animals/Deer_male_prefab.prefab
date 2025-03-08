@@ -975,8 +975,8 @@ MonoBehaviour:
   wanderWaitTime: 6
   canMoveWhileAttacking: 0
   walkSpeed: 1.5
-  runSpeed: 7
-  wanderRange: 30
+  runSpeed: 6.8
+  wanderRange: 20
   walk: 0
   run: 0
 --- !u!195 &1058047526785375429

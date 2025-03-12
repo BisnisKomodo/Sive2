@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
@@ -70,6 +71,9 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true; 
+            SceneManager.LoadScene(2);
         }
         if (health >= maxhealth)
         {

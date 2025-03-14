@@ -740,7 +740,7 @@ MonoBehaviour:
   canMoveWhileAttacking: 0
   walkSpeed: 0.8
   runSpeed: 5
-  wanderRange: 10
+  wanderRange: 15
   walk: 0
   run: 0
   knockbackFlyForce: 3

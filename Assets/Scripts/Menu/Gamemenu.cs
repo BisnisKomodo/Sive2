@@ -129,7 +129,8 @@ public class Gamemenu : MonoBehaviour
 
     public void Intro()
     {
-
+        SceneManager.LoadScene(4);
+        DestroyAllDontDestroyOnLoadObjects();
     }
 
     public void StartGame()
@@ -169,5 +170,21 @@ public class Gamemenu : MonoBehaviour
     public void CloseEscape()
     {
         UI.transform.localPosition = new Vector3(-10000, 0, 0);
+    }
+
+    private void DestroyAllDontDestroyOnLoadObjects()
+    {
+    GameObject temp = new GameObject();
+    Scene tempScene = temp.scene;
+
+    foreach (GameObject obj in FindObjectsOfType<GameObject>())
+    {
+        if (obj.scene != tempScene) // Objects in DontDestroyOnLoad exist in a different scene
+        {
+            Destroy(obj);
+        }
+    }
+
+    Destroy(temp);
     }
 }

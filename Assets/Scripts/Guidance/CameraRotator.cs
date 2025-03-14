@@ -6,11 +6,10 @@ public class CameraRotator : MonoBehaviour
 {
     public Camera mainCamera;
     public float rotationAmount = 90f; 
-    public float rotationSpeed = 5f; 
+    public float rotationSpeed = 7f; 
 
     private Quaternion targetRotation;
     private bool isRotating = false;
-    public GameObject disabler;
 
     private void Start()
     {
@@ -41,6 +40,5 @@ public class CameraRotator : MonoBehaviour
             targetRotation *= Quaternion.Euler(0, rotationAmount, 0); 
             isRotating = true;
         }
-        disabler.gameObject.SetActive(false);
     }
 }

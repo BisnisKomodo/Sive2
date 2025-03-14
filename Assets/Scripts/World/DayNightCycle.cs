@@ -103,6 +103,7 @@ public class DayNightCycle : MonoBehaviour
 //     }
 // }
     public Transform sun;
+    public GameObject nocturnalSpawner;
 
     [Header("Cycle Settings")]
     public float sunStartingPoint = 100;
@@ -179,6 +180,15 @@ public class DayNightCycle : MonoBehaviour
 
         // Update lighting and rotation
         UpdateLighting();
+
+        if (timeOfDay >= 180 && timeOfDay <= 360)
+        {
+            nocturnalSpawner.gameObject.SetActive(true);
+        }
+        else
+        {
+            nocturnalSpawner.gameObject.SetActive(false);
+        }
     }
 
     private void UpdateLighting()

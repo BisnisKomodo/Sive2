@@ -505,7 +505,8 @@ MonoBehaviour:
   deathType: 0
   gatherData:
   - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
-  hits: 4
+  - {fileID: 11400000, guid: c7730aeb134a77549ba29312c923906a, type: 2}
+  hits: 5
   prefferedtools: []
   toolMultiplier: 0
 --- !u!114 &5659988834859060070

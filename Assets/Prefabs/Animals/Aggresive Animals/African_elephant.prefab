@@ -1483,7 +1483,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 7
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1550,8 +1550,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathType: 0
   gatherData:
-  - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
-  hits: 11
+  - {fileID: 11400000, guid: 4c1a2fad0c7e834408a072717b725d5c, type: 2}
+  - {fileID: 11400000, guid: a8881ee8ae238ab4987b9d9c5bfc0560, type: 2}
+  - {fileID: 11400000, guid: b5fc0e67e8c22624fa307e1b44ef4c0a, type: 2}
+  hits: 7
   prefferedtools: []
   toolMultiplier: 0
 --- !u!114 &4946851391941594999

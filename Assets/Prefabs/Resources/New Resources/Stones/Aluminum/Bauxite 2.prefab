@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3761491836460983075}
   - component: {fileID: 6136709442927245676}
   - component: {fileID: 3164400301685087210}
+  - component: {fileID: 4902681909007710532}
   m_Layer: 0
   m_Name: Bauxite 2
   m_TagString: Untagged
@@ -105,3 +106,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.138032, y: 3.2490072, z: 9.111729}
   m_Center: {x: 0.7239792, y: 0.8391226, z: 0.20930879}
+--- !u!114 &4902681909007710532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762338778907908746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7480a60be31887d45b8b3fbcd8730456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathType: 0
+  gatherData:
+  - {fileID: 11400000, guid: 53bbfecc0d2f6584fbe785c5e87319dd, type: 2}
+  hits: 5
+  prefferedtools: []
+  toolMultiplier: 1

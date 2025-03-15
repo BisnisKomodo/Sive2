@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
@@ -11,6 +12,8 @@ public class SettingsMenu : MonoBehaviour
     public Slider sensitivitySlider;
     public Slider multiplierSlider;
     public Gamemenu gameMenu;
+    public Slider audioSlider;
+    public AudioMixer audioMixer;
     private void Start() 
     {
         graphicsQuality.value = (int)Settings.graphicsQuality;
@@ -18,8 +21,10 @@ public class SettingsMenu : MonoBehaviour
         postProcessing.isOn = Settings.postProcessing;
         sensitivitySlider.value = SettingsManager.Instance.mouseSensitivity;
         multiplierSlider.value = SettingsManager.Instance.sensitivityMultiplier;
+        audioSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
 
         ApplyChanges();
+        audioSlider.onValueChanged.AddListener(SetAudioVolume);
     }
     private void Update() 
     {
@@ -31,7 +36,15 @@ public class SettingsMenu : MonoBehaviour
         SettingsManager.Instance.mouseSensitivity = sensitivitySlider.value;
         SettingsManager.Instance.sensitivityMultiplier = multiplierSlider.value;
     }
+    
+    public void SetAudioVolume(float volume)
+    {
+        float volumeDB = Mathf.Log10(volume) * 20; 
+        audioMixer.SetFloat("MasterVolume", volumeDB);
 
+        PlayerPrefs.SetFloat("MasterVolume", volume);
+        PlayerPrefs.Save();
+    }
     public void Close()
     {
         gameObject.SetActive(false);

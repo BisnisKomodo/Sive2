@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathType: 0
   gatherData:
-  - {fileID: 11400000, guid: 4225f01de2cfa794a90acc6ff0370a2a, type: 2}
-  hits: 7
+  - {fileID: 11400000, guid: 4ce5be994fdcbfe409598659a91784f8, type: 2}
+  hits: 3
   prefferedtools: []
   toolMultiplier: 1

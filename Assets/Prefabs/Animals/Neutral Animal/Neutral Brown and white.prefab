@@ -1236,6 +1236,7 @@ MonoBehaviour:
   deathType: 0
   gatherData:
   - {fileID: 11400000, guid: 2f2207de8e39b7247934152942be04b6, type: 2}
+  - {fileID: 11400000, guid: dd1c7ff2772e8a5498ad7d3ff0b4587d, type: 2}
   hits: 7
   prefferedtools: []
   toolMultiplier: 0

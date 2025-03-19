@@ -1107,6 +1107,7 @@ MonoBehaviour:
   wanderRange: 35
   walk: 0
   run: 0
+  animalDeathSound: {fileID: 8300000, guid: 818cd39ed6d3dd343be39b38006c7038, type: 3}
   knockbackFlyForce: 4
   knockbackPushForce: 2
 --- !u!65 &5885429171551708465

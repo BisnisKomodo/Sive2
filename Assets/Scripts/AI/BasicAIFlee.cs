@@ -28,6 +28,7 @@ public class BasicAIFlee : MonoBehaviour
 
     public bool walk;
     public bool run;
+    public AudioClip animalDeathSound;
 
     private void Start()
     {
@@ -80,6 +81,7 @@ public class BasicAIFlee : MonoBehaviour
         agent.SetDestination(transform.position);
         Destroy(agent);
         anim.SetTrigger("Die");
+        SettingsManager.Instance.PlayAnimalSound(animalDeathSound, transform.position);
 
         GetComponent<GatherableObject>().enabled = true;
         this.enabled = false;

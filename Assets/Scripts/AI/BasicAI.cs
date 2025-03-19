@@ -32,6 +32,7 @@ public class BasicAI : MonoBehaviour
 
     public bool walk;
     public bool run;
+    public AudioClip animalDeathSound;
 
 
     [SerializeField] private float knockbackFlyForce = 5f;
@@ -115,6 +116,7 @@ public class BasicAI : MonoBehaviour
         agent.SetDestination(transform.position);
         Destroy(agent); // Destroy the NavMeshAgent so the bear stops moving
         anim.SetTrigger("Die");
+        SettingsManager.Instance.PlayAnimalSound(animalDeathSound, transform.position);
 
         // Enable gathering once the bear is dead
         GetComponent<GatherableObject>().enabled = true;

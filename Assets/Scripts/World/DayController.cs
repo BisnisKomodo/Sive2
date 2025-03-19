@@ -43,7 +43,7 @@ public class DayController : MonoBehaviour
     {
         if (dayIndicator == 8)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
     }
 }

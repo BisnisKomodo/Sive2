@@ -346,8 +346,9 @@ MonoBehaviour:
   wanderRange: 30
   walk: 0
   run: 0
+  animalDeathSound: {fileID: 8300000, guid: 379eccd68e011ab49848313162955269, type: 3}
   knockbackFlyForce: 1
-  knockbackPushForce: 1
+  knockbackPushForce: 3
 --- !u!195 &4302126583838453361
 NavMeshAgent:
   m_ObjectHideFlags: 0

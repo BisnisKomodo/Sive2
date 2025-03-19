@@ -237,19 +237,21 @@ public class Weapon : MonoBehaviour
 
             if (Physics.Raycast(shootPoint.position, shootDir, out hit, weaponData.range, shootableLayers))
             {
-                GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                bulletPool.SpawnBulletHole(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 BasicAI ai = hit.transform.GetComponent<BasicAI>();
                 BasicAIFlee aiflee = hit.transform.GetComponent<BasicAIFlee>();
 
                 if (hit.collider.CompareTag("Animal"))
                 {
-                    GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    Destroy(blood, 2f);
+                    //GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    bloodPool.SpawnBloodEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    //Destroy(blood, 2f);
                 }
                 else
                 {
-                    GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    Destroy(smoke, 2f);
+                    //GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    smokePool.SpawnSmokeEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    //Destroy(smoke, 2f);
                 }
 
                 if (ai != null)
@@ -529,13 +531,15 @@ public class Weapon : MonoBehaviour
 
             if (hit.collider.CompareTag("Animal"))
             {
-                GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(blood, 2f);
+                //GameObject blood = Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                bloodPool.SpawnBloodEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                //Destroy(blood, 2f);
             }
             else
             {
-                GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(smoke, 2f);
+                //GameObject smoke = Instantiate(smokeEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                smokePool.SpawnSmokeEffect(hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                //Destroy(smoke, 2f);
             }
 
             if (aiflee != null)
@@ -580,6 +584,7 @@ public class Weapon : MonoBehaviour
             gatherObj.Gather(weaponData, GetComponentInParent<WindowHandler>().inventory);
         }
     }
+    audioS.PlayOneShot(weaponData.shootSound);
 }
 
 

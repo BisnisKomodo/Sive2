@@ -36,6 +36,11 @@ public class PlayerStats : MonoBehaviour
     public StatsBar Thirstbar;
     public StatsBar Armorbar;
     public Image redOverlay;
+    public AudioSource audioSources;
+    public AudioClip damagedSoundEffect;
+    public GameObject playerDeathScreen;
+    public PlayerMovement playerMovementScript;
+    private bool isDeath = false;
 
     private void Start()
     {
@@ -43,6 +48,7 @@ public class PlayerStats : MonoBehaviour
         hunger = maxhunger;
         thirst = maxthirst;
         armor = maxarmor;
+        audioSources = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -68,13 +74,11 @@ public class PlayerStats : MonoBehaviour
 
     private void UpdateStats()
     {
-        if (health <= 0)
+        if (health <= 0 && !isDeath)
         {
-            health = 0;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true; 
-            SceneManager.LoadScene(2);
+            Die();
         }
+
         if (health >= maxhealth)
         {
             health = maxhealth;
@@ -134,6 +138,26 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    private void Die()
+    {
+        isDeath = true;
+
+        if (playerMovementScript != null)
+        {
+            playerMovementScript.enabled = false;
+        }
+
+        if (playerDeathScreen != null)
+        {
+            playerDeathScreen.gameObject.SetActive(true);
+        }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        audioSources.Stop();
+    }
+
     public IEnumerator FadeOverlayOut()
     {
         //Debug.Log("Player got hurt!");
@@ -144,6 +168,7 @@ public class PlayerStats : MonoBehaviour
         float fadeDuration = 0.5f;
         float elapsedTime = 0f;
 
+        audioSources.PlayOneShot(damagedSoundEffect);
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;

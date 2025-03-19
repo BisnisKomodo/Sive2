@@ -1399,6 +1399,7 @@ MonoBehaviour:
   wanderRange: 40
   walk: 0
   run: 0
+  animalDeathSound: {fileID: 8300000, guid: 2d436ba2135beb341bf3f03c884407fd, type: 3}
 --- !u!195 &2587092347984912898
 NavMeshAgent:
   m_ObjectHideFlags: 0

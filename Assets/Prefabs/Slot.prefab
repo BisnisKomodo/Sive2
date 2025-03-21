@@ -450,11 +450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1a6c2ce1f85a549bb9640407b61221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  weaponEquipped: {fileID: 0}
   data: {fileID: 0}
   StackSize: 0
   icon: {fileID: 4374716338661448473}
   StackText: {fileID: 1974007046159399607}
   IsEmpty: 0
+  consumeSound: {fileID: 8300000, guid: 642c9523125aada4ea7fb395300e1da2, type: 3}
 --- !u!1 &8346448063910551180
 GameObject:
   m_ObjectHideFlags: 0

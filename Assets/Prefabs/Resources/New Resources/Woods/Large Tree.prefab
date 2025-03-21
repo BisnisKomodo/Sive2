@@ -122,6 +122,7 @@ MonoBehaviour:
   hits: 7
   prefferedtools:
   - {fileID: 11400000, guid: bf272065318b4c14bb62977e4861d9f8, type: 2}
+  - {fileID: 11400000, guid: 9eb4278d87de1054682577aa0c1baa55, type: 2}
   toolMultiplier: 2
 --- !u!136 &7053968459502983767
 CapsuleCollider:

@@ -136,11 +136,14 @@ public class WaterSource : MonoBehaviour
 {
     public ItemScriptableObject bowlItem;
     public ItemScriptableObject seaWaterBowlItem;
+    public AudioSource audioSourcez;
+    public AudioClip waterSound;
 
     private void OnTriggerEnter(Collider other) 
     {
         if (other.CompareTag("Player"))
         {
+            
             InventoryManager inventoryManager = other.GetComponentInChildren<InventoryManager>();
             if (inventoryManager == null)
             {
@@ -152,11 +155,10 @@ public class WaterSource : MonoBehaviour
 
             if (bowlsReplaced > 0)
             {
-                //Debug.Log($"{bowlsReplaced} bowl(s) filled with seawater.");
-            }
-            else
-            {
-                //Debug.Log("No empty bowl found in inventory.");
+                if (audioSourcez != null && waterSound != null)
+                {
+                    audioSourcez.PlayOneShot(waterSound);
+                }
             }
         }
     }

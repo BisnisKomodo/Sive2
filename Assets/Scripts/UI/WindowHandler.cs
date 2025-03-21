@@ -71,6 +71,7 @@ public class WindowHandler : MonoBehaviour
     public BuildingHandler building;
     public bool WindowOpened;
     private CameraLook cam;
+    private PlayerStats playerStats;
 
     
     [HideInInspector] public bool armoryUIOpened;
@@ -85,10 +86,17 @@ public class WindowHandler : MonoBehaviour
         storage = GetComponentInChildren<StorageUI>();
         building = GetComponentInChildren<BuildingHandler>();
         gameMenu = FindObjectOfType<Gamemenu>();
+
+        playerStats = FindObjectOfType<PlayerStats>();
     }
 
     private void FixedUpdate()
     {
+
+        if (playerStats != null && playerStats.isDeath)
+        {
+            return; // Skip the rest of the function if the player is dead
+        }
         
         if (inventory.opened || gameMenu.opened || armoryUIOpened || cauldronUIOpened || benchUIOpened)
         {

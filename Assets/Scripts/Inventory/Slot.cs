@@ -140,10 +140,18 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     public bool IsEmpty;
     public bool isempty => IsEmpty;
 
+    public AudioClip consumeSound; // Drag a sound effect in the Inspector
+    private AudioSource audioSource;
+
     private void Start()
     {
         dragDropHandler = GetComponentInParent<PlayerMovement>().GetComponentInChildren<DragDropHandler>();
         inventory = GetComponentInParent<PlayerMovement>().GetComponentInChildren<InventoryManager>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         UpdateSlot();
     }
 
@@ -327,6 +335,10 @@ public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void Consume()
     {
+        if (consumeSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(consumeSound);
+        }
         PlayerStats stats = GetComponentInParent<PlayerStats>();
         stats.health += data.healthChange;
         stats.hunger += data.hungerChange;

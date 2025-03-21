@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -38,16 +39,15 @@ public class PlayerStats : MonoBehaviour
     public Image redOverlay;
     public AudioSource audioSources;
     public AudioClip damagedSoundEffect;
-    public GameObject playerDeathScreen;
-    public PlayerMovement playerMovementScript;
-    private bool isDeath = false;
+    public bool isDeath = false;
+    private bool isWarningActive = false;
 
     private void Start()
     {
         health = maxhealth;
         hunger = maxhunger;
         thirst = maxthirst;
-        armor = maxarmor;
+        armor = 10f;
         audioSources = GetComponent<AudioSource>();
     }
 
@@ -55,6 +55,7 @@ public class PlayerStats : MonoBehaviour
     {
         UpdateStats();
         UpdateUI();
+        WarningStats();
     }
 
     private void UpdateUI()
@@ -114,15 +115,15 @@ public class PlayerStats : MonoBehaviour
         //Player Stats Get Damages
         if (hunger <= 0)
         {
-            redOverlay.gameObject.SetActive(true);
-            StartCoroutine(FadeOverlayOut());
+            //redOverlay.gameObject.SetActive(true);
+            //StartCoroutine(FadeOverlayOut());
             health -= HungerDamage * Time.deltaTime;
         }
 
         if (thirst <= 0)
         {
-            redOverlay.gameObject.SetActive(true);
-            StartCoroutine(FadeOverlayOut());
+            //redOverlay.gameObject.SetActive(true);
+            //StartCoroutine(FadeOverlayOut());
             health -= ThirstDamage * Time.deltaTime;
         }
 
@@ -141,20 +142,9 @@ public class PlayerStats : MonoBehaviour
     private void Die()
     {
         isDeath = true;
-
-        if (playerMovementScript != null)
-        {
-            playerMovementScript.enabled = false;
-        }
-
-        if (playerDeathScreen != null)
-        {
-            playerDeathScreen.gameObject.SetActive(true);
-        }
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
+        SceneManager.LoadScene(4);
         audioSources.Stop();
     }
 
@@ -179,5 +169,19 @@ public class PlayerStats : MonoBehaviour
 
         redOverlay.gameObject.SetActive(false);
         //Debug.Log("Overlay Hidden");
+    }
+
+    public void WarningStats()
+    {
+         if ((hunger == 0 || thirst == 0) && !isWarningActive)
+    {
+        isWarningActive = true;
+        redOverlay.gameObject.SetActive(true);
+        StartCoroutine(FadeOverlayOut());
+    }
+    else if (hunger > 0 && thirst > 0)
+    {
+        isWarningActive = false;
+    }
     }
 }

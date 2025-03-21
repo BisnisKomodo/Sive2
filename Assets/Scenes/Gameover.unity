@@ -466,7 +466,7 @@ Transform:
   m_GameObject: {fileID: 1079112431}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8184416, y: -6.0265317, z: 23.479784}
+  m_LocalPosition: {x: -2.8184416, y: -25.3, z: 23.479784}
   m_LocalScale: {x: 0.042289816, y: 0.0811095, z: 0.17743264}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -901,6 +901,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449899522}
   m_CullTransparentMesh: 1
+--- !u!1 &1483727483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483727485}
+  - component: {fileID: 1483727484}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1483727484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483727483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96087a402f5cc947b83a039e8372e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1483727485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483727483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1759.1764, y: 235.69185, z: 577.65924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485854085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1094,7 @@ MonoBehaviour:
   retryButton: {fileID: 1485854085}
   exitButton: {fileID: 1498760818}
   canvasDisabler: {fileID: 102397184}
+  loadingEnabler: {fileID: 0}
 --- !u!1 &1498760818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1244,7 @@ MonoBehaviour:
   retryButton: {fileID: 1485854085}
   exitButton: {fileID: 1498760818}
   canvasDisabler: {fileID: 102397184}
+  loadingEnabler: {fileID: 0}
 --- !u!1 &1714805170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,3 +1502,4 @@ SceneRoots:
   - {fileID: 1714805172}
   - {fileID: 1355047371}
   - {fileID: 421974739}
+  - {fileID: 1483727485}

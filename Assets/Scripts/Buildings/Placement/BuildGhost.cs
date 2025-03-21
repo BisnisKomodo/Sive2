@@ -6,6 +6,7 @@ public class BuildGhost : MonoBehaviour
 {
     public GameObject buildPrefab;
     public bool canBuild;
+    private int collisionCount = 0;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class BuildGhost : MonoBehaviour
     {
         if(!other.isTrigger)
         {
+            collisionCount++;
             canBuild = false;
         }
     }
@@ -24,6 +26,7 @@ public class BuildGhost : MonoBehaviour
     {
         if (!other.isTrigger)
         {
+            collisionCount--;
             canBuild = true;
         }
     }

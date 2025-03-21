@@ -129,7 +129,7 @@ public class Gamemenu : MonoBehaviour
 
     public void Intro()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
         DestroyAllDontDestroyOnLoadObjects();
     }
 

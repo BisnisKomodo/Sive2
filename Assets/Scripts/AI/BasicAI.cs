@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using System.Linq; 
 
 public class BasicAI : MonoBehaviour
 {
+    public static bool isChaseMusicPlaying = false; 
+    public static AudioSource chaseMusicSource; 
+
+    [Header("Chase Music Settings")]
+    public AudioClip chaseMusic;
+    [Space]
     public Transform target;
     public NavMeshAgent agent;
     private Animator anim;
@@ -43,6 +50,15 @@ public class BasicAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        if (chaseMusicSource == null)
+        {
+            GameObject musicObj = new GameObject("ChaseMusic");
+            chaseMusicSource = musicObj.AddComponent<AudioSource>();
+            chaseMusicSource.clip = chaseMusic;
+            chaseMusicSource.loop = true;
+            chaseMusicSource.playOnAwake = false;
+            DontDestroyOnLoad(musicObj);
+        }
 
         currentWanderTime = wanderWaitTime;
     }
@@ -189,6 +205,12 @@ public class BasicAI : MonoBehaviour
 
                 walk = true;
                 run = false;
+                // Stop chase music when no animals are chasing
+                if (isChaseMusicPlaying && FindObjectsOfType<BasicAI>().All(ai => ai.target == null))
+                {
+                    isChaseMusicPlaying = false;
+                    chaseMusicSource.Stop();
+                }
             }
             else
             {
@@ -271,6 +293,14 @@ public class BasicAI : MonoBehaviour
             run = true;
 
             agent.speed = runSpeed;
+
+
+            // Play chase music if it's not already playing
+            if (!isChaseMusicPlaying)
+            {
+                isChaseMusicPlaying = true;
+                chaseMusicSource.Play();
+            }
 
             // Check if it's within attack range and ready to attack
             float distanceToTarget = Vector3.Distance(target.transform.position, transform.position);

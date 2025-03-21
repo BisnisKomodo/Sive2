@@ -43,4 +43,4 @@ MonoBehaviour:
   isFuel: 0
   outcome: {fileID: 11400000, guid: b9f930b1ae724ff41b99df814467da83, type: 2}
   outcomeAmount: 1
-  processTimer: 8
+  processTimer: 5

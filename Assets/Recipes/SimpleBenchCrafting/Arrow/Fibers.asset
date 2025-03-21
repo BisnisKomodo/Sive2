@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fibers
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5c79d76e673fa1847be63152941d3c60, type: 2}
-  amountNeeded: 15
+  amountNeeded: 5

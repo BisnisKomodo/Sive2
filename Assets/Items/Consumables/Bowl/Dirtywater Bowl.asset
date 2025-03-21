@@ -41,6 +41,6 @@ MonoBehaviour:
   armorChange: 0
   ghost: {fileID: 0}
   isFuel: 0
-  outcome: {fileID: 0}
+  outcome: {fileID: 11400000, guid: 6975d60202a460c4a833292b1bd2bd44, type: 2}
   outcomeAmount: 1
-  processTimer: 3
+  processTimer: 4

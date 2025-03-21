@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseMusic: {fileID: 8300000, guid: dde7b9773541f8e4d9ddfa3c57ffef35, type: 3}
   target: {fileID: 0}
   agent: {fileID: 0}
   maxhealth: 200

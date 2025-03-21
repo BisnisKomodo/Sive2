@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616f6706b2bd4a746b7b528d06595353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseMusic: {fileID: 8300000, guid: dde7b9773541f8e4d9ddfa3c57ffef35, type: 3}
   target: {fileID: 0}
   agent: {fileID: 0}
   maxhealth: 45
@@ -342,13 +343,13 @@ MonoBehaviour:
   wanderWaitTime: 7.5
   canMoveWhileAttacking: 0
   walkSpeed: 2.5
-  runSpeed: 7.5
+  runSpeed: 4
   wanderRange: 30
   walk: 0
   run: 0
   animalDeathSound: {fileID: 8300000, guid: 379eccd68e011ab49848313162955269, type: 3}
   knockbackFlyForce: 1
-  knockbackPushForce: 3
+  knockbackPushForce: 1
 --- !u!195 &4302126583838453361
 NavMeshAgent:
   m_ObjectHideFlags: 0

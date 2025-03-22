@@ -1,16 +1,16 @@
 <table>
   <tr>
     <td align="left" width="50%">
-      <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/f3da1e29-8b62-4046-915a-d5dd8f488e18">
+      <img width="100%" alt="gif1" src="https://github.com/user-attachments/assets/a01eef8e-4281-4a45-ba5e-da38af4e47fb">
     </td>
     <td align="right" width="50%">
-      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/f1e758bb-6d88-4801-9818-ec999609664e">
+      <img width="100%" alt="gif2" src="https://github.com/user-attachments/assets/f96b78ce-3f23-4b2e-a17f-c7c1581d5cf5">
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/fff4ba8c-4aad-45ab-9848-749a7d48a316">
+  <img width="100%" alt="gif3" src="https://github.com/user-attachments/assets/2882e5c3-3b05-4ca6-8a0e-6f1ca2bb0c76">
 </p>
 
 ##  📜Scripts and Features
